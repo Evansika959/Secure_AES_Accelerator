@@ -42,8 +42,8 @@ module tb_encryptRound;
         $display("Encrypted:    %h", out);
 
         // End simulation
-        #10;
-        $stop;
+        #100;
+        $finish;
     end
 
 endmodule
