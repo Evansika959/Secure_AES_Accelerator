@@ -1,6 +1,6 @@
 module sbox (
-    input [7:0] in,
-    output logic [7:0] out
+    input [7:0] a,
+    output logic [7:0] c
 );
 
 always_comb begin

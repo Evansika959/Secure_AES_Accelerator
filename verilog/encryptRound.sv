@@ -6,7 +6,7 @@ module encryptRound (
     output logic [127:0] out
 );
 
-logic [127:0] after_roundkey, after_subbytes, after_shiftrows, after_mixcolumns;
+logic [127:0] after_roundkey, after_subbytes, after_shiftrows;
 
 addRoundKey addRoundKey_inst (
     .clk(clk),
@@ -34,7 +34,7 @@ mixColumns mixColumns_inst (
     .clk(clk),
     .rst_n(rst_n),
     .state(after_shiftrows),
-    .out(after_mixcolumns)
+    .out(out)
 );
 
 endmodule
