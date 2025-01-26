@@ -27,14 +27,15 @@ def print_state(label, data):
 def aes_step_by_step_demo():
     # Step 1: Key and Plaintext
     key = get_random_bytes(16)  # Generate a random 128-bit key
-    plaintext = b"Simple AES Example"
+    # plaintext = b"Simple AES Example"
+    plaintext = get_random_bytes(16)  # Generate a random 16-byte plaintext
     print("=== AES Step-by-Step Process ===")
-    print("Original Plaintext:", plaintext.decode())
+    print_state("Original Plaintext:", plaintext)
     print_state("Encryption Key", key)
 
     # Step 2: Padding (to align to AES block size)
     block_size = AES.block_size  # AES block size (16 bytes)
-    padded_plaintext = pad(plaintext, block_size)
+    padded_plaintext = plaintext
     print("\n--- Step 1: Pad Plaintext ---")
     print_state("Padded Plaintext", padded_plaintext)
 
@@ -126,6 +127,6 @@ def aes_step_by_step_demo():
 
 if __name__ == "__main__":
     aes_step_by_step_demo()
-    aes_encrypt_decrypt_demo()
+    # aes_encrypt_decrypt_demo()
 
 
