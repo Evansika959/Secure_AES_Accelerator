@@ -2,7 +2,7 @@ module mixColumns(
     input clk,
     input rst_n,
     input [127:0] state,
-    output [127:0] out
+    output logic [127:0] out
 )
 
 logic [127:0] state_out;
