@@ -1,6 +1,10 @@
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 import itertools
+import binascii
+
+def print_state(label, data):
+    print(f"{label}: {binascii.hexlify(data).decode()}")
 
 def aes_single_round(plaintext: bytes, key: bytes) -> bytes:
     """
@@ -40,10 +44,12 @@ def aes_single_round(plaintext: bytes, key: bytes) -> bytes:
 
     def shift_rows(state: bytearray):
         """Perform ShiftRows operation."""
+        state = state[::-1]   #reverse the state
         rows = [state[i::4] for i in range(4)]  # Separate into rows
         for i, row in enumerate(rows):
             rows[i] = row[i:] + row[:i]  # Rotate left by row index
-        return bytearray(itertools.chain(*zip(*rows)))
+        state = bytearray(itertools.chain(*zip(*rows)))
+        return state[::-1]   #reverse the state
 
     def gmul(a, b):
         """Multiply two numbers in GF(2^8)."""
@@ -78,14 +84,22 @@ def aes_single_round(plaintext: bytes, key: bytes) -> bytes:
     # Step 1: Initial AddRoundKey
     state = add_round_key(bytearray(plaintext), key)
 
+    print_state("After round_key:", state)
+
     # Step 2: SubBytes
     state = sub_bytes(state)
+
+    print_state("After sub_bytes:", state)
 
     # Step 3: ShiftRows
     state = shift_rows(state)
 
+    print_state("After shift_rows:", state)
+
     # Step 4: MixColumns
     state = mix_columns(state)
+
+    print_state("After mix_columns:", state)
 
     # For demonstration, return state after one round
     return bytes(state)
@@ -94,8 +108,8 @@ def aes_single_round(plaintext: bytes, key: bytes) -> bytes:
 key = get_random_bytes(16)  # Random 128-bit key
 plaintext = get_random_bytes(16)  # Random 128-bit plaintext
 
-key = bytes.fromhex("2b7e151628aed2a6abf7158809cf4f3c")
-plaintext = bytes.fromhex("3243f6a8885a308d313198a2e0370734")
+key = bytes.fromhex("000102030405060708090a0b0c0d0e0f")
+plaintext = bytes.fromhex("00112233445566778899aabbccddeeff")
 
 result = aes_single_round(plaintext, key)
 
