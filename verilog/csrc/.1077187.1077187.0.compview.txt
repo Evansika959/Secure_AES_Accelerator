@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1737943606.319975576, "rt":1.22, "ut":0.19, "st":0.16}}
+{"vcselab":{"timestamp_begin":1737943607.639855288, "rt":0.91, "ut":0.27, "st":0.14}}
+{"link":{"timestamp_begin":1737943608.637305385, "rt":0.48, "ut":0.12, "st":0.11}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1737943605.360843701}
+{"VCS_COMP_START_TIME": 1737943605.360843701}
+{"VCS_COMP_END_TIME": 1737943609.257451321}
+{"VCS_USER_OPTIONS": "-o sim +v2k +vc -sverilog -timescale=1ns/1ps +vcs+lic+wait +multisource_int_delays +neg_tchk +incdir+ +plusarg_save +overlap +warn=noSDFCOM_UHICD,noSDFCOM_IWSBA,noSDFCOM_IANE,noSDFCOM_PONF -full64 -cc gcc +libext+.v+.vlib+.vh encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv subBytes.sv ../testbench/encryptRound_tb.sv"}
+{"vcs1": {"peak_mem": 1077988}}
+{"stitch_vcselab": {"peak_mem": 1078031}}

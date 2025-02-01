@@ -34,7 +34,7 @@ module tb_encryptRound;
         rst_n = 1;
 
         // Wait for the encryption round to complete
-        #50;
+        #10;
 
         // Display results
         $display("State:        %h", state);
