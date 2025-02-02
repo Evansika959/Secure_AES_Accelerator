@@ -59,9 +59,9 @@ assign shifted[72+:8] = state[8+:8];
 assign shifted[104+:8] = state[40+:8];
 
 // // Fourth row (r = 3) is cyclically left shifted by 3 offsets
-assign shifted[0+:8] = shifted[32+:8];
+assign shifted[0+:8] = state[32+:8];
 assign shifted[32+:8] = state[64+:8];
 assign shifted[64+:8] = state[96+:8];
-assign shifted[96+:8] = shifted[0+:8];
+assign shifted[96+:8] = state[0+:8];
 
 endmodule

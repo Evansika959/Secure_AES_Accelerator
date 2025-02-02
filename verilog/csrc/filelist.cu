@@ -4,25 +4,28 @@ ifeq ($(LDVERSION), 0)
 endif
 
 ARCHIVE_OBJS=
-ARCHIVE_OBJS += _565901_archive_1.so
-_565901_archive_1.so : archive.3/_565901_archive_1.a
+ARCHIVE_OBJS += _553697_archive_1.so
+_553697_archive_1.so : archive.9/_553697_archive_1.a
 	@$(AR) -s $<
-	@$(PIC_LD) -shared  -Bsymbolic $(LD_NORELAX_FLAG)  -o .//../sim.daidir//_565901_archive_1.so --whole-archive $< --no-whole-archive
+	@$(PIC_LD) -shared  -Bsymbolic $(LD_NORELAX_FLAG)  -o .//../sim_shiftrows.daidir//_553697_archive_1.so --whole-archive $< --no-whole-archive
 	@rm -f $@
-	@ln -sf .//../sim.daidir//_565901_archive_1.so $@
+	@ln -sf .//../sim_shiftrows.daidir//_553697_archive_1.so $@
 
 
 ARCHIVE_OBJS += _prev_archive_1.so
-_prev_archive_1.so : archive.3/_prev_archive_1.a
+_prev_archive_1.so : archive.9/_prev_archive_1.a
 	@$(AR) -s $<
-	@$(PIC_LD) -shared  -Bsymbolic $(LD_NORELAX_FLAG)  -o .//../sim.daidir//_prev_archive_1.so --whole-archive $< --no-whole-archive
+	@$(PIC_LD) -shared  -Bsymbolic $(LD_NORELAX_FLAG)  -o .//../sim_shiftrows.daidir//_prev_archive_1.so --whole-archive $< --no-whole-archive
 	@rm -f $@
-	@ln -sf .//../sim.daidir//_prev_archive_1.so $@
+	@ln -sf .//../sim_shiftrows.daidir//_prev_archive_1.so $@
 
 
 
+VCS_CU_ARC0 =_cuarc0.so
 
-VCS_CU_ARC_OBJS = 
+VCS_CU_ARC_OBJS0 =objs/amcQw_d.o 
+
+VCS_CU_ARC_OBJS = $(VCS_CU_ARC_OBJS0) 
 
 
 O0_OBJS =
@@ -34,15 +37,19 @@ $(O0_OBJS) : %.o: %.c
 %.o: %.c
 	$(CC_CG) $(CFLAGS_CG) -c -o $@ $<
 
+$(VCS_CU_ARC0) : $(VCS_CU_ARC_OBJS0)
+	$(PIC_LD) -shared  -Bsymbolic $(LD_NORELAX_FLAG)  -o .//../sim_shiftrows.daidir//$(VCS_CU_ARC0) $(VCS_CU_ARC_OBJS0)
+	rm -f $(VCS_CU_ARC0)
+	@ln -sf .//../sim_shiftrows.daidir//$(VCS_CU_ARC0) $(VCS_CU_ARC0)
+
 CU_UDP_OBJS = \
 
 
-CU_UDP_OBJS += 
 CU_LVL_OBJS = \
 SIM_l.o 
 
 MAIN_OBJS = \
-objs/amcQw_d.o 
 
-CU_OBJS = $(MAIN_OBJS) $(ARCHIVE_OBJS) $(CU_UDP_OBJS) $(CU_LVL_OBJS)
+
+CU_OBJS = $(MAIN_OBJS) $(ARCHIVE_OBJS) $(VCS_CU_ARC0) $(CU_UDP_OBJS) $(CU_LVL_OBJS)
 
