@@ -1,6 +1,6 @@
 STD_CELLS = /afs/umich.edu/class/eecs627/ibm13/artisan/2005q3v1/aci/sc-x/verilog/ibm13_neg.v
 TESTBENCH = ../testbench/encryptRound_tb.sv
-SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv subBytes.sv
+SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv subBytes.sv subWords.sv key_expansion_stage.sv
 # SIM_SYNTH_FILES = standard.vh ../syn/mult.syn.v
 
 VV         = vcs
@@ -44,7 +44,7 @@ sim_shiftrows:
 	cd verilog; $(VV) $(VVOPTS) shiftRows.sv ../testbench/shiftrow_tb.sv; ./$@
 
 sim_key_expansion_stage:
-	cd verilog; $(VV) $(VVOPTS) key_expansion_stage.sv ../testbench/key_expansion_stage_tb.sv; ./$@
+	cd verilog; $(VV) $(VVOPTS) key_expansion_stage.sv subWords.sv sbox.sv  ../testbench/key_expansion_stage_tb.sv; ./$@
 
 verdi: 
 	cd verilog; $(VV) $(VVOPTS) -debug_access+r -kdb $(SIM_FILES) $(TESTBENCH); ./$@ -gui=verdi -verdi_opts "-ultra"

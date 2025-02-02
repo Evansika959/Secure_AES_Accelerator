@@ -1,5 +1,5 @@
 module key_expansion_stage #(
-    parameter int Round_idx = 1;
+    parameter int Round_idx = 1
 )(
     input  logic        clk,
     input  logic        rst,
@@ -14,18 +14,18 @@ logic [31:0] w0, w1, w2, w3, t, rcon;
 
 logic [127:0] next_round_key;
 
-assign rot_word_out = {in[23:0], in[31:24]};
+assign rot_word_out = {in_key[23:0], in_key[31:24]};
 
-sub_words sub_words_inst (
+subWords sub_words_inst (
     .state(rot_word_out),
     .out(sub_word_t)
 );
 
 always_comb begin
-    w0 = prev_key[127:96];
-    w1 = prev_key[95:64];
-    w2 = prev_key[63:32];
-    w3 = prev_key[31:0];
+    w0 = in_key[127:96];
+    w1 = in_key[95:64];
+    w2 = in_key[63:32];
+    w3 = in_key[31:0];
 
     // get round constant
     case (Round_idx)

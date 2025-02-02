@@ -1,4 +1,4 @@
-module subwords(
+module subWords(
     input [31:0] state,
     output [31:0] out
 );

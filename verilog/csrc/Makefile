@@ -8,7 +8,7 @@ VSRC=..
 TARGET_ARCH=
 
 # Choose name of executable 
-PRODUCTBASE=$(VSRC)/sim
+PRODUCTBASE=$(VSRC)/sim_key_expansion_stage
 
 PRODUCT=$(PRODUCTBASE)
 
@@ -39,7 +39,7 @@ STDLIB =
 STRIPFLAGS= 
 
 PRE_LDFLAGS= # Loader Flags
-LDFLAGS= -rdynamic  -Wl,-rpath='$$ORIGIN'/sim.daidir -Wl,-rpath=./sim.daidir -Wl,-rpath=/usr/caen/vcs-2022.06/linux64/lib -L/usr/caen/vcs-2022.06/linux64/lib 
+LDFLAGS= -rdynamic  -Wl,-rpath='$$ORIGIN'/sim_key_expansion_stage.daidir -Wl,-rpath=./sim_key_expansion_stage.daidir -Wl,-rpath=/usr/caen/vcs-2022.06/linux64/lib -L/usr/caen/vcs-2022.06/linux64/lib 
 # Picarchive Flags
 PICLDFLAGS= -Wl,-rpath-link=./ 
 PIC_LD=ld
