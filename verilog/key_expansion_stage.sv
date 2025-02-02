@@ -4,7 +4,6 @@ module key_expansion_stage #(
     input  logic        clk,
     input  logic        rst,
     input  logic [127:0] in_key,
-    input  logic [3:0]   round_idx,  // valid values: 1 to 10
     output logic [127:0] out_key
 );
 
