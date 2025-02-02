@@ -43,6 +43,9 @@ sim:
 sim_shiftrows:
 	cd verilog; $(VV) $(VVOPTS) shiftRows.sv ../testbench/shiftrow_tb.sv; ./$@
 
+sim_key_expansion_stage:
+	cd verilog; $(VV) $(VVOPTS) key_expansion_stage.sv ../testbench/key_expansion_stage_tb.sv; ./$@
+
 verdi: 
 	cd verilog; $(VV) $(VVOPTS) -debug_access+r -kdb $(SIM_FILES) $(TESTBENCH); ./$@ -gui=verdi -verdi_opts "-ultra"
 

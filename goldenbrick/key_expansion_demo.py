@@ -91,6 +91,8 @@ def key_expansion(key_bytes):
     w = [0] * 44
     for i in range(4):
         w[i] = (key_bytes[4*i] << 24) | (key_bytes[4*i+1] << 16) | (key_bytes[4*i+2] << 8) | key_bytes[4*i+3]
+
+    print("Initial key: ", hex(w[0]))
     
     for i in range(4, 44):
         temp = w[i - 1]
