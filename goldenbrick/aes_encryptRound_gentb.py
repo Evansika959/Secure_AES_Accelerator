@@ -6,7 +6,7 @@ import binascii
 def print_state(label, data):
     print(f"{label}: {binascii.hexlify(data).decode()}")
 
-def aes_single_round(plaintext: bytes, key: bytes) -> bytes:
+def aes_single_round(plaintext: bytes, key: bytes, if_last_round: bool) -> bytes:
     """
     Perform a single round of AES encryption.
     Args:
@@ -44,13 +44,13 @@ def aes_single_round(plaintext: bytes, key: bytes) -> bytes:
 
     def shift_rows(state: bytearray):
         """Perform ShiftRows operation."""
-        state = state[::-1]   #reverse the state
+        # state = state[::-1]   #reverse the state
         rows = [state[i::4] for i in range(4)]  # Separate into rows
         for i, row in enumerate(rows):
             rows[i] = row[i:] + row[:i]  # Rotate left by row index
         state = bytearray(itertools.chain(*zip(*rows)))
-        return state[::-1]   #reverse the state
-
+        return state  #reverse the state
+    
     def gmul(a, b):
         """Multiply two numbers in GF(2^8)."""
         p = 0
@@ -81,10 +81,8 @@ def aes_single_round(plaintext: bytes, key: bytes) -> bytes:
         """Perform AddRoundKey operation."""
         return bytearray(s ^ k for s, k in zip(state, round_key))
 
-    # Step 1: Initial AddRoundKey
-    state = add_round_key(bytearray(plaintext), key)
 
-    print_state("After round_key:", state)
+    state = bytearray(plaintext)
 
     # Step 2: SubBytes
     state = sub_bytes(state)
@@ -97,9 +95,14 @@ def aes_single_round(plaintext: bytes, key: bytes) -> bytes:
     print_state("After shift_rows:", state)
 
     # Step 4: MixColumns
-    state = mix_columns(state)
+    if not if_last_round:
+        state = mix_columns(state)
+        print_state("After mix_columns:", state)
 
-    print_state("After mix_columns:", state)
+    # Step 1: Initial AddRoundKey
+    state = add_round_key(state, key)
+    print_state("After round_key:", state)
+
 
     # For demonstration, return state after one round
     return bytes(state)
@@ -108,10 +111,10 @@ def aes_single_round(plaintext: bytes, key: bytes) -> bytes:
 key = get_random_bytes(16)  # Random 128-bit key
 plaintext = get_random_bytes(16)  # Random 128-bit plaintext
 
-key = bytes.fromhex("000102030405060708090a0b0c0d0e0f")
-plaintext = bytes.fromhex("00112233445566778899aabbccddeeff")
+key = bytes.fromhex("d6aa74fdd2af72fadaa678f1d6ab76fe")
+plaintext = bytes.fromhex("00102030405060708090a0b0c0d0e0f0")
 
-result = aes_single_round(plaintext, key)
+result = aes_single_round(plaintext, key, False)
 
 print("Key:        ", key.hex())
 print("Plaintext:  ", plaintext.hex())

@@ -1,1 +1,3 @@
 verilog/inter*
+verilog/csrc/*
+verilog/sim.daidr/*

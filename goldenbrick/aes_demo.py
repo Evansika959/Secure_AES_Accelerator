@@ -126,7 +126,7 @@ def aes_step_by_step_demo():
     print("\n=== AES Encryption Completed ===")
 
 if __name__ == "__main__":
-    aes_step_by_step_demo()
-    # aes_encrypt_decrypt_demo()
+    # aes_step_by_step_demo()
+    aes_encrypt_decrypt_demo()
 
 
