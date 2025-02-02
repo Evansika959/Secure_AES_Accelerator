@@ -6,20 +6,12 @@ module encryptRound (
     output logic [127:0] out
 );
 
-logic [127:0] after_roundkey, after_subbytes, after_shiftrows;
-
-addRoundKey addRoundKey_inst (
-    // .clk(clk),
-    // .rst_n(rst_n),
-    .state(state),
-    .key(key),
-    .out(after_roundkey)
-);
+logic [127:0] after_mixcolumn, after_subbytes, after_shiftrows;
 
 subBytes subBytes_inst (
     // .clk(clk),
     // .rst_n(rst_n),
-    .state(after_roundkey),
+    .state(state),
     .out(after_subbytes)
 );
 
@@ -34,6 +26,14 @@ mixColumns mixColumns_inst (
     // .clk(clk),
     // .rst_n(rst_n),
     .state(after_shiftrows),
+    .out(after_mixcolumn)
+);
+
+addRoundKey addRoundKey_inst (
+    // .clk(clk),
+    // .rst_n(rst_n),
+    .state(after_mixcolumn),
+    .key(key),
     .out(out)
 );
 

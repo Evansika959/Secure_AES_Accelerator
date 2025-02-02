@@ -181,15 +181,15 @@ ARCH=linux64
 7
 1738440908 ../testbench/encryptRound_tb.sv
 1738440923 subBytes.sv
-1738470623 shiftRows.sv
+1738472334 shiftRows.sv
 1738440852 mixColumns.sv
 1737943095 sbox.sv
 1738440862 addRoundKey.sv
-1738440890 encryptRound.sv
+1738472784 encryptRound.sv
 4
 1654054205 /usr/caen/vcs-2022.06/linux64/lib/libvirsim.so
 1654053585 /usr/caen/vcs-2022.06/linux64/lib/liberrorinf.so
 1654053489 /usr/caen/vcs-2022.06/linux64/lib/libsnpsmalloc.so
 1654053565 /usr/caen/vcs-2022.06/linux64/lib/libvfs.so
-1738470729 sim.daidir
+1738472795 sim.daidir
 -1 partitionlib

@@ -1,7 +1,0 @@
-Command exited with non-zero status 255
-{"vcs1":{"timestamp_begin":1738440915.255332756, "rt":0.49, "ut":0.06, "st":0.07}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1738440914.207293475}
-{"VCS_COMP_START_TIME": 1738440914.207293475}
-{"VCS_COMP_END_TIME": 1738440915.860058783}
-{"VCS_USER_OPTIONS": "-o sim +v2k +vc -sverilog -timescale=1ns/1ps +vcs+lic+wait +multisource_int_delays +neg_tchk +incdir+ +plusarg_save +overlap +warn=noSDFCOM_UHICD,noSDFCOM_IWSBA,noSDFCOM_IANE,noSDFCOM_PONF -full64 -cc gcc +libext+.v+.vlib+.vh encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv subBytes.sv ../testbench/encryptRound_tb.sv"}
-{"vcs1": {"peak_mem": 377584}}

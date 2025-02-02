@@ -9,13 +9,13 @@
         "sbox",
         "QR1W3",
         "module",
-        3
+        2
     ],
     "tb_encryptRound": [
         "tb_encryptRound",
         "FDARw",
         "module",
-        2
+        3
     ],
     "...MASTER...": [
         "SIM",
