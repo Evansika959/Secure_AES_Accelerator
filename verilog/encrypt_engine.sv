@@ -1,4 +1,4 @@
-module encryptRound (
+module encrypt_engine (
     input clk,
     input rst_n,
     input start,
@@ -16,9 +16,9 @@ localparam PROCESS = 2;
 
 logic [1:0] fsm_state, next_fsm_state;
 
-logic [127:0]   stage_out_regs [9:0];
-logic [127:0]   stage_key_regs [9:0];
-logic           stage_valid   [9:0];
+logic [8:0] [127:0]   stage_out_regs ;
+logic [9:0] [127:0]   stage_key_regs ;
+logic [8:0]          stage_valid   ;
 logic           stage_in_valid;
 
 logic [127:0]   key_reg;
@@ -46,11 +46,10 @@ addRoundKey first_addRoundKey_inst (
 );
 
 // process initial key expansion
-key_expansion_stage #(.Round_idx(i)) key_expansion_stage_initial_inst (
+key_expansion_stage #(.Round_idx(0)) key_expansion_stage_initial_inst (
     .clk(clk),
     .rst(rst_n),
     .in_key(key_reg),
-    .round_idx(4'd0),
     .out_key(stage_key_regs[0])
 );
 
@@ -67,7 +66,7 @@ always_ff @(posedge clk or negedge rst_n) begin
 end
 
 // ===========================================================
-// process jey expansions
+// process key expansions
 genvar i;
 generate
     for (i = 1; i < 10; i = i + 1) begin : key_expansion
@@ -84,21 +83,17 @@ endgenerate
 encryptRound encryptRound_insts [9:0] (
     .clk(clk),
     .rst_n(rst_n),
-    .state({stage_out_regs[8:0],stage0_in}),
-    .in_valid({stage_valid[8:0],stage_in_valid}),
+    .state({stage_out_regs,stage0_in}),
+    .in_valid({stage_valid,stage_in_valid}),
     .key(stage_key_regs),
-    .out(stage_out_regs),
-    .out_valid(stage_valid)
+    .out({out,stage_out_regs}),
+    .out_valid({out_valid,stage_valid})
 );
-
-always_comb begin
-    out       = stage_out_regs[9];
-    out_valid = stage_valid[9];
-end
 
 // ===========================================================
 // state transfer function
 always_comb begin
+    next_fsm_state = fsm_state;
     case (fsm_state)
         INIT: begin
             if (set_key) begin
@@ -115,7 +110,7 @@ always_comb begin
                 next_fsm_state = INIT;
             end 
         end
-        default: next_fsm_state = state;
+        default: next_fsm_state = fsm_state;
     endcase
 end
 

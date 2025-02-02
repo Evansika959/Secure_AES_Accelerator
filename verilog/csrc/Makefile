@@ -8,7 +8,7 @@ VSRC=..
 TARGET_ARCH=
 
 # Choose name of executable 
-PRODUCTBASE=$(VSRC)/sim_key_expansion_stage
+PRODUCTBASE=$(VSRC)/verdi
 
 PRODUCT=$(PRODUCTBASE)
 
@@ -39,7 +39,7 @@ STDLIB =
 STRIPFLAGS= 
 
 PRE_LDFLAGS= # Loader Flags
-LDFLAGS= -rdynamic  -Wl,-rpath='$$ORIGIN'/sim_key_expansion_stage.daidir -Wl,-rpath=./sim_key_expansion_stage.daidir -Wl,-rpath=/usr/caen/vcs-2022.06/linux64/lib -L/usr/caen/vcs-2022.06/linux64/lib 
+LDFLAGS= -rdynamic  -Wl,-rpath='$$ORIGIN'/verdi.daidir -Wl,-rpath=./verdi.daidir -Wl,-rpath=/usr/caen/vcs-2022.06/linux64/lib -L/usr/caen/vcs-2022.06/linux64/lib 
 # Picarchive Flags
 PICLDFLAGS= -Wl,-rpath-link=./ 
 PIC_LD=ld
@@ -49,7 +49,7 @@ CRT0=
 # C run time startup
 CRTN=
 # Machine specific libraries
-SYSLIBS=-ldl  -lc -lm -lpthread -ldl
+SYSLIBS=/usr/caen/verdi-2022.06/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl
 
 # Default defines
 SHELL=/bin/sh

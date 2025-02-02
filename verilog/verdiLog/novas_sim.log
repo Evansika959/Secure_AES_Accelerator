@@ -1,0 +1,52 @@
+Invoking simulator...
+
+./verdi -sml=verdi +UVM_VERDI_TRACE=UVM_AWARE +fsdb+gate=off -ucli2Proc -ucli
+debImport "-i" "-simflow" "-dbdir" "./verdi.daidir"
+*Verdi* Loading libsscore_vcs202206.so
+
+FSDB Dumper for VCS, Release Verdi_T-2022.06, Linux x86_64/64bit, 05/29/2022
+(C) 1996 - 2022 by Synopsys, Inc.
+
+*Verdi* : Create FSDB file '/home/xinting/eecs627/Secure_AES_Accelerator/verilog/inter.fsdb'
+
+*Verdi* : Flush all FSDB Files at 0 ps.
+
+srcTBInvokeSim
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Feb  2 12:15 2025
+xterm-256color is Not a valid terminal...
+Verdi>fsdbDumpvars 1 "encrypt_engine_tb.dut.clk"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.rst_n"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.start"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.set_key"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.halt"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.state"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.key"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.out"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.out_valid"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.fsm_state"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.next_fsm_state"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage_out_regs"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage_key_regs"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage_valid"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage_in_valid"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.key_reg"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.after_addroundkey"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage0_in"  +all +trace_process;fsdbDumpflush 
+
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.clk).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.rst_n).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.start).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.set_key).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.halt).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.state).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.key).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.out).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.out_valid).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.fsm_state).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.next_fsm_state).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage_out_regs).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage_key_regs).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage_valid).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage_in_valid).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.key_reg).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.after_addroundkey).
+*Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage0_in).
+*Verdi* : Flush all FSDB Files at 0 ps.
+
+Verdi>run
+Time: 0 | Start: 0 | State: 00112233445566778899aabbccddeeff | Key: 000102030405060708090a0b0c0d0e0f | Out: 00000000000000000000000000000000 | Valid: 0
+Time: 20000 | Start: 1 | State: 00112233445566778899aabbccddeeff | Key: 000102030405060708090a0b0c0d0e0f | Out: 00000000000000000000000000000000 | Valid: 0
+Time: 125000 | Start: 1 | State: 00112233445566778899aabbccddeeff | Key: 000102030405060708090a0b0c0d0e0f | Out: f5ed645775fe03503c5771cad4966d49 | Valid: 1
+$finish called from file "../testbench/encrypt_engine_tb.sv", line 57.
+$finish at simulation time               210000
+Simulation complete, time is 210000 ps.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 210000 ps
+CPU Time:      1.900 seconds;       Data structure size:   0.3Mb
+Sun Feb  2 12:29:30 2025
+debExit

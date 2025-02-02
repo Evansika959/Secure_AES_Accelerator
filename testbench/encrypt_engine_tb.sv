@@ -1,6 +1,4 @@
-`timescale 1ns / 1ps
-
-module encryptRound_tb;
+module encrypt_engine_tb;
 
     // Testbench signals
     logic clk;
@@ -17,7 +15,7 @@ module encryptRound_tb;
     always #5 clk = ~clk;
 
     // Instantiate the DUT (Device Under Test)
-    encryptRound dut (
+    encrypt_engine dut (
         .clk(clk),
         .rst_n(rst_n),
         .start(start),

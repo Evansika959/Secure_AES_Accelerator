@@ -1,3 +1,5 @@
 verilog/inter*
 verilog/csrc/*
 verilog/sim*
+verilog/nova*
+verilog/verdi*

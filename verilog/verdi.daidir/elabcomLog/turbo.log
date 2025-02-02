@@ -1,0 +1,5 @@
+Command Line: /usr/caen/vcs-2022.06/linux64/bin/elabcom -logdir /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir/elabcomLog -simvdaidir /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir -lib /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir/work -saveLevel -elab /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir/kdb -simflow -simdir /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir/kdb_libs -topfile /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir/.elabcomTopFile -ssv -ssy -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389
+uname(Linux caen-vnc-mi09.engin.umich.edu 4.18.0-553.34.1.el8_10.x86_64 #1 SMP Mon Dec 16 04:25:43 EST 2024 x86_64)
+[INFO] error/warning message 'C00388' has been suppressed.
+[INFO] error/warning message 'C00389' has been suppressed.
+au time 0.771859 0.018339 0.033863 delta 86327296 86327296 total 259465216 259465216
