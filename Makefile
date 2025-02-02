@@ -1,6 +1,7 @@
 STD_CELLS = /afs/umich.edu/class/eecs627/ibm13/artisan/2005q3v1/aci/sc-x/verilog/ibm13_neg.v
-TESTBENCH = ../testbench/encryptRound_tb.sv
-SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv subBytes.sv subWords.sv key_expansion_stage.sv
+TESTBENCH = ../testbench/encrypt_engine_tb.sv
+SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv subBytes.sv subWords.sv key_expansion_stage.sv \
+			encrypt_engine.sv
 # SIM_SYNTH_FILES = standard.vh ../syn/mult.syn.v
 
 VV         = vcs
