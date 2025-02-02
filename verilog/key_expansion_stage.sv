@@ -2,7 +2,7 @@ module key_expansion_stage #(
     parameter int Round_idx = 1
 )(
     input  logic        clk,
-    input  logic        rst,
+    input  logic        rst_n,
     input  logic [127:0] in_key,
     output logic [127:0] out_key
 );
@@ -51,8 +51,8 @@ always_comb begin
 end
 
 // Register the computed key
-always_ff @(posedge clk or posedge rst) begin
-if (rst)
+always_ff @(posedge clk or negedge rst_n) begin
+if (!rst_n)
     out_key <= 128'b0;
 else
     out_key <= next_round_key;

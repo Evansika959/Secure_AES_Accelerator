@@ -48,7 +48,7 @@ addRoundKey first_addRoundKey_inst (
 // process initial key expansion
 key_expansion_stage #(.Round_idx(0)) key_expansion_stage_initial_inst (
     .clk(clk),
-    .rst(rst_n),
+    .rst_n(rst_n),
     .in_key(key_reg),
     .out_key(stage_key_regs[0])
 );
@@ -72,7 +72,7 @@ generate
     for (i = 1; i < 10; i = i + 1) begin : key_expansion
         key_expansion_stage #(.Round_idx(i)) key_expansion_stage_inst (
             .clk(clk),
-            .rst(rst_n),
+            .rst_n(rst_n),
             .in_key(stage_key_regs[i-1]),
             .out_key(stage_key_regs[i])
         );
