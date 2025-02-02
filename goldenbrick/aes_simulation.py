@@ -242,10 +242,9 @@ def main():
     
     print("\nFinal Ciphertext:", ciphertext.hex())
 
-    mat =bytes_to_matrix(plaintext)
-    for row in mat:
-        print(' '.join(f"{b:02x}" for b in row))
-
+    mat = bytes_to_matrix(plaintext)
+    
+    mat = shift_rows(mat)
     print(matrix_to_bytes(mat).hex())
 
     ans = ""

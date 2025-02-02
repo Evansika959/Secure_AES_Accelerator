@@ -111,8 +111,8 @@ def aes_single_round(plaintext: bytes, key: bytes, if_last_round: bool) -> bytes
 key = get_random_bytes(16)  # Random 128-bit key
 plaintext = get_random_bytes(16)  # Random 128-bit plaintext
 
-key = bytes.fromhex("d6aa74fdd2af72fadaa678f1d6ab76fe")
-plaintext = bytes.fromhex("00102030405060708090a0b0c0d0e0f0")
+key = bytes.fromhex("000102030405060708090a0b0c0d0e0f")
+plaintext = bytes.fromhex("00112233445566778899aabbccddeeff")
 
 result = aes_single_round(plaintext, key, False)
 
