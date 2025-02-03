@@ -2,4 +2,4 @@ Command Line: /usr/caen/vcs-2022.06/linux64/bin/elabcom -logdir /home/xinting/ee
 uname(Linux caen-vnc-mi09.engin.umich.edu 4.18.0-553.34.1.el8_10.x86_64 #1 SMP Mon Dec 16 04:25:43 EST 2024 x86_64)
 [INFO] error/warning message 'C00388' has been suppressed.
 [INFO] error/warning message 'C00389' has been suppressed.
-au time 0.771859 0.018339 0.033863 delta 86327296 86327296 total 259465216 259465216
+au time 1.262613 0.019683 0.031246 delta 86327296 86327296 total 259465216 259465216

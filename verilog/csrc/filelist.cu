@@ -4,12 +4,20 @@ ifeq ($(LDVERSION), 0)
 endif
 
 ARCHIVE_OBJS=
-ARCHIVE_OBJS += _755231_archive_1.so
-_755231_archive_1.so : archive.12/_755231_archive_1.a
+ARCHIVE_OBJS += _875458_archive_1.so
+_875458_archive_1.so : archive.23/_875458_archive_1.a
 	@$(AR) -s $<
-	@$(PIC_LD) -shared  -Bsymbolic $(LD_NORELAX_FLAG)  -o .//../verdi.daidir//_755231_archive_1.so --whole-archive $< --no-whole-archive
+	@$(PIC_LD) -shared  -Bsymbolic $(LD_NORELAX_FLAG)  -o .//../sim_key_expansion_stage.daidir//_875458_archive_1.so --whole-archive $< --no-whole-archive
 	@rm -f $@
-	@ln -sf .//../verdi.daidir//_755231_archive_1.so $@
+	@ln -sf .//../sim_key_expansion_stage.daidir//_875458_archive_1.so $@
+
+
+ARCHIVE_OBJS += _prev_archive_1.so
+_prev_archive_1.so : archive.23/_prev_archive_1.a
+	@$(AR) -s $<
+	@$(PIC_LD) -shared  -Bsymbolic $(LD_NORELAX_FLAG)  -o .//../sim_key_expansion_stage.daidir//_prev_archive_1.so --whole-archive $< --no-whole-archive
+	@rm -f $@
+	@ln -sf .//../sim_key_expansion_stage.daidir//_prev_archive_1.so $@
 
 
 
@@ -25,9 +33,11 @@ $(O0_OBJS) : %.o: %.c
 
 %.o: %.c
 	$(CC_CG) $(CFLAGS_CG) -c -o $@ $<
+
 CU_UDP_OBJS = \
 
 
+CU_UDP_OBJS += 
 CU_LVL_OBJS = \
 SIM_l.o 
 

@@ -1,49 +1,61 @@
-Thread 2 (Thread 0x7fffebe93700 (LWP 743216)):
-#0  0x00007fffeeae5098 in nanosleep () at /lib64/libc.so.6
-#1  0x00007fffeeae4f9e in sleep () at /lib64/libc.so.6
-#2  0x0000000009b96a76 in LicenseCheckUtility ()
-#3  0x000000000c8d2989 in sdp_wrap_start_routine ()
-#4  0x00007ffff5a261ca in start_thread () at /lib64/libpthread.so.0
-#5  0x00007fffeea168d3 in clone () at /lib64/libc.so.6
-Thread 1 (Thread 0x7ffff7ec1140 (LWP 743189)):
-#0  0x00007fffeeb10a0e in __waitpid_nocancel () at /lib64/libc.so.6
-#1  0x00007fffeea64595 in _IO_proc_close@@GLIBC_2.2.5 () at /lib64/libc.so.6
-#2  0x00007fffeea6ecdc in __GI__IO_file_close_it () at /lib64/libc.so.6
-#3  0x00007fffeea6298f in fclose@@GLIBC_2.2.5 () at /lib64/libc.so.6
-#4  0x000000000c9ab059 in _sys_pclose ()
-#5  0x000000000c94b257 in system ()
-#6  0x000000000c937f1f in sysiCrash ()
-#7  0x000000000c938458 in actUnexpectAction ()
-#8  0x000000000c9384c2 in catchSignalCB ()
-#9  0x000000000b71049f in _anrep_handler_signal ()
-#10 0x00007fffeea2b5b0 in <signal handler called> () at /lib64/libc.so.6
-#11 0x0000000004746fc6 in vgif_viewer_db_t::get_hdl_type() const ()
-#12 0x0000000004716097 in vgif_tab_page_t::is_mdb_tab() const ()
-#13 0x00000000047160e7 in vgif_tab_page_t::setup_msg_filter() ()
-#14 0x0000000004734ea2 in vgif_tab_page_t::vgif_tab_page_t(Allocator_R&, char const*, char const*, vgif_output_form_t*, char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&, int, char const*, char, qBaseJob_C*, slhMDBLogInfo_S*) ()
-#15 0x00000000049fdda4 in vgif_ones_tab_t::vgif_ones_tab_t(Allocator_R&, char const*, char const*, vgif_output_form_t*, char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&, int) ()
-#16 0x00000000047354c5 in vgif_tab_facty_t::create_tab_page(Allocator_R&, char const*, char const*, vgif_output_form_t*, char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&, char const*, char, char, char, slhMDBLogInfo_S*) ()
-#17 0x00000000046be307 in vgif_output_form_t::add_empty_page(char const*, char) ()
-#18 0x00000000049f778a in vgif_ones_form_t::ones_add_tab(int&) ()
-#19 0x00000000049fbce2 in vgif_ones_form_t::add_new_tab() ()
-#20 0x00000000049fbe03 in vgif_ones_form_t::reset() ()
-#21 0x00000000049fbe51 in vgif_ones_form_t::import_design_action(char&) ()
-#22 0x00000000049c4214 in vgif_cntr_t::output_form_import_design_action() ()
-#23 0x000000000469c76d in npi_vgif_form_import_design_action() ()
-#24 0x00000000043a5a17 in dsync_event_handler_t::onImportDesignEnd(nvfwAppEventDataExtend_C*) ()
-#25 0x00000000083d01f3 in nvfwDesignEventCenter_C::onImportDesignEnd() ()
-#26 0x000000000577d721 in hbDoAfterImpDsg(_wtHierBrowserRec*, impFileIO*, char*) ()
-#27 0x000000000579b5a1 in hbImpDsgGuiUtil::DoAfterImportDesign(impFileIO*, char*) ()
-#28 0x00000000057a1860 in hbImpFileIO::ImportDesign(hbImpDsgUtil&, nvfwArgArray&, char*, SimImportArgUtil_C*) ()
-#29 0x000000000577d40a in hbImportFromCmdLine(_wtHierBrowserRec*, nvfwArgArray&, char*, SimImportArgUtil_C*) ()
-#30 0x000000000352b669 in debMain(prodMainStruct*, int, char**) ()
-#31 0x000000000353014b in main ()
+Thread 3 (Thread 0x7fffe51cc700 (LWP 761426)):
+#0  0x00007fffef3621ff in select () at /lib64/libc.so.6
+#1  0x000000000b1a37ea in NotifierThreadProc ()
+#2  0x000000000b23f846 in sdp_wrap_start_routine ()
+#3  0x00007ffff642c1ca in start_thread () at /lib64/libpthread.so.0
+#4  0x00007fffef2668d3 in clone () at /lib64/libc.so.6
+Thread 2 (Thread 0x7fffec0ef700 (LWP 761380)):
+#0  0x00007fffef335098 in nanosleep () at /lib64/libc.so.6
+#1  0x00007fffef334f9e in sleep () at /lib64/libc.so.6
+#2  0x00000000087b1074 in LicenseCheckUtility ()
+#3  0x000000000b23f846 in sdp_wrap_start_routine ()
+#4  0x00007ffff642c1ca in start_thread () at /lib64/libpthread.so.0
+#5  0x00007fffef2668d3 in clone () at /lib64/libc.so.6
+Thread 1 (Thread 0x7ffff7ed2340 (LWP 761368)):
+#0  0x00007fffef360a0e in __waitpid_nocancel () at /lib64/libc.so.6
+#1  0x00007fffef2b4595 in _IO_proc_close@@GLIBC_2.2.5 () at /lib64/libc.so.6
+#2  0x00007fffef2becdc in __GI__IO_file_close_it () at /lib64/libc.so.6
+#3  0x00007fffef2b298f in fclose@@GLIBC_2.2.5 () at /lib64/libc.so.6
+#4  0x000000000b33f7c9 in _sys_pclose ()
+#5  0x000000000b2ddfb7 in system ()
+#6  0x000000000b2cc9ca in sysiCrash ()
+#7  0x000000000b2ccf03 in actUnexpectAction ()
+#8  0x000000000b2ccf4b in catchSignalCB ()
+#9  0x000000000a31ff57 in _anrep_handler_signal ()
+#10 0x00007fffef27b5b0 in <signal handler called> () at /lib64/libc.so.6
+#11 0x0000000007fdecab in LogHdl_C::_SetLine2BlockValue(int, int, int) ()
+#12 0x0000000007fcd768 in InteractiveSmartLogHdl_C::_ParseOneLineSimMsgBySml(char const*, int, char) ()
+#13 0x0000000007fc791c in InteractiveSmartLogHdl_C::_ParseSimMsgSml(char const*, int) ()
+#14 0x0000000007fc79f2 in InteractiveSmartLogHdl_C::Parse(char const*, int) ()
+#15 0x0000000003e105a0 in vgif_inter_tab_t::append_text(ulString&, char) ()
+#16 0x00000000041a3775 in vgif_inter_form_base_t::append_text(ulString&, char) ()
+#17 0x00000000054590a2 in tbvAppendTextSmartLog(ulString&, char) ()
+#18 0x00000000053fbccc in tbvCommandWin::AppendTextString(ulString&, char) ()
+#19 0x00000000053fc021 in tbvCommandWin::AppendTextStringWithBreakLine(ulString&, char, char) ()
+#20 0x00000000055cfd4f in tbvTransBase_V::onProcessing(tbsimSubjectCenter_C::tbsimEventReason_E, tbsimResultBase_S*) ()
+#21 0x00000000081de3b8 in tbsimTransactCmdSet::updateProcessing(EventInfo_C) ()
+#22 0x00000000081e071a in tbsimSubjectCenter_C::TriggerEvent(int, EventInfo_C*) ()
+#23 0x000000000811a556 in TriggerInProgress(tbsimBaseSimCmdUnit_C*, ulString&) ()
+#24 0x000000000812e916 in _InitFsdbSettingTimerCB(char*, unsigned long*) ()
+#25 0x00000000081199e0 in tbsimBaseSimCmdUnit_C::_AddTimer(void (*)(char*, unsigned long*), int) ()
+#26 0x000000000813fc3a in tbsimVCSInitFsdbSettingSimCmdUnit_C::bDoSimCmd(ulString&) ()
+#27 0x00000000080f9ec7 in tbsimRealSimulatorExecuteSimHdl_C::tbsimExeInitFsdbSetting(int, EventInfo_C*) ()
+#28 0x000000000812c065 in _InvokeSimTimerCB(char*, unsigned long*) ()
+#29 0x0000000008784984 in qwTimerProc ()
+#30 0x00007ffff083e668 in XtAppProcessEvent () at /lib64/libXt.so.6
+#31 0x00000000085ff2b1 in QtMotif::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
+#32 0x00007ffff5331e2f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () at /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#33 0x00007ffff53320c8 in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () at /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#34 0x00007ffff5335e3c in QCoreApplication::exec() () at /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtCore.so.4
+#35 0x00000000085d91bd in QwApplication::exec() ()
+#36 0x0000000002ff64c1 in FUNC_DEBMAIN_LOOP() ()
+#37 0x0000000002ffeb74 in main ()
 ---------------
-branchName=Verdi_V-2023.12-SP2-1 cnlDate=-- Mon Jul 15 02:51:00 PDT 2024 cnlEnv=Linux.0/64bit
+branchName=Verdi_T-2022.06 cnlDate=-- Sun May 29 04:59:55 PDT 2022 cnlEnv=Linux.0/64bit
 uname(Linux caen-vnc-mi09.engin.umich.edu 4.18.0-553.34.1.el8_10.x86_64 #1 SMP Mon Dec 16 04:25:43 EST 2024 x86_64)
 ---------------
-Process Size: 877682688 bytes
+Process Size: 796708864 bytes
 verdi detected abnormal termination.
 Log information written to
-/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sysinfo_Feb02_1157.tar.
+/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sysinfo_Feb02_1726.tar.
 Please send this file to customer support.

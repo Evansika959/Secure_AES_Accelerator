@@ -39,7 +39,7 @@ supported pixmap formats:
     depth 24, bits_per_pixel 32, scanline_pad 32
     depth 32, bits_per_pixel 32, scanline_pad 32
 keycode range:    minimum 8, maximum 255
-focus:  window 0x3c00303, revert to PointerRoot
+focus:  window 0x4000c8a, revert to PointerRoot
 number of extensions:    23
     BIG-REQUESTS
     Composite
@@ -84,7 +84,7 @@ screen #0:
     LeaveWindowMask          KeymapStateMask          StructureNotifyMask      
     SubstructureNotifyMask   SubstructureRedirectMask PropertyChangeMask       
     ColormapChangeMask       
-  number of visuals:    390
+  number of visuals:    360
   default visual id:  0x21
   visual:
     visual id:    0x396
@@ -2593,216 +2593,6 @@ screen #0:
     red, green, blue masks:    0xff0000, 0xff00, 0xff
     significant bits in color specification:    8 bits
   visual:
-    visual id:    0x4d
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x4fc
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x4fd
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x4fe
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x4ff
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x500
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x501
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x502
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x503
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x504
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x505
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x506
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x507
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x508
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x509
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x50a
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x50b
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x50c
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x50d
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x50e
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x50f
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x510
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x511
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x512
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x513
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x514
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x515
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x516
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x517
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
-    visual id:    0x518
-    class:    TrueColor
-    depth:    32 planes
-    available colormap entries:    256 per subfield
-    red, green, blue masks:    0xff0000, 0xff00, 0xff
-    significant bits in color specification:    8 bits
-  visual:
     visual id:    0x21
     class:    TrueColor
     depth:    24 planes
@@ -2819,40 +2609,55 @@ screen #0:
 -------------	end(xdpyinfo)     -------------
 ==========	Environment Variables	==========
 VCS_UCLI_STDIN_BLOCKING=1
+TMIARCH=RH_64
+VCS_TARGET_ARCH=linux64
 LC_ALL=C
 LS_COLORS=rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.zst=38;5;9:*.tzst=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.wim=38;5;9:*.swm=38;5;9:*.dwm=38;5;9:*.esd=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.mjpg=38;5;13:*.mjpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
-LD_LIBRARY_PATH=/usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/bin:/usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt:/usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/tbb:/usr/caen/verdi-2023.12-SP2-1/etc/lib/libstdc++/LINUXAMD64:/usr/caen/verdi-2023.12-SP2-1/share/NPI/lib/LINUXAMD64:/usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/zebu:
+LD_LIBRARY_PATH=/usr/caen/verdi-2022.06/platform/LINUXAMD64/bin:/usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt:/usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/tbb:/usr/caen/verdi-2022.06/etc/lib/libstdc++/LINUXAMD64:/usr/caen/verdi-2022.06/share/NPI/lib/LINUXAMD64:
 NOVAS_VERDI_SVTB_BETA=1
-SYS_INST_DIR=/usr/caen/verdi-2023.12-SP2-1
-__LMOD_REF_COUNT_PATH=/usr/um/vscode-1.92.2/code/bin:1;/usr/local/bin:1;/usr/local/sbin:1;/usr/bin:1;/usr/sbin:1;/usr/um/bin:1;/usr/caen/bin:1;/home/xinting/bin:1
-_ModuleTable002_=L2V0Yy9zY2wvbW9kdWxlZmlsZXMiLCAiL2V0Yy9tb2R1bGVmaWxlcyIKLCAiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcyIsICIvdXNyL2NhZW4vbWlzYy9jbGFzcy9tb2R1bGVzIgosICIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL0xpbnV4IiwgIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvQ29yZSIsICIvdXNyL3NoYXJlL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIiwKfSwKc3lzdGVtQmFzZU1QQVRIID0gIi9ldGMvc2NsL21vZHVsZWZpbGVzOi9ldGMvc2NsL21vZHVsZWZpbGVzOi9ldGMvbW9kdWxlZmlsZXM6L3Vzci9zaGFyZS9tb2R1bGVmaWxlczovdXNyL2NhZW4vbWlzYy9tb2R1bGVzOi91c3IvY2Flbi9taXNjL2NsYXNzL21vZHVsZXM6L3Vzci9zaGFyZS9tb2R1bGVmaWxl
-XKEYSYMDB=/usr/caen/verdi-2023.12-SP2-1/etc/access/XKeysymDB2.1
+SYS_INST_DIR=/usr/caen/verdi-2022.06
+__LMOD_REF_COUNT_PATH=/usr/caen/verdi-2022.06/bin:1;/usr/caen/xa-2022.06/bin:1;/usr/caen/primetime-2022.03-SP3/bin:1;/usr/caen/vcs-2022.06/bin:1;/usr/caen/hspice-2022.06/hspice/bin:1;/usr/caen/hspice-2022.06/hspice/GNU/linux64/gcc/bin:1;/usr/caen/hspice-2022.06/hspice/linux64:1;/usr/bin:2;/usr/ucb/bin:1;/usr/caen/innovus-21.37.000/tools/bin:1;/usr/caen/synopsys-lib-compiler-2022.03-SP3/bin:1;/usr/caen/synopsys-synth-2022.03-SP3/bin:1;/usr/caen/calibre-2021.3_15.9/aok/bin:1;/usr/caen/spectre-21.10.415/tools/bin:1;/usr/caen/ic-23.10.020/tools/bin:1;/usr/caen/ic-23.10.020/tools/dfII/bin:1;/usr/caen/ic-23.10.020/tools/leapfrog/bin:1;/usr/um/vscode-1.92.2/code/bin:1;/usr/local/bin:1;/usr/local/sbin:1;/usr/sbin:1;/usr/um/bin:1;/usr/caen/bin:1;/home/xinting/bin:1
+_ModuleTable002_=cmUgPSB7CmZuID0gIi91c3IvY2Flbi9taXNjL21vZHVsZXMvY2FsaWJyZS8yMDIxLjNfMTUuOSIsCmZ1bGxOYW1lID0gImNhbGlicmUvMjAyMS4zXzE1LjkiLApsb2FkT3JkZXIgPSA0LApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMSwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gImNhbGlicmUvMjAyMS4zXzE1LjkiLAp3ViA9ICJeMDAwMDIwMjEuMDAwMDAwMDAzLipfLjAwMDAwMDAxNS4wMDAwMDAwMDkuKnpmaW5hbCIsCn0sCmVlY3M2MjcgPSB7CmZuID0gIi91c3IvY2Flbi9taXNjL2NsYXNzL21vZHVsZXMvZWVjczYyNy93MjUiLApmdWxsTmFtZSA9ICJlZWNzNjI3L3cyNSIsCmxvYWRPcmRlciA9IDEzLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMCwKc3Rh
+MGLS_LICENSE_FILE=/usr/caen/FLEXlm/data/license.dat.mentor
+ARCH=linux64
+XKEYSYMDB=/usr/caen/verdi-2022.06/etc/access/XKeysymDB2.1
 XDG_MENU_PREFIX=gnome-
-NOVAS_TCL_LIBRARY=/usr/caen/verdi-2023.12-SP2-1/etc/access/tcl86_library
+HSP_GCC_VERSION=9.2.0
+NOVAS_TCL_LIBRARY=/usr/caen/verdi-2022.06/etc/access/tcl86_library
 LANG=C
 GDM_LANG=en_US.UTF-8
 HISTCONTROL=ignoredups
+SNPS_64=1
+_ModuleTable008_=PSAxMiwKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDEsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJ2ZXJkaS8yMDIyLjA2IiwKd1YgPSAiMDAwMDAyMDIyLjAwMDAwMDAwNi4qemZpbmFsIiwKfSwKdnNjb2RlID0gewpmbiA9ICIvdXNyL2NhZW4vbWlzYy9tb2R1bGVzL3ZzY29kZS8xLjkyLjIubHVhIiwKZnVsbE5hbWUgPSAidnNjb2RlLzEuOTIuMiIsCmxvYWRPcmRlciA9IDEsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAwLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAidnNjb2RlIiwKd1YgPSAiXjAwMDAwMDAxLjAwMDAwMDA5Mi4wMDAwMDAwMDIuKnpmaW5hbCIsCn0sCnhhID0gewpmbiA9ICIvdXNyL2NhZW4vbWlzYy9tb2R1bGVzL3hhLzIwMjIu
 DISPLAY=127.0.0.1:51
 HOSTNAME=caen-vnc-mi09.engin.umich.edu
+TFV_FSDB_MIS_RCA_MODE=1
 NOVAS_VERDI_SVTB_ALPHA=1
 VCS_STACK_EXEC=true
 OLDPWD=/home/xinting/eecs627/Secure_AES_Accelerator
 ORIGINAL_XDG_CURRENT_DESKTOP=GNOME
+HSP_HOME=/usr/caen/hspice-2022.06/hspice
+TFV_FSDB_MIS_BATCH_DUMP_TDC=0
 VERDI_SVTB_ALPHA=1
+HSP_SIGMA_AMP=/usr/caen/hspice-2022.06/hspice/linux64/python/AVA/ava
 COLORTERM=truecolor
 FPATH=/usr/share/lmod/lmod/init/ksh_funcs
 LAMMPS_POTENTIALS=/usr/share/lammps/potentials
+_ModuleTable007_=b3BzeXMtc3ludGgvMjAyMi4wMy1TUDMiLAp3ViA9ICIwMDAwMDIwMjIuMDAwMDAwMDAzLipzcC4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCnZjcyA9IHsKZm4gPSAiL3Vzci9jYWVuL21pc2MvbW9kdWxlcy92Y3MvMjAyMi4wNi5sdWEiLApmdWxsTmFtZSA9ICJ2Y3MvMjAyMi4wNiIsCmxvYWRPcmRlciA9IDksCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAxLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAidmNzLzIwMjIuMDYiLAp3ViA9ICIwMDAwMDIwMjIuMDAwMDAwMDA2Lip6ZmluYWwiLAp9LAp2ZXJkaSA9IHsKZm4gPSAiL3Vzci9jYWVuL21pc2MvbW9kdWxlcy92ZXJkaS8yMDIyLjA2Lmx1YSIsCmZ1bGxOYW1lID0gInZlcmRpLzIwMjIuMDYiLApsb2FkT3JkZXIg
 MAKE_TERMOUT=/dev/pts/4
 USERNAME=xinting
 SNPSLMD_LICENSE_FILE=/usr/caen/FLEXlm/data/license.dat.synopsys
 __GL_SHADER_DISK_CACHE=0
 FLEXLM_BORROWFILE=/home/xinting/.caen-vnc-mi09.engin.umich.edu-borrow.txt
+__LMOD_REF_COUNT_LM_LICENSE_FILE=license.dat:1;/usr/caen/FLEXlm/data/license.dat.synopsys:1
 CHROME_DESKTOP=code-url-handler.desktop
 VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+CDS_Netlisting_Mode=Analog
 NO_AT_BRIDGE=1
 SIMV_DAIDIR_PATH=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/./verdi.daidir
+_ModuleTable004_=LjAwMCIsCmxvYWRPcmRlciA9IDcsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAxLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiaW5ub3Z1cy8yMS4zNy4wMDAiLAp3ViA9ICJeMDAwMDAwMjEuMDAwMDAwMDM3Lip6ZmluYWwiLAp9LApwcmltZXRpbWUgPSB7CmZuID0gIi91c3IvY2Flbi9taXNjL21vZHVsZXMvcHJpbWV0aW1lLzIwMjIuMDMtU1AzLmx1YSIsCmZ1bGxOYW1lID0gInByaW1ldGltZS8yMDIyLjAzLVNQMyIsCmxvYWRPcmRlciA9IDEwLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMSwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInByaW1ldGltZS8yMDIyLjAzLVNQMyIsCndWID0gIl4wMDAwMjAyMi4wMDAwMDAwMDMuKnNwLjAwMDAwMDAw
 MFLAGS=
-SYNOPSYS_SIM=/usr/caen/vcs-2023.12-SP2-1
+SYNOPSYS_SIM=/usr/caen/vcs-2022.06
 which_declare=declare -f
 XDG_SESSION_ID=3349
 NOVAS_SYNC_MOTIF_DISP=
@@ -2860,7 +2665,8 @@ USER=xinting
 SIGNAL_BASED_BA=0
 DESKTOP_SESSION=gnome
 VCS_EXEC_DONE=1
-__LMOD_REF_COUNT_MODULEPATH=/usr/caen/misc/modules:3;/etc/scl/modulefiles:2;/etc/modulefiles:1;/usr/share/modulefiles:1;/usr/caen/misc/class/modules:2;/usr/share/modulefiles/Linux:1;/usr/share/modulefiles/Core:1;/usr/share/lmod/lmod/modulefiles/Core:1
+SYNOPSYS_LC_ROOT=/usr/caen/synopsys-lib-compiler-2022.03-SP3
+__LMOD_REF_COUNT_MODULEPATH=/etc/scl/modulefiles:3;/usr/caen/misc/modules:4;/etc/modulefiles:1;/usr/share/modulefiles:1;/usr/caen/misc/class/modules:3;/usr/share/modulefiles/Linux:1;/usr/share/modulefiles/Core:1;/usr/share/lmod/lmod/modulefiles/Core:1
 GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/35bc3a88_e794_4a03_8e77_62fd3173b397
 PWD=/home/xinting/eecs627/Secure_AES_Accelerator/verilog
 HOME=/home/xinting
@@ -2873,81 +2679,108 @@ TERM_PROGRAM_VERSION=1.92.2
 MSI2LMP_LIBRARY=/usr/share/lammps/frc_files
 LMOD_VERSION=8.7.55
 VCS_PATHMAP_PRELOAD_DONE=1
-XNLSPATH=/usr/caen/verdi-2023.12-SP2-1/etc/access/nls
-TCL_LIBRARY=/usr/caen/verdi-2023.12-SP2-1/etc/access/tcl86_library
+SPAPI_AHDL_INCLUDE=/usr/caen/hspice-2022.06/hspice/include
+XNLSPATH=/usr/caen/verdi-2022.06/etc/access/nls
+TCL_LIBRARY=/usr/caen/verdi-2022.06/etc/access/tcl86_library
 XDG_SESSION_TYPE=x11
 KRB5CCNAME=KEYRING:persistent:114356500
 FSDB_SVA_STATUS=1
+MGC_HOME=/usr/caen/calibre-2021.3_15.9/aok
 BASH_ENV=/usr/share/lmod/lmod/init/bash
 XDG_DATA_DIRS=/home/xinting/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/share:/usr/local/share:/usr/caen/misc/menus
 FSDB_VHDL_PROTECTED=1
+CDS_INSTALL_DIR=/usr/caen/ic-23.10.020/tools/dfII
 NOVAS_VERDI_TB_HT=1
+installdir=/usr/caen/hspice-2022.06/hspice
+CDSHOME=/usr/caen/ic-23.10.020
+SNPS_PLATFORM=linux64
 XDG_SESSION_DESKTOP=gnome
+DD_DONT_DO_OS_LOCKS=SET
 GJS_DEBUG_OUTPUT=stderr
-SPS_XFONT_PATH=/usr/caen/verdi-2023.12-SP2-1/XFont
+SPS_XFONT_PATH=/usr/caen/verdi-2022.06/XFont
 LMOD_sys=Linux
-_ModuleTable001_=X01vZHVsZVRhYmxlXyA9IHsKTVR2ZXJzaW9uID0gMywKY19yZWJ1aWxkVGltZSA9IDcyMDAuMCwKY19zaG9ydFRpbWUgPSAwLjAxMTAyNDk1MTkzNDgxNCwKZGVwdGhUID0ge30sCmZhbWlseSA9IHt9LAptVCA9IHsKdnNjb2RlID0gewpmbiA9ICIvdXNyL2NhZW4vbWlzYy9tb2R1bGVzL3ZzY29kZS8xLjkyLjIubHVhIiwKZnVsbE5hbWUgPSAidnNjb2RlLzEuOTIuMiIsCmxvYWRPcmRlciA9IDEsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAwLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAidnNjb2RlIiwKd1YgPSAiXjAwMDAwMDAxLjAwMDAwMDA5Mi4wMDAwMDAwMDIuKnpmaW5hbCIsCn0sCn0sCm1wYXRoQSA9IHsKIi91c3IvY2Flbi9taXNjL21vZHVsZXMiLCAi
-LOADEDMODULES=vscode/1.92.2
-QTWEBENGINE_CHROMIUM_FLAGS=--log-level=3
-_ModuleTable003_=cy9MaW51eDovdXNyL3NoYXJlL21vZHVsZWZpbGVzL0NvcmU6L3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZTovdXNyL2NhZW4vbWlzYy9tb2R1bGVzOi91c3IvY2Flbi9taXNjL2NsYXNzL21vZHVsZXMiLAp9Cg==
+_ModuleTable010_=b3JlIiwgIi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiCiwgIi91c3IvY2Flbi9taXNjL21vZHVsZXMiLCAiL3Vzci9jYWVuL21pc2MvY2xhc3MvbW9kdWxlcyIsCn0sCnN5c3RlbUJhc2VNUEFUSCA9ICIvZXRjL3NjbC9tb2R1bGVmaWxlczovZXRjL3NjbC9tb2R1bGVmaWxlczovZXRjL21vZHVsZWZpbGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXM6L3Vzci9jYWVuL21pc2MvbW9kdWxlczovdXNyL2NhZW4vbWlzYy9jbGFzcy9tb2R1bGVzOi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvTGludXg6L3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9Db3JlOi91c3Ivc2hhcmUvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3Vzci9jYWVuL21pc2MvbW9kdWxlczovdXNy
+_ModuleTable001_=X01vZHVsZVRhYmxlXyA9IHsKTVR2ZXJzaW9uID0gMywKY19yZWJ1aWxkVGltZSA9IDcyMDAuMCwKY19zaG9ydFRpbWUgPSAwLjAxMTAyNDk1MTkzNDgxNCwKZGVwdGhUID0ge30sCmZhbWlseSA9IHt9LAptVCA9IHsKWyJjYWRlbmNlLWljIl0gPSB7CmZuID0gIi91c3IvY2Flbi9taXNjL21vZHVsZXMvY2FkZW5jZS1pYy8yMy4xMC4wMjAubHVhIiwKZnVsbE5hbWUgPSAiY2FkZW5jZS1pYy8yMy4xMC4wMjAiLApsb2FkT3JkZXIgPSAyLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMSwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gImNhZGVuY2UtaWMvMjMuMTAuMDIwIiwKd1YgPSAiXjAwMDAwMDIzLjAwMDAwMDAxMC4wMDAwMDAwMjAuKnpmaW5hbCIsCn0sCmNhbGli
+LOADEDMODULES=vscode/1.92.2:cadence-ic/23.10.020:spectre/21.10.415:calibre/2021.3_15.9:synopsys-synth/2022.03-SP3:synopsys-lib-compiler/2022.03-SP3:innovus/21.37.000:hspice/2022.06:vcs/2022.06:primetime/2022.03-SP3:xa/2022.06:verdi/2022.06:eecs627/w25
+_ModuleTable006_=bGVyLzIwMjIuMDMtU1AzIiwKbG9hZE9yZGVyID0gNiwKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDEsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJzeW5vcHN5cy1saWItY29tcGlsZXIvMjAyMi4wMy1TUDMiLAp3ViA9ICIwMDAwMDIwMjIuMDAwMDAwMDAzLipzcC4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sClsic3lub3BzeXMtc3ludGgiXSA9IHsKZm4gPSAiL3Vzci9jYWVuL21pc2MvbW9kdWxlcy9zeW5vcHN5cy1zeW50aC8yMDIyLjAzLVNQMy5sdWEiLApmdWxsTmFtZSA9ICJzeW5vcHN5cy1zeW50aC8yMDIyLjAzLVNQMyIsCmxvYWRPcmRlciA9IDUsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAxLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAic3lu
+_ModuleTable003_=dHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gImVlY3M2MjcvdzI1IiwKd1YgPSAiKncuMDAwMDAwMDI1Lip6ZmluYWwiLAp9LApoc3BpY2UgPSB7CmZuID0gIi91c3IvY2Flbi9taXNjL21vZHVsZXMvaHNwaWNlLzIwMjIuMDYubHVhIiwKZnVsbE5hbWUgPSAiaHNwaWNlLzIwMjIuMDYiLApsb2FkT3JkZXIgPSA4LApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMSwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gImhzcGljZS8yMDIyLjA2IiwKd1YgPSAiXjAwMDAyMDIyLjAwMDAwMDAwNi4qemZpbmFsIiwKfSwKaW5ub3Z1cyA9IHsKZm4gPSAiL3Vzci9jYWVuL21pc2MvbW9kdWxlcy9pbm5vdnVzLzIxLjM3LjAwMC5sdWEiLApmdWxsTmFtZSA9ICJpbm5vdnVzLzIxLjM3
 LMOD_ROOT=/usr/share/lmod
+CLS_CDSD_COMPATIBILITY_LOCKING=NO
 NOVAS_SIGNAL_BASED_BA=0
 MAIL=/var/spool/mail/xinting
 VERDI_TB_HT=1
+SYNOPSYS=/usr/caen/synopsys-synth-2022.03-SP3
 VSCODE_GIT_ASKPASS_MAIN=/opt/caen/um/vscode-1.92.2/code/resources/app/extensions/git/dist/askpass-main.js
-MODEXEC_MSG=
+CDS_LIC_FILE=/usr/caen/FLEXlm/data/license.dat.cadence
 LD_NOVERSION=1
-QT_PLUGIN_PATH=/usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/plugins
+QT_PLUGIN_PATH=/usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/plugins
 NOVAS_SIGNAL_BASE_EXTRACTION=1
 DISABLE_LIBRARY_MAP_CHECK=1
+_ModuleTable009_=MDYubHVhIiwKZnVsbE5hbWUgPSAieGEvMjAyMi4wNiIsCmxvYWRPcmRlciA9IDExLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMSwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInhhLzIwMjIuMDYiLAp3ViA9ICJeMDAwMDIwMjIuMDAwMDAwMDA2Lip6ZmluYWwiLAp9LAp9LAptcGF0aEEgPSB7CiIvZXRjL3NjbC9tb2R1bGVmaWxlcyIsICIvdXNyL2NhZW4vbWlzYy9tb2R1bGVzIiwgIi9ldGMvc2NsL21vZHVsZWZpbGVzIiwgIi9ldGMvbW9kdWxlZmlsZXMiLCAiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcyIsICIvdXNyL2NhZW4vbWlzYy9jbGFzcy9tb2R1bGVzIiwgIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvTGludXgiLCAiL3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9D
 TERM=xterm-256color
 VTE_VERSION=5204
 SHELL=/bin/bash
 FSDB_FILE=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/inter.fsdb
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=none
-_ModuleTable_Sz_=3
+_ModuleTable_Sz_=11
 LM_LICENSE_FILE=license.dat:/usr/caen/FLEXlm/data/license.dat.synopsys
+CDS_AUTO_64BIT=ALL
 XDG_CURRENT_DESKTOP=GNOME
-XLOCALEDIR=/usr/caen/verdi-2023.12-SP2-1/etc/access/locale
+XLOCALEDIR=/usr/caen/verdi-2022.06/etc/access/locale
+CDS_XVFB_PATH=/usr/caen/ic-23.10.020/xvfb-rhel8
 WAVE_REDRAW_ALLVC=1
 GNOME_TERMINAL_SERVICE=:1.72
 MAKELEVEL=1
-VERDI_HOME=/usr/caen/verdi-2023.12-SP2-1
+XARCH=linux64
+VERDI_HOME=/usr/caen/verdi-2022.06
+TFV_FSDB_MIS_BATCH_ENABLE_FSDB_GATE=1
+HSP_GCC=/usr/caen/hspice-2022.06/hspice/GNU/linux64/gcc/bin/gcc -m64
 SHLVL=7
 MAKE_TERMERR=/dev/pts/4
 VSCODE_GIT_IPC_HANDLE=/run/user/114356500/vscode-git-9c81758db8.sock
 NOVAS_LC_ALL=C
+CDPL_HOME=/usr/caen/hspice-2022.06/hspice/cdpl
 MANPATH=/usr/share/lmod/lmod/share/man:
 SIGNAL_BASE_EXTRACTION=1
-SPS_FONT_PATH=/usr/caen/verdi-2023.12-SP2-1/font
+SPS_FONT_PATH=/usr/caen/verdi-2022.06/font
+CDS_VERSION=IC6
+CDS=/usr/caen/ic-23.10.020
 GDK_BACKEND=x11
-MODULEPATH=/etc/scl/modulefiles:/usr/caen/misc/modules:/etc/scl/modulefiles:/etc/modulefiles:/usr/share/modulefiles:/usr/caen/misc/class/modules:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core:/usr/caen/misc/modules:/usr/caen/misc/class/modules
+MODULEPATH=/etc/scl/modulefiles:/usr/caen/misc/modules:/etc/modulefiles:/usr/share/modulefiles:/usr/caen/misc/class/modules:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
 GDMSESSION=gnome
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
 VERDI_ORIGNAL_LD_LIBRARY_PATH=
 LOGNAME=xinting
 DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-nZfVJbvVRU,guid=8f68be0c2aa62ace601eb75f679f91fb
-SPS_RGB_PATH=/usr/caen/verdi-2023.12-SP2-1/etc/rgb
+mraarch=linux_64
+SPS_RGB_PATH=/usr/caen/verdi-2022.06/etc/rgb
 GIT_ASKPASS=/opt/caen/um/vscode-1.92.2/code/resources/app/extensions/git/dist/askpass.sh
 XDG_RUNTIME_DIR=/run/user/114356500
 XAUTHORITY=/run/gdm/auth-for-xinting-BROX02/database
 MODULEPATH_ROOT=/usr/share/modulefiles
 MALLOC_ARENA_MAX=1
-PATH=/usr/um/vscode-1.92.2/code/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/um/bin:/usr/caen/bin:/home/xinting/bin
-_LMFILES_=/usr/caen/misc/modules/vscode/1.92.2.lua
-VCS_HOME=/usr/caen/vcs-2023.12-SP2-1
+CMIARCH=RH_64
+PATH=/usr/caen/verdi-2022.06/bin:/usr/caen/xa-2022.06/bin:/usr/caen/primetime-2022.03-SP3/bin:/usr/caen/vcs-2022.06/bin:/usr/caen/hspice-2022.06/hspice/bin:/usr/caen/hspice-2022.06/hspice/GNU/linux64/gcc/bin:/usr/caen/hspice-2022.06/hspice/linux64:/usr/bin:/usr/ucb/bin:/usr/caen/innovus-21.37.000/tools/bin:/usr/caen/synopsys-lib-compiler-2022.03-SP3/bin:/usr/caen/synopsys-synth-2022.03-SP3/bin:/usr/caen/calibre-2021.3_15.9/aok/bin:/usr/caen/spectre-21.10.415/tools/bin:/usr/caen/ic-23.10.020/tools/bin:/usr/caen/ic-23.10.020/tools/dfII/bin:/usr/caen/ic-23.10.020/tools/leapfrog/bin:/usr/um/vscode-1.92.2/code/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/um/bin:/usr/caen/bin:/home/xinting/bin
+CALIBRE_HOME=/usr/caen/calibre-2021.3_15.9/aok
+_LMFILES_=/usr/caen/misc/modules/vscode/1.92.2.lua:/usr/caen/misc/modules/cadence-ic/23.10.020.lua:/usr/caen/misc/modules/spectre/21.10.415.lua:/usr/caen/misc/modules/calibre/2021.3_15.9:/usr/caen/misc/modules/synopsys-synth/2022.03-SP3.lua:/usr/caen/misc/modules/synopsys-lib-compiler/2022.03-SP3.lua:/usr/caen/misc/modules/innovus/21.37.000.lua:/usr/caen/misc/modules/hspice/2022.06.lua:/usr/caen/misc/modules/vcs/2022.06.lua:/usr/caen/misc/modules/primetime/2022.03-SP3.lua:/usr/caen/misc/modules/xa/2022.06.lua:/usr/caen/misc/modules/verdi/2022.06.lua:/usr/caen/misc/class/modules/eecs627/w25
+VCS_HOME=/usr/caen/vcs-2022.06
 MODULESHOME=/usr/share/Modules
 LMOD_SETTARG_FULL_SUPPORT=no
 LMOD_CACHED_LOADS=yes
+_ModuleTable011_=L2NhZW4vbWlzYy9jbGFzcy9tb2R1bGVzIiwKfQo=
 HISTSIZE=1000
 MAKEFLAGS=
 SNPS_SIM_DEFAULT_GUI=verdi
 LMOD_PKG=/usr/share/lmod/lmod
+CDS_LOAD_ENV=CSF
 GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+XLIB_SKIP_ARGB_VISUALS=1
+PS_HWPC=OFF
 SYS_PROG_NAME=verdi
+_ModuleTable005_=My4qemZpbmFsIiwKfSwKc3BlY3RyZSA9IHsKZm4gPSAiL3Vzci9jYWVuL21pc2MvbW9kdWxlcy9zcGVjdHJlLzIxLjEwLjQxNS5sdWEiLApmdWxsTmFtZSA9ICJzcGVjdHJlLzIxLjEwLjQxNSIsCmxvYWRPcmRlciA9IDMsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAxLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAic3BlY3RyZS8yMS4xMC40MTUiLAp3ViA9ICIwMDAwMDAwMjEuMDAwMDAwMDEwLjAwMDAwMDQxNS4qemZpbmFsIiwKfSwKWyJzeW5vcHN5cy1saWItY29tcGlsZXIiXSA9IHsKZm4gPSAiL3Vzci9jYWVuL21pc2MvbW9kdWxlcy9zeW5vcHN5cy1saWItY29tcGlsZXIvMjAyMi4wMy1TUDMubHVhIiwKZnVsbE5hbWUgPSAic3lub3BzeXMtbGliLWNvbXBp
 LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
-NOVASHLPPATH=/usr/caen/verdi-2023.12-SP2-1/doc
+NOVASHLPPATH=/usr/caen/verdi-2022.06/doc
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LMOD_DIR=/usr/share/lmod/lmod/libexec
 BASH_FUNC_which%%=() {  ( alias;
@@ -2987,7 +2820,7 @@ BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then
 }
 BASH_FUNC_ml%%=() {  eval "$($LMOD_DIR/ml_cmd "$@")"
 }
-_=/usr/caen/verdi-2023.12-SP2-1/etc/access/sysinfo.sh
+_=/usr/caen/verdi-2022.06/etc/access/sysinfo.sh
 HOSTTYPE=x86_64-linux
 VENDOR=unknown
 OSTYPE=linux
@@ -2998,54 +2831,53 @@ HOST=caen-vnc-mi09.engin.umich.edu
 ==========	ps	    ==========
     PID TTY          TIME CMD
  734506 pts/4    00:00:00 bash
- 742110 pts/4    00:00:00 make
- 742111 pts/4    00:00:00 sh
- 743189 pts/4    00:00:02 Novas
- 743280 pts/4    00:00:00 ucli
- 743347 pts/4    00:00:00 verdi
- 743359 pts/4    00:00:00 ucli.exe
- 743472 pts/4    00:00:00 sysinfo.sh
- 743485 pts/4    00:00:00 ps
+ 760110 pts/4    00:00:00 make
+ 760111 pts/4    00:00:00 sh
+ 761368 pts/4    00:06:58 Novas
+ 819626 pts/4    00:00:00 ucli
+ 819721 pts/4    00:00:00 ucli.exe
+ 820112 pts/4    00:00:00 sysinfo.sh
+ 820126 pts/4    00:00:00 ps
 -------------	end(ps)     -------------
 ==========       cat /proc/meminfo        ==========
 MemTotal:       18201968 kB
-MemFree:         2585376 kB
-MemAvailable:   14401904 kB
-Buffers:          374040 kB
-Cached:         11650264 kB
-SwapCached:         6180 kB
-Active:          8132936 kB
-Inactive:        6170308 kB
-Active(anon):     355564 kB
-Inactive(anon):  2299724 kB
-Active(file):    7777372 kB
-Inactive(file):  3870584 kB
+MemFree:         2727228 kB
+MemAvailable:   11669312 kB
+Buffers:          263528 kB
+Cached:          8916328 kB
+SwapCached:         8240 kB
+Active:          6648472 kB
+Inactive:        7343748 kB
+Active(anon):     552512 kB
+Inactive(anon):  4702888 kB
+Active(file):    6095960 kB
+Inactive(file):  2640860 kB
 Unevictable:           0 kB
 Mlocked:               0 kB
 SwapTotal:       9302012 kB
-SwapFree:        9099576 kB
-Dirty:               372 kB
-Writeback:           160 kB
-AnonPages:       2245272 kB
-Mapped:          1127224 kB
-Shmem:            376356 kB
-KReclaimable:     519204 kB
-Slab:             730676 kB
-SReclaimable:     519204 kB
-SUnreclaim:       211472 kB
-KernelStack:       15004 kB
-PageTables:        69240 kB
+SwapFree:        8967992 kB
+Dirty:             91268 kB
+Writeback:             0 kB
+AnonPages:       4720772 kB
+Mapped:          1501632 kB
+Shmem:            443084 kB
+KReclaimable:     555896 kB
+Slab:             811948 kB
+SReclaimable:     555896 kB
+SUnreclaim:       256052 kB
+KernelStack:       28680 kB
+PageTables:       143552 kB
 NFS_Unstable:          0 kB
 Bounce:                0 kB
 WritebackTmp:          0 kB
 CommitLimit:    18402996 kB
-Committed_AS:    7950884 kB
+Committed_AS:   21123732 kB
 VmallocTotal:   34359738367 kB
-VmallocUsed:      249112 kB
+VmallocUsed:      263196 kB
 VmallocChunk:          0 kB
 Percpu:            12096 kB
 HardwareCorrupted:     0 kB
-AnonHugePages:   1001472 kB
+AnonHugePages:   1646592 kB
 ShmemHugePages:        0 kB
 ShmemPmdMapped:        0 kB
 FileHugePages:         0 kB
@@ -3056,8 +2888,8 @@ HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB
 Hugetlb:               0 kB
-DirectMap4k:     5436828 kB
-DirectMap2M:    13436928 kB
+DirectMap4k:     5571996 kB
+DirectMap2M:    13301760 kB
 DirectMap1G:     2097152 kB
 -------------	     end(cat /proc/meminfo)      -------------
 ==========       xset -q      ==========
@@ -3093,7 +2925,7 @@ Kernel \r on an \m
 
 -------------    end(show OS patch level)      -------------
 =========       uptime      ==========
- 11:57:35 up 20 days,  2:13,  3 users,  load average: 0.59, 0.52, 0.43
+ 17:26:50 up 20 days,  7:43,  6 users,  load average: 1.86, 1.03, 0.85
 ------------    end(uptime)    -------------
 =========       locale       ==========
 LANG=C
@@ -3112,56 +2944,54 @@ LC_IDENTIFICATION="C"
 LC_ALL=C
 ------------    end(locale)    -------------
 ==========       ldd       ==========
-ldd /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/bin/Novas
+ldd /usr/caen/verdi-2022.06/platform/LINUXAMD64/bin/Novas
 	linux-vdso.so.1 (0x00007ffff7ffa000)
 	libdl.so.2 => /lib64/libdl.so.2 (0x00007ffff7bc9000)
-	libvfs.so => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/bin/libvfs.so (0x00007ffff7f5f000)
-	libpsslanguage.so => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/bin/libpsslanguage.so (0x00007ffff6891000)
-	libRtxStable.so => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/zebu/libRtxStable.so (0x00007ffff7f55000)
-	libstdc++.so.6 => /usr/caen/verdi-2023.12-SP2-1/etc/lib/libstdc++/LINUXAMD64/libstdc++.so.6 (0x00007ffff64b1000)
-	librtlappa_core-g.so => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/bin/librtlappa_core-g.so (0x00007ffff6262000)
-	libfreetype.so.6 => /lib64/libfreetype.so.6 (0x00007ffff5fa6000)
-	libxml2.so.2 => /lib64/libxml2.so.2 (0x00007ffff5c3e000)
-	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007ffff5a1e000)
-	librt.so.1 => /lib64/librt.so.1 (0x00007ffff5816000)
-	libm.so.6 => /lib64/libm.so.6 (0x00007ffff5494000)
-	libQtSolutions_MotifExtension-2.7.so.1 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQtSolutions_MotifExtension-2.7.so.1 (0x00007ffff527e000)
-	libQtGui.so.4 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQtGui.so.4 (0x00007ffff46da000)
-	libQtCore.so.4 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQtCore.so.4 (0x00007ffff4241000)
-	libQtXml.so.4 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQtXml.so.4 (0x00007ffff4007000)
-	libQtWebKit.so.4 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQtWebKit.so.4 (0x00007ffff26f6000)
-	libQtNetwork.so.4 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQtNetwork.so.4 (0x00007ffff23e8000)
-	libQt3Support.so.4 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQt3Support.so.4 (0x00007ffff1f48000)
-	libQtSql.so.4 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQtSql.so.4 (0x00007ffff1d12000)
-	libQtCommercialChart.so.1 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQtCommercialChart.so.1 (0x00007ffff19e1000)
-	libQtScript.so.4 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/Qt/libQtScript.so.4 (0x00007ffff1575000)
-	libutil.so.1 => /lib64/libutil.so.1 (0x00007ffff1371000)
-	libtbb.so.2 => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/lib/tbb/libtbb.so.2 (0x00007ffff7f0d000)
-	libsimprofile_verdi.so => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/bin/libsimprofile_verdi.so (0x00007ffff1172000)
-	libsnpsmalloc.so => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/bin/libsnpsmalloc.so (0x00007ffff7ed1000)
-	libuuid.so.1 => /lib64/libuuid.so.1 (0x00007ffff0f6a000)
-	libcmlp_cassandra-O.so => /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/bin/libcmlp_cassandra-O.so (0x00007ffff043b000)
-	libXss.so.1 => /lib64/libXss.so.1 (0x00007ffff0237000)
-	libXft.so.2 => /lib64/libXft.so.2 (0x00007ffff0020000)
-	libXt.so.6 => /lib64/libXt.so.6 (0x00007fffefdb5000)
-	libXmu.so.6 => /lib64/libXmu.so.6 (0x00007fffefb9a000)
-	libX11.so.6 => /lib64/libX11.so.6 (0x00007fffef856000)
-	libXext.so.6 => /lib64/libXext.so.6 (0x00007fffef643000)
-	libfontconfig.so.1 => /lib64/libfontconfig.so.1 (0x00007fffef3fe000)
-	libnsl.so.1 => /lib64/libnsl.so.1 (0x00007fffef1e5000)
-	libnuma.so.1 => /lib64/libnuma.so.1 (0x00007fffeefd9000)
-	libpng12.so.0 => /usr/caen/verdi-2023.12-SP2-1/etc/lib/libstdc++/LINUXAMD64/libpng12.so.0 (0x00007fffeedb3000)
-	libc.so.6 => /lib64/libc.so.6 (0x00007fffee9dd000)
+	libvfs.so => /usr/caen/verdi-2022.06/platform/LINUXAMD64/bin/libvfs.so (0x00007ffff7f64000)
+	libpsslanguage.so => /usr/caen/verdi-2022.06/platform/LINUXAMD64/bin/libpsslanguage.so (0x00007ffff7047000)
+	libstdc++.so.6 => /usr/caen/verdi-2022.06/etc/lib/libstdc++/LINUXAMD64/libstdc++.so.6 (0x00007ffff6c68000)
+	libfreetype.so.6 => /lib64/libfreetype.so.6 (0x00007ffff69ac000)
+	libxml2.so.2 => /lib64/libxml2.so.2 (0x00007ffff6644000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007ffff6424000)
+	libQtSolutions_MotifExtension-2.7.so.1 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtSolutions_MotifExtension-2.7.so.1 (0x00007ffff620e000)
+	libQtGui.so.4 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtGui.so.4 (0x00007ffff566a000)
+	libQtCore.so.4 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtCore.so.4 (0x00007ffff51d1000)
+	libQtXml.so.4 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtXml.so.4 (0x00007ffff4f97000)
+	libQtWebKit.so.4 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtWebKit.so.4 (0x00007ffff3686000)
+	libQtNetwork.so.4 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtNetwork.so.4 (0x00007ffff3378000)
+	libQt3Support.so.4 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQt3Support.so.4 (0x00007ffff2ed8000)
+	libQtSql.so.4 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtSql.so.4 (0x00007ffff2ca2000)
+	libQtCommercialChart.so.1 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtCommercialChart.so.1 (0x00007ffff2971000)
+	libQtScript.so.4 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/Qt/libQtScript.so.4 (0x00007ffff2505000)
+	libutil.so.1 => /lib64/libutil.so.1 (0x00007ffff2301000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007ffff1f7f000)
+	libsimprofile_verdi.so => /usr/caen/verdi-2022.06/platform/LINUXAMD64/bin/libsimprofile_verdi.so (0x00007ffff1bcb000)
+	libsnpsmalloc.so => /usr/caen/verdi-2022.06/platform/LINUXAMD64/bin/libsnpsmalloc.so (0x00007ffff7f24000)
+	libuuid.so.1 => /lib64/libuuid.so.1 (0x00007ffff19c3000)
+	libtbb.so.2 => /usr/caen/verdi-2022.06/platform/LINUXAMD64/lib/tbb/libtbb.so.2 (0x00007ffff7ee2000)
+	libcmlp_cassandra-O.so => /usr/caen/verdi-2022.06/platform/LINUXAMD64/bin/libcmlp_cassandra-O.so (0x00007ffff0e94000)
+	libXss.so.1 => /lib64/libXss.so.1 (0x00007ffff0c90000)
+	libXft.so.2 => /lib64/libXft.so.2 (0x00007ffff0a79000)
+	libXt.so.6 => /lib64/libXt.so.6 (0x00007ffff080e000)
+	libXmu.so.6 => /lib64/libXmu.so.6 (0x00007ffff05f3000)
+	libX11.so.6 => /lib64/libX11.so.6 (0x00007ffff02af000)
+	libXext.so.6 => /lib64/libXext.so.6 (0x00007ffff009c000)
+	libfontconfig.so.1 => /lib64/libfontconfig.so.1 (0x00007fffefe57000)
+	libnsl.so.1 => /lib64/libnsl.so.1 (0x00007fffefc3e000)
+	libnuma.so.1 => /lib64/libnuma.so.1 (0x00007fffefa32000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007fffef82a000)
+	libpng12.so.0 => /lib64/libpng12.so.0 (0x00007fffef603000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007fffef22d000)
 	/lib64/ld-linux-x86-64.so.2 (0x00007ffff7dcd000)
-	libz.so.1 => /lib64/libz.so.1 (0x00007fffee7c5000)
-	libexpat.so.1 => /lib64/libexpat.so.1 (0x00007fffee589000)
-	libgcc_s.so.1 => /usr/caen/verdi-2023.12-SP2-1/etc/lib/libstdc++/LINUXAMD64/libgcc_s.so.1 (0x00007fffee371000)
-	libbz2.so.1 => /lib64/libbz2.so.1 (0x00007fffee160000)
-	libpng16.so.16 => /lib64/libpng16.so.16 (0x00007fffedf2b000)
-	liblzma.so.5 => /lib64/liblzma.so.5 (0x00007fffedd04000)
-	libSM.so.6 => /lib64/libSM.so.6 (0x00007fffedafb000)
-	libICE.so.6 => /lib64/libICE.so.6 (0x00007fffed8de000)
-	libXrender.so.1 => /lib64/libXrender.so.1 (0x00007fffed6d3000)
-	libxcb.so.1 => /lib64/libxcb.so.1 (0x00007fffed4aa000)
-	libXau.so.6 => /lib64/libXau.so.6 (0x00007fffed2a6000)
+	libz.so.1 => /lib64/libz.so.1 (0x00007fffef015000)
+	libexpat.so.1 => /lib64/libexpat.so.1 (0x00007fffeedd9000)
+	libgcc_s.so.1 => /usr/caen/verdi-2022.06/etc/lib/libstdc++/LINUXAMD64/libgcc_s.so.1 (0x00007fffeebc1000)
+	libbz2.so.1 => /lib64/libbz2.so.1 (0x00007fffee9b0000)
+	libpng16.so.16 => /lib64/libpng16.so.16 (0x00007fffee77b000)
+	liblzma.so.5 => /lib64/liblzma.so.5 (0x00007fffee554000)
+	libSM.so.6 => /lib64/libSM.so.6 (0x00007fffee34b000)
+	libICE.so.6 => /lib64/libICE.so.6 (0x00007fffee12e000)
+	libXrender.so.1 => /lib64/libXrender.so.1 (0x00007fffedf23000)
+	libxcb.so.1 => /lib64/libxcb.so.1 (0x00007fffedcfa000)
+	libXau.so.6 => /lib64/libXau.so.6 (0x00007fffedaf6000)
 -------------    end(ldd)      -------------

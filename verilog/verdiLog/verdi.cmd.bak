@@ -2,11 +2,16 @@ simSetSimulator "-vcssv" -exec "./verdi" -args " " -uvmDebug on
 debImport "-i" "-simflow" "-dbdir" "./verdi.daidir"
 srcTBInvokeSim
 verdiSetActWin -win $_OneSearch
-verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -inst "dut" -line 18 -pos 1 -win $_nTrace1
+srcSelect -win $_nTrace1 -range {18 18 1 7 1 1}
+srcTBAddBrkPnt -line 18 -file \
+           /home/xinting/eecs627/Secure_AES_Accelerator/testbench/encrypt_engine_tb.sv
+verdiSetActWin -dock widgetDock_<Local>
 srcDeselectAll -win $_nTrace1
 srcSelect -inst "dut" -line 18 -pos 1 -win $_nTrace1
 srcAction -pos 17 3 2 -win $_nTrace1 -name "dut" -ctrlKey off
-srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
 srcSelect -signal "clk" -line 2 -pos 1 -win $_nTrace1
 srcSelect -signal "rst_n" -line 3 -pos 1 -win $_nTrace1
 srcSelect -signal "start" -line 4 -pos 1 -win $_nTrace1
@@ -32,13 +37,63 @@ srcTBRunSim
 verdiDockWidgetMaximize -dock windowDock_nWave_3
 wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
+wvSetCursor -win $_nWave3 206481.547412 -snap {("G1" 12)}
+wvSetCursor -win $_nWave3 115479.741307 -snap {("G1" 12)}
+wvSetCursor -win $_nWave3 115420.376567 -snap {("G1" 13)}
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvSetCursor -win $_nWave3 29682.370099 -snap {("G1" 15)}
+wvSetCursor -win $_nWave3 29919.829060 -snap {("G1" 14)}
+wvZoom -win $_nWave3 33837.901913 34906.467237
 wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
-wvSetCursor -win $_nWave3 15669.286077 -snap {("G1" 11)}
-wvSetCursor -win $_nWave3 15899.716755 -snap {("G1" 11)}
-wvSetCursor -win $_nWave3 19125.746242 -snap {("G1" 12)}
-debExit
+wvSetCursor -win $_nWave3 17681.790938 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 18848.704052 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 20050.978170 -snap {("G1" 4)}
+wvSetCursor -win $_nWave3 30723.520511 -snap {("G1" 1)}
+wvSetCursor -win $_nWave3 39041.220601 -snap {("G1" 6)}
+wvSetCursor -win $_nWave3 39677.199156 -snap {("G1" 1)}
+wvSetOptions -win $_nWave3 -fixedDelta on
+wvSelectSignal -win $_nWave3 {( "G1" 13 )} 
+wvZoom -win $_nWave3 0.000000 567.135221
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvSetCursor -win $_nWave3 30085.462009 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 18148.327083 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 8734.488970 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 20574.574019 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 28629.713847 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 34064.506985 -snap {("G1" 13)}
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomOut -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvZoomIn -win $_nWave3
+wvSelectSignal -win $_nWave3 {( "G1" 16 )} 
+wvSelectSignal -win $_nWave3 {( "G1" 4 )} 
+wvSetCursor -win $_nWave3 19604.075245 -snap {("G1" 4)}
+wvSelectSignal -win $_nWave3 {( "G1" 16 )} 
+wvSetCursor -win $_nWave3 24844.768627 -snap {("G1" 10)}
+wvSetCursor -win $_nWave3 32608.758823 -snap {("G1" 15)}
+wvSetCursor -win $_nWave3 26203.466911 -snap {("G1" 16)}
+wvSetCursor -win $_nWave3 24650.668872 -snap {("G1" 15)}
+srcTBSimReset

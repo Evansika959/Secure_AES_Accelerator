@@ -31,13 +31,13 @@ TMPSPECENV=$(VCSTMPSPECENV)
 CC=$(TMPSPECENV) $(VCS_CC) $(TMPSPECARG)
 
 # C flags for compilation
-CFLAGS=$(STDLIB)-w  -pipe -fPIC -O -I/usr/caen/vcs-2022.06/include    
+CFLAGS=$(STDLIB)-w  -pipe -fPIC -O -I/usr/caen/vcs-2023.12-SP2-1/include    
 
-CFLAGS_CG=-w  -pipe -fPIC -I/usr/caen/vcs-2022.06/include -O  -fno-strict-aliasing -fno-optimize-sibling-calls   
+CFLAGS_CG=-w  -pipe -fPIC -I/usr/caen/vcs-2023.12-SP2-1/include -O  -fno-strict-aliasing -fno-optimize-sibling-calls   
 
-CFLAGS_CG_CLIB=-w  -pipe -fPIC -I/usr/caen/vcs-2022.06/include -O  -fno-strict-aliasing -fno-optimize-sibling-calls   
+CFLAGS_CG_CLIB=-w  -pipe -fPIC -I/usr/caen/vcs-2023.12-SP2-1/include -O  -fno-strict-aliasing -fno-optimize-sibling-calls   
 
-CFLAGS_RMAR=-w  -pipe -fPIC -I/usr/caen/vcs-2022.06/include -O  -fno-strict-aliasing -fno-optimize-sibling-calls   
+CFLAGS_RMAR=-w  -pipe -fPIC -I/usr/caen/vcs-2023.12-SP2-1/include -O  -fno-strict-aliasing -fno-optimize-sibling-calls   
 
 ASFLAGS=(null)
 LIBS=
@@ -46,4 +46,4 @@ include filelist.hsopt
 
 
 rmapats.so: $(HSOPT_OBJS)
-	@$(VCS_CC) $(LDFLAGS) $(LIBS) -shared -o ./../verdi.daidir/rmapats.so $(HSOPT_OBJS)
+	@$(VCS_CC) $(LDFLAGS) $(LIBS) -shared -o ./../sim_key_expansion_stage.daidir/rmapats.so $(HSOPT_OBJS)

@@ -1,8 +1,7 @@
-module key_expansion_stage #(
-    parameter int Round_idx = 1
-)(
+module key_expansion_stage (
     input  logic        clk,
     input  logic        rst_n,
+    input  logic [3:0]  round_idx,
     input  logic [127:0] in_key,
     output logic [127:0] out_key
 );
@@ -27,7 +26,7 @@ always_comb begin
     w3 = in_key[31:0];
 
     // get round constant
-    case (Round_idx)
+    case (round_idx)
     1: rcon = 32'h01000000;
     2: rcon = 32'h02000000;
     3: rcon = 32'h04000000;

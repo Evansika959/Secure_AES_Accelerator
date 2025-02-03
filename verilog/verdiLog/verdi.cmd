@@ -4,8 +4,9 @@ srcTBInvokeSim
 verdiSetActWin -win $_OneSearch
 verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
 srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
 srcSelect -inst "dut" -line 18 -pos 1 -win $_nTrace1
-srcAction -pos 17 3 1 -win $_nTrace1 -name "dut" -ctrlKey off
+srcAction -pos 17 3 0 -win $_nTrace1 -name "dut" -ctrlKey off
 srcDeselectAll -win $_nTrace1
 srcSelect -signal "clk" -line 2 -pos 1 -win $_nTrace1
 srcSelect -signal "rst_n" -line 3 -pos 1 -win $_nTrace1
@@ -34,28 +35,29 @@ wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
+wvSelectSignal -win $_nWave3 {( "G1" 16 )} 
+wvSetCursor -win $_nWave3 27693.526458 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 36494.349192 -snap {("G1" 13)}
 wvZoomOut -win $_nWave3
 wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvSetCursor -win $_nWave3 21660.483695 -snap {("G1" 10)}
-wvSetCursor -win $_nWave3 52538.194495 -snap {("G1" 13)}
-wvSetCursor -win $_nWave3 34103.740286 -snap {("G1" 13)}
-wvZoomIn -win $_nWave3
-wvZoomIn -win $_nWave3
-wvZoomIn -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomOut -win $_nWave3
-wvZoomIn -win $_nWave3
-wvZoomIn -win $_nWave3
-wvZoomIn -win $_nWave3
-wvZoomIn -win $_nWave3
-wvZoomIn -win $_nWave3
-wvSetCursor -win $_nWave3 39639.533166 -snap {("G1" 12)}
-wvSetCursor -win $_nWave3 48627.566849 -snap {("G1" 12)}
-debExit
+wvSetCursor -win $_nWave3 32413.148148 -snap {("G1" 17)}
+wvSetCursor -win $_nWave3 36628.044702 -snap {("G1" 17)}
+wvSetCursor -win $_nWave3 36390.585742 -snap {("G1" 17)}
+wvSetCursor -win $_nWave3 21193.212251 -snap {("G1" 17)}
+wvSetCursor -win $_nWave3 27723.333673
+wvSetCursor -win $_nWave3 22321.142315
+wvSetCursor -win $_nWave3 9498.358432
+wvSetCursor -win $_nWave3 6352.027201
+wvSetCursor -win $_nWave3 23627.166599
+wvSetCursor -win $_nWave3 28316.981075 -snap {("G1" 18)}
+wvSetCursor -win $_nWave3 28316.981075 -snap {("G1" 18)}
+wvSetCursor -win $_nWave3 26536.038869
+wvSetCursor -win $_nWave3 37874.704247 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 40546.117556 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 35975.032560 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 37934.068987 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 38646.445869
+wvSetCursor -win $_nWave3 50578.758649 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 37755.974766 -snap {("G1" 13)}
+wvSetCursor -win $_nWave3 39715.011193 -snap {("G1" 0)}
+wvSetCursor -win $_nWave3 40130.564374 -snap {("G1" 1)}

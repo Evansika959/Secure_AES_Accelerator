@@ -1,3 +1,2 @@
 Command Line: /usr/caen/verdi-2022.06/platform/LINUXAMD64/bin/Novas -i -simflow -simBin ./verdi -ultra -simOpt  
 uname(Linux caen-vnc-mi09.engin.umich.edu 4.18.0-553.34.1.el8_10.x86_64 #1 SMP Mon Dec 16 04:25:43 EST 2024 x86_64)
-au time 851.197009 22.561404 9.849506 delta 259194880 259194880 total 796704768 796704768

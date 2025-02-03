@@ -389,8 +389,8 @@ argv[5]=-ucli
 argv[6]=-l
 argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 357 profile - 100
-          CPU/Mem usage: 0.020 sys,  0.040 user,  289.30M mem
-358 Elapsed time:    0:00:00    Sun Feb  2 12:15:25 2025
+          CPU/Mem usage: 0.030 sys,  0.040 user,  289.30M mem
+358 Elapsed time:    0:00:00    Sun Feb  2 17:28:34 2025
 359 User CPU time used: 0 seconds
 360 System CPU time used: 0 seconds
 361 pliAppInit
@@ -425,29 +425,29 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 390 argv[3]: +trace_process
 391 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.clk).
 392 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  406.14M mem
-                   incr: 0.000 sys,  0.010 user,  2.07M mem
-                   accu: 0.000 sys,  0.010 user,  2.07M mem
-              accu incr: 0.000 sys,  0.010 user,  2.07M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  405.82M mem
+                   incr: 0.000 sys,  0.000 user,  2.06M mem
+                   accu: 0.000 sys,  0.000 user,  2.06M mem
+              accu incr: 0.000 sys,  0.000 user,  2.06M mem
 
           Count usage: 0 var,  1 idcode,  1 callback
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-393 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+393 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 394 User CPU time used: 0 seconds
 395 System CPU time used: 1 seconds
 396 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  407.19M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  406.87M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.010 user,  3.13M mem
+                   accu: 0.000 sys,  0.000 user,  3.11M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
           Count usage: 0 var,  1 idcode,  1 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-397 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+397 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 398 User CPU time used: 0 seconds
 399 System CPU time used: 1 seconds
 400 sps_tcl_fsdbDumpvars_vd_main
@@ -457,7 +457,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 404 argv[3]: +trace_process
 405 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.rst_n).
 406 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  407.19M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  406.87M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -466,11 +466,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-407 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+407 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 408 User CPU time used: 0 seconds
 409 System CPU time used: 1 seconds
 410 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  407.19M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  406.87M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -479,7 +479,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-411 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+411 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 412 User CPU time used: 0 seconds
 413 System CPU time used: 1 seconds
 414 sps_tcl_fsdbDumpvars_vd_main
@@ -489,7 +489,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 418 argv[3]: +trace_process
 419 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.start).
 420 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  407.19M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  406.87M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -498,11 +498,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-421 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+421 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 422 User CPU time used: 0 seconds
 423 System CPU time used: 1 seconds
 424 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  407.19M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  406.87M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -511,7 +511,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-425 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+425 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 426 User CPU time used: 0 seconds
 427 System CPU time used: 1 seconds
 428 sps_tcl_fsdbDumpvars_vd_main
@@ -521,7 +521,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 432 argv[3]: +trace_process
 433 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.set_key).
 434 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  407.19M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  406.87M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -530,11 +530,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-435 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+435 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 436 User CPU time used: 0 seconds
 437 System CPU time used: 1 seconds
 438 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  407.19M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  406.87M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -543,7 +543,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-439 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+439 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 440 User CPU time used: 0 seconds
 441 System CPU time used: 1 seconds
 442 sps_tcl_fsdbDumpvars_vd_main
@@ -553,7 +553,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 446 argv[3]: +trace_process
 447 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.halt).
 448 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  407.19M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  406.87M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -562,11 +562,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-449 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+449 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 450 User CPU time used: 0 seconds
 451 System CPU time used: 1 seconds
 452 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.090 sys,  0.720 user,  407.19M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  406.87M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -575,7 +575,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-453 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+453 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 454 User CPU time used: 0 seconds
 455 System CPU time used: 1 seconds
 456 sps_tcl_fsdbDumpvars_vd_main
@@ -585,29 +585,29 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 460 argv[3]: +trace_process
 461 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.state).
 462 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
-                   incr: 0.010 sys,  0.000 user,  1.05M mem
-                   accu: 0.010 sys,  0.000 user,  1.05M mem
-              accu incr: 0.010 sys,  0.000 user,  1.05M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
+                   incr: 0.000 sys,  0.000 user,  1.05M mem
+                   accu: 0.000 sys,  0.000 user,  1.05M mem
+              accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
           Count usage: 0 var,  6 idcode,  6 callback
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-463 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+463 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 464 User CPU time used: 0 seconds
 465 System CPU time used: 1 seconds
 466 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
-                   accu: 0.010 sys,  0.000 user,  1.05M mem
+                   accu: 0.000 sys,  0.000 user,  1.05M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
 
           Count usage: 0 var,  6 idcode,  6 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-467 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+467 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 468 User CPU time used: 0 seconds
 469 System CPU time used: 1 seconds
 470 sps_tcl_fsdbDumpvars_vd_main
@@ -617,7 +617,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 474 argv[3]: +trace_process
 475 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.key).
 476 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -626,11 +626,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-477 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+477 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 478 User CPU time used: 0 seconds
 479 System CPU time used: 1 seconds
 480 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -639,7 +639,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-481 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+481 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 482 User CPU time used: 0 seconds
 483 System CPU time used: 1 seconds
 484 sps_tcl_fsdbDumpvars_vd_main
@@ -649,7 +649,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 488 argv[3]: +trace_process
 489 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.out).
 490 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -658,11 +658,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-491 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+491 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 492 User CPU time used: 0 seconds
 493 System CPU time used: 1 seconds
 494 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -671,7 +671,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-495 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+495 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 496 User CPU time used: 0 seconds
 497 System CPU time used: 1 seconds
 498 sps_tcl_fsdbDumpvars_vd_main
@@ -681,7 +681,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 502 argv[3]: +trace_process
 503 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.out_valid).
 504 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -690,11 +690,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-505 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+505 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 506 User CPU time used: 0 seconds
 507 System CPU time used: 1 seconds
 508 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -703,7 +703,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-509 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+509 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 510 User CPU time used: 0 seconds
 511 System CPU time used: 1 seconds
 512 sps_tcl_fsdbDumpvars_vd_main
@@ -713,7 +713,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 516 argv[3]: +trace_process
 517 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.fsm_state).
 518 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -722,11 +722,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-519 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+519 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 520 User CPU time used: 0 seconds
 521 System CPU time used: 1 seconds
 522 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.000 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -735,7 +735,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-523 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+523 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 524 User CPU time used: 0 seconds
 525 System CPU time used: 1 seconds
 526 sps_tcl_fsdbDumpvars_vd_main
@@ -745,29 +745,29 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 530 argv[3]: +trace_process
 531 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.next_fsm_state).
 532 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
-                   incr: 0.000 sys,  0.000 user,  0.00M mem
-                   accu: 0.000 sys,  0.000 user,  0.00M mem
-              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
+                   incr: 0.010 sys,  0.000 user,  0.00M mem
+                   accu: 0.010 sys,  0.000 user,  0.00M mem
+              accu incr: 0.010 sys,  0.000 user,  0.00M mem
 
           Count usage: 0 var,  11 idcode,  11 callback
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-533 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+533 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 534 User CPU time used: 0 seconds
 535 System CPU time used: 1 seconds
 536 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
-                   accu: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.010 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
 
           Count usage: 0 var,  11 idcode,  11 callback
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-537 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+537 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 538 User CPU time used: 0 seconds
 539 System CPU time used: 1 seconds
 540 sps_tcl_fsdbDumpvars_vd_main
@@ -777,7 +777,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 544 argv[3]: +trace_process
 545 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage_out_regs).
 546 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -786,11 +786,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  9 idcode,  1 callback
                  accu: 0 var,  9 idcode,  1 callback
             accu incr: 0 var,  9 idcode,  1 callback
-547 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+547 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 548 User CPU time used: 0 seconds
 549 System CPU time used: 1 seconds
 550 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -799,7 +799,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  9 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-551 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+551 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 552 User CPU time used: 0 seconds
 553 System CPU time used: 1 seconds
 554 sps_tcl_fsdbDumpvars_vd_main
@@ -809,7 +809,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 558 argv[3]: +trace_process
 559 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage_key_regs).
 560 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -818,11 +818,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  10 idcode,  1 callback
                  accu: 0 var,  10 idcode,  1 callback
             accu incr: 0 var,  10 idcode,  1 callback
-561 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+561 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 562 User CPU time used: 0 seconds
 563 System CPU time used: 1 seconds
 564 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -831,7 +831,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  10 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-565 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+565 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 566 User CPU time used: 0 seconds
 567 System CPU time used: 1 seconds
 568 sps_tcl_fsdbDumpvars_vd_main
@@ -841,7 +841,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 572 argv[3]: +trace_process
 573 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage_valid).
 574 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -850,11 +850,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-575 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+575 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 576 User CPU time used: 0 seconds
 577 System CPU time used: 1 seconds
 578 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -863,7 +863,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-579 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+579 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 580 User CPU time used: 0 seconds
 581 System CPU time used: 1 seconds
 582 sps_tcl_fsdbDumpvars_vd_main
@@ -873,7 +873,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 586 argv[3]: +trace_process
 587 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage_in_valid).
 588 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -882,11 +882,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-589 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+589 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 590 User CPU time used: 0 seconds
 591 System CPU time used: 1 seconds
 592 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.670 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -895,7 +895,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-593 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+593 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 594 User CPU time used: 0 seconds
 595 System CPU time used: 1 seconds
 596 sps_tcl_fsdbDumpvars_vd_main
@@ -905,7 +905,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 600 argv[3]: +trace_process
 601 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.key_reg).
 602 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.680 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -914,11 +914,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-603 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+603 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 604 User CPU time used: 0 seconds
 605 System CPU time used: 1 seconds
 606 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.680 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -927,7 +927,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-607 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+607 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 608 User CPU time used: 0 seconds
 609 System CPU time used: 1 seconds
 610 sps_tcl_fsdbDumpvars_vd_main
@@ -937,7 +937,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 614 argv[3]: +trace_process
 615 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.after_addroundkey).
 616 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.680 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -946,11 +946,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-617 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+617 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 618 User CPU time used: 0 seconds
 619 System CPU time used: 1 seconds
 620 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.680 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -959,7 +959,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-621 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+621 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 622 User CPU time used: 0 seconds
 623 System CPU time used: 1 seconds
 624 sps_tcl_fsdbDumpvars_vd_main
@@ -969,7 +969,7 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 628 argv[3]: +trace_process
 629 *Verdi* : Dumping the signal (encrypt_engine_tb.dut.stage0_in).
 630 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.680 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -978,11 +978,11 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  1 idcode,  1 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  1 idcode,  1 callback
-631 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+631 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 632 User CPU time used: 0 seconds
 633 System CPU time used: 1 seconds
 634 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 1.100 sys,  0.720 user,  408.24M mem
+          CPU/Mem usage: 1.010 sys,  0.680 user,  407.92M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
                    accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
@@ -991,37 +991,10 @@ argv[7]=/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
                  incr: 0 var,  0 idcode,  0 callback
                  accu: 0 var,  1 idcode,  1 callback
             accu incr: 0 var,  0 idcode,  0 callback
-635 Elapsed time:    0:00:25    Sun Feb  2 12:15:50 2025
+635 Elapsed time:    0:14:58    Sun Feb  2 17:43:32 2025
 636 User CPU time used: 0 seconds
 637 System CPU time used: 1 seconds
 638 sps_tcl_fsdbDumpflush_vd_main at 0 : N/A(0)
 639 *Verdi* : Flush all FSDB Files at 0 ps.
 640 sps_tcl_fsdbDumpflush_vd_main at 210000 : N/A(0)
 641 *Verdi* : Flush all FSDB Files at 210,000 ps.
-642 End of simulation at 210000
-643 Memory usage: 410.272 M
-644 Maximum resident set size: 114 MB
-645 Hard page faults: 2
-646 Soft page faults: 6574
-647 Elapsed time:    0:14:05    Sun Feb  2 12:29:30 2025
-648 User CPU time used: 0 seconds
-649 System CPU time used: 1 seconds
-650 Begin FSDB profile info:
-651 FSDB Writer : bc1(63) bcn(164) mtf/stf(0/4)
-FSDB Writer elapsed time : flush(0.075951) io wait(0.000000) theadpool wait(0.000000)
-FSDB Writer cpu time : MT Compression : 0
-652 End FSDB profile info
-653 FSDB closed. Name: /home/xinting/eecs627/Secure_AES_Accelerator/verilog/inter.fsdb Size: 12739
-654 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-655                      - BlockUsed:1 Acquire:136 BufferUsed:5400
-656                      - Flush:24 Expand:0 ProducerWait:0 ConsumerWait:0
-657                      - MainProducerTime:1.907075615 TotalConsumerTime:0.000000000
-658                      - ElapsedTime:844.469883000
-659 Producer   0 profile - BlockUsed:1 Acquire:136 BufferUsed:5400
-660 Consumer   0 profile - Affinity:-1 CPUTime:0.000000000 LifeTime:0.000000000 (-nan%)
-661                      - BlockUsed:1 Acquire:136 BufferUsed:5400
-662 SimExit
-663 Elapsed time:    0:14:05    Sun Feb  2 12:29:30 2025
-664 User CPU time used: 0 seconds
-665 System CPU time used: 1 seconds
-666 Sim process exit

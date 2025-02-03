@@ -1,7 +1,7 @@
 Command: /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi -sml=verdi +UVM_VERDI_TRACE=UVM_AWARE +fsdb+gate=off -ucli2Proc -ucli -l /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 Chronologic VCS simulator copyright 1991-2022
 Contains Synopsys proprietary information.
-Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Feb  2 12:15 2025
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Feb  2 17:28 2025
 
 ucli% synUtils::getArch
 linux64
@@ -17,24 +17,24 @@ FSDB Dumper for VCS, Release Verdi_T-2022.06, Linux x86_64/64bit, 05/29/2022
 ucli% synEnv::hasFataled
 0
 ucli% ucliCore::getToolPID
-755556
+822687
 ucli% sps_interactive
-*Verdi* : Enable RPC Server(755556)
+*Verdi* : Enable RPC Server(822687)
 
 ucli% ucliCore::getToolPID
-755556
+822687
 ucli% ucliCore::getToolPID
-755556
+822687
 ucli% if {[catch {ucliCore::setFocus tool}]} {}
 
 ucli% puts $ucliCore::nativeUcliMode
 0
 
 ucli% ucliCore::getToolTopPID
-755556
+822687
 ucli% pid
-755574
-ucli% synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.xinting.755556 }
+822705
+ucli% synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.xinting.822687 }
 
 ucli% if { [info vars watch::vcbp_str_len_limit_of_get_value] != ""} {set watch::vcbp_str_len_limit_of_get_value 1024}
 1024
@@ -95,7 +95,7 @@ line: 0
 logFilename: /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 macroIndex: -1
 macroOffset: -1
-pid: 755556
+pid: 822687
 scope: encrypt_engine_tb
 startCol: 0
 state: stopped
@@ -146,8 +146,11 @@ Time: 0 | Start: 0 | State: 00112233445566778899aabbccddeeff | Key: 000102030405
 Time: 20000 | Start: 1 | State: 00112233445566778899aabbccddeeff | Key: 000102030405060708090a0b0c0d0e0f | Out: 00000000000000000000000000000000 | Valid: 0
 <slb!&*()_+>---<sls!&*()_+>loc: -1<sls!&*()_+>src: ../testbench/encrypt_engine_tb.sv<sls!&*()_+>line: 62<sls!&*()_+>time: 20000 ps<sls!&*()_+>length: 0<sls!&*()_+>...<sls!&*()_+><sle!&*()_+>
 <slp!&*()_+>
-Time: 125000 | Start: 1 | State: 00112233445566778899aabbccddeeff | Key: 000102030405060708090a0b0c0d0e0f | Out: f5ed645775fe03503c5771cad4966d49 | Valid: 1
+Time: 125000 | Start: 1 | State: 00112233445566778899aabbccddeeff | Key: 000102030405060708090a0b0c0d0e0f | Out: a8058190ea66fac0a8564e49e347c5b6 | Valid: 1
 <slb!&*()_+>---<sls!&*()_+>loc: -1<sls!&*()_+>src: ../testbench/encrypt_engine_tb.sv<sls!&*()_+>line: 62<sls!&*()_+>time: 125000 ps<sls!&*()_+>length: 0<sls!&*()_+>...<sls!&*()_+><sle!&*()_+>
+<slp!&*()_+>
+Time: 135000 | Start: 1 | State: 00112233445566778899aabbccddeeff | Key: 000102030405060708090a0b0c0d0e0f | Out: 124263403e1630618991266153f50b15 | Valid: 1
+<slb!&*()_+>---<sls!&*()_+>loc: -1<sls!&*()_+>src: ../testbench/encrypt_engine_tb.sv<sls!&*()_+>line: 62<sls!&*()_+>time: 135000 ps<sls!&*()_+>length: 0<sls!&*()_+>...<sls!&*()_+><sle!&*()_+>
 $finish called from file "../testbench/encrypt_engine_tb.sv", line 57.
 $finish at simulation time               210000
 Simulation complete, time is 210000 ps.
@@ -155,7 +158,7 @@ Simulation complete, time is 210000 ps.
 ucli% synEnv::hasFataled
 0
 ucli% ucliCore::getToolPID
-755556
+822687
 ucli% save::getUserdefinedProcs
 ::stateVerdiChangeCB ::LoadFSDBDumpCmd
 ucli% if {[catch {ucliCore::setFocus tool}]} {}
@@ -181,7 +184,7 @@ line: 0
 logFilename: /home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdiLog/sim.log
 macroIndex: -1
 macroOffset: -1
-pid: 755556
+pid: 822687
 scope: encrypt_engine_tb
 startCol: 0
 state: stopped
@@ -203,11 +206,4 @@ ucli% stop
 No stop points are set
 ucli% if {[catch {ucliCore::setFocus tool}]} {}
 
-ucli% finish; quit
-           V C S   S i m u l a t i o n   R e p o r t 
-Time: 210000 ps
-CPU Time:      1.900 seconds;       Data structure size:   0.3Mb
-Sun Feb  2 12:29:30 2025
-
-<VERDI_Terminated>
-
+ucli% 

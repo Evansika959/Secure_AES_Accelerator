@@ -5,7 +5,7 @@ module key_expansion_stage_tb;
 
     // Testbench signals
     logic clk;
-    logic rst;
+    logic rst_n;
     logic [127:0] in_key;
     logic [3:0] round_idx;
     logic [127:0] out_key;
@@ -14,11 +14,9 @@ module key_expansion_stage_tb;
     always #5 clk = ~clk;  // 100MHz clock (10ns period)
 
     // Instantiate the DUT (Device Under Test)
-    key_expansion_stage #(
-        .Round_idx(Round_idx)
-    ) dut (
+    key_expansion_stage dut (
         .clk(clk),
-        .rst(rst),
+        .rst_n(rst_n),
         .in_key(in_key),
         .round_idx(round_idx),
         .out_key(out_key)
@@ -28,18 +26,19 @@ module key_expansion_stage_tb;
     initial begin
         // Initialize signals
         clk = 0;
-        rst = 1;
-        in_key = 128'h2b7e151628aed2a6abf7158809cf4f3c; // Example AES key
+        rst_n = 0;
+        in_key = 128'h000102030405060708090a0b0c0d0e0f; // Example AES key
         round_idx = 4'd1;
 
         // Reset the module
-        #10 rst = 0;
+        #10 rst_n = 1;
         #10;
 
         // Apply different test cases
         repeat (10) begin
             round_idx = round_idx + 1;
-            in_key = in_key ^ (round_idx * 32'h01020304);  // Change the input key for testing
+            // in_key = in_key ^ (round_idx * 32'h01020304);  // Change the input key for testing
+            in_key = out_key;  // Use the output key as the input key for the next round
             #20;
         end
 

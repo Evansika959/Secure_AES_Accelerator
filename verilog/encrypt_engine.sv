@@ -31,7 +31,7 @@ always_ff @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
         key_reg <= 128'h0;
     end else begin
-        if (set_key && state == INIT) begin
+        if (set_key && fsm_state == INIT) begin
             key_reg <= key;
         end
     end
@@ -41,7 +41,7 @@ end
 // process initial round key
 addRoundKey first_addRoundKey_inst (
     .state(state),
-    .key(key),
+    .key(key_reg),
     .out(after_addroundkey)
 );
 

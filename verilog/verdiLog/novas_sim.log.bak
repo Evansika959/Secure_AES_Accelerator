@@ -11,12 +11,10 @@ FSDB Dumper for VCS, Release Verdi_T-2022.06, Linux x86_64/64bit, 05/29/2022
 
 *Verdi* : Flush all FSDB Files at 0 ps.
 
-*Verdi* : Enable RPC Server(752708)
-
 srcTBInvokeSim
 Chronologic VCS simulator copyright 1991-2022
 Contains Synopsys proprietary information.
-Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Feb  2 12:11 2025
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Feb  2 12:15 2025
 xterm-256color is Not a valid terminal...
 Verdi>fsdbDumpvars 1 "encrypt_engine_tb.dut.clk"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.rst_n"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.start"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.set_key"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.halt"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.state"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.key"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.out"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.out_valid"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.fsm_state"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.next_fsm_state"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage_out_regs"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage_key_regs"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage_valid"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage_in_valid"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.key_reg"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.after_addroundkey"  +all +trace_process;fsdbDumpvars 1 "encrypt_engine_tb.dut.stage0_in"  +all +trace_process;fsdbDumpflush 
 
@@ -49,6 +47,6 @@ $finish at simulation time               210000
 Simulation complete, time is 210000 ps.
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 210000 ps
-CPU Time:      1.490 seconds;       Data structure size:   0.3Mb
-Sun Feb  2 12:14:51 2025
+CPU Time:      1.900 seconds;       Data structure size:   0.3Mb
+Sun Feb  2 12:29:30 2025
 debExit
