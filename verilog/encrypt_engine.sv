@@ -64,7 +64,7 @@ assign key_gen_idx_next = (fsm_state == READY) ? 4'd1 :
                           (fsm_state == KEY_GEN) ? key_gen_idx + 1 : 0;
 
 assign key_expansion_in_next = (fsm_state == READY) ? key_reg :
-                               (fsm_state == KEY_GEN) ? stage_key_regs[key_gen_idx] : key_reg;
+                               (fsm_state == KEY_GEN) ? stage_key_regs[key_gen_idx-2] : key_reg;
 
 always_ff @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
