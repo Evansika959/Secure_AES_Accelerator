@@ -17,10 +17,14 @@ localparam PROCESS = 3;
 
 logic [1:0] fsm_state, next_fsm_state;
 
-logic [8:0] [127:0]   stage_out_regs ;
+logic [7:0] [127:0]   stage_out_regs ;
 logic [9:0] [127:0]   stage_key_regs ;
-logic [8:0]          stage_valid   ;
+logic [7:0]          stage_valid   ;
 logic           stage_in_valid;
+
+// for last round
+logic [127:0] last_stage_in;
+logic         last_in_valid;
 
 logic [127:0]   key_reg;
 
@@ -61,10 +65,10 @@ key_expansion_stage key_expansion_stage_initial_inst (
 );
 
 assign key_gen_idx_next = (fsm_state == READY) ? 4'd1 : 
-                          (fsm_state == KEY_GEN) ? key_gen_idx + 1 : 0;
+                          (fsm_state == KEY_GEN) ? key_gen_idx + 1 : 1;
 
 assign key_expansion_in_next = (fsm_state == READY) ? key_reg :
-                               (fsm_state == KEY_GEN) ? stage_key_regs[key_gen_idx-2] : key_reg;
+                               (fsm_state == KEY_GEN) ? key_expansion_out : key_reg;
 
 always_ff @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
@@ -75,7 +79,7 @@ always_ff @(posedge clk or negedge rst_n) begin
         key_gen_idx <= key_gen_idx_next;
         key_expansion_in <= key_expansion_in_next;
         
-        if (fsm_state == KEY_GEN || fsm_state == READY) begin
+        if (fsm_state == KEY_GEN) begin
             stage_key_regs[key_gen_idx-1] <= key_expansion_out;
         end
     end
@@ -95,14 +99,24 @@ end
 
 // ===========================================================
 // process rounds
-encryptRound encryptRound_insts [9:0] (
+encryptRound encryptRound_insts [8:0] (
     .clk(clk),
     .rst_n(rst_n),
     .state({stage_out_regs,stage0_in}),
     .in_valid({stage_valid,stage_in_valid}),
-    .key(stage_key_regs),
-    .out({out,stage_out_regs}),
-    .out_valid({out_valid,stage_valid})
+    .key(stage_key_regs[8:0]),
+    .out({last_stage_in,stage_out_regs}),
+    .out_valid({last_in_valid,stage_valid})
+);
+
+encryptLastRound encryptLastRound_inst (
+    .clk(clk),
+    .rst_n(rst_n),
+    .state(last_stage_in),
+    .in_valid(last_in_valid),
+    .key(stage_key_regs[9]),
+    .out(out),
+    .out_valid(out_valid)
 );
 
 // ===========================================================
@@ -123,7 +137,7 @@ always_comb begin
         KEY_GEN: begin
             if (halt) begin
                 next_fsm_state = INIT;
-            end else if (key_gen_idx == 9) begin
+            end else if (key_gen_idx == 10) begin
                 next_fsm_state = PROCESS;
             end
         end

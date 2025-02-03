@@ -49,12 +49,14 @@ always_comb begin
     next_round_key = {w0, w1, w2, w3};
 end
 
-// Register the computed key
-always_ff @(posedge clk or negedge rst_n) begin
-if (!rst_n)
-    out_key <= 128'b0;
-else
-    out_key <= next_round_key;
-end
+// // Register the computed key
+// always_ff @(posedge clk or negedge rst_n) begin
+// if (!rst_n)
+//     out_key <= 128'b0;
+// else
+//     out_key <= next_round_key;
+// end
+
+assign out_key = next_round_key;
 
 endmodule
