@@ -12,7 +12,8 @@ module encrypt_engine (
 
 localparam INIT = 0;
 localparam READY = 1;
-localparam PROCESS = 2;
+localparam KEY_GEN = 2;
+localparam PROCESS = 3;
 
 logic [1:0] fsm_state, next_fsm_state;
 
@@ -22,6 +23,11 @@ logic [8:0]          stage_valid   ;
 logic           stage_in_valid;
 
 logic [127:0]   key_reg;
+
+logic [3:0]     key_gen_idx, key_gen_idx_next;
+
+logic [127:0]   key_expansion_in, key_expansion_in_next;
+logic [127:0]   key_expansion_out;
 // logic           key_valid;
 
 logic [127:0]   after_addroundkey, stage0_in;
@@ -46,12 +52,34 @@ addRoundKey first_addRoundKey_inst (
 );
 
 // process initial key expansion
-key_expansion_stage #(.Round_idx(0)) key_expansion_stage_initial_inst (
+key_expansion_stage key_expansion_stage_initial_inst (
     .clk(clk),
     .rst_n(rst_n),
-    .in_key(key_reg),
-    .out_key(stage_key_regs[0])
+    .round_idx(key_gen_idx),
+    .in_key(key_expansion_in),
+    .out_key(key_expansion_out)
 );
+
+assign key_gen_idx_next = (fsm_state == READY) ? 4'd1 : 
+                          (fsm_state == KEY_GEN) ? key_gen_idx + 1 : 0;
+
+assign key_expansion_in_next = (fsm_state == READY) ? key_reg :
+                               (fsm_state == KEY_GEN) ? stage_key_regs[key_gen_idx] : key_reg;
+
+always_ff @(posedge clk or negedge rst_n) begin
+    if (~rst_n) begin
+        key_gen_idx <= 4'd0;
+        key_expansion_in <= 128'h0;
+        stage_key_regs <= 0;
+    end else begin
+        key_gen_idx <= key_gen_idx_next;
+        key_expansion_in <= key_expansion_in_next;
+        
+        if (fsm_state == KEY_GEN || fsm_state == READY) begin
+            stage_key_regs[key_gen_idx-1] <= key_expansion_out;
+        end
+    end
+end
 
 always_ff @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
@@ -66,19 +94,6 @@ always_ff @(posedge clk or negedge rst_n) begin
 end
 
 // ===========================================================
-// process key expansions
-genvar i;
-generate
-    for (i = 1; i < 10; i = i + 1) begin : key_expansion
-        key_expansion_stage #(.Round_idx(i)) key_expansion_stage_inst (
-            .clk(clk),
-            .rst_n(rst_n),
-            .in_key(stage_key_regs[i-1]),
-            .out_key(stage_key_regs[i])
-        );
-    end
-endgenerate
-
 // process rounds
 encryptRound encryptRound_insts [9:0] (
     .clk(clk),
@@ -102,13 +117,20 @@ always_comb begin
         end
         READY: begin
             if (start) begin
+                next_fsm_state = KEY_GEN;
+            end
+        end
+        KEY_GEN: begin
+            if (halt) begin
+                next_fsm_state = INIT;
+            end else if (key_gen_idx == 9) begin
                 next_fsm_state = PROCESS;
             end
         end
         PROCESS: begin
             if (halt) begin
                 next_fsm_state = INIT;
-            end 
+            end
         end
         default: next_fsm_state = fsm_state;
     endcase
