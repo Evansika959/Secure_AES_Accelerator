@@ -56,7 +56,7 @@ slack:
 .PHONY: slack
 
 synth:
-	cd syn; dc_shell -tcl_mode -xg_mode -f mult.syn.tcl | tee output.txt 
+	cd syn; dc_shell -tcl_mode -xg_mode -f encrypt_engine.syn.tcl | tee output.txt 
 
 sim_synth:
 	cp goldenbrick/goldenbrick.txt verilog/goldenbrick.txt
