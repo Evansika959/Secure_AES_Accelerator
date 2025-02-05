@@ -58,6 +58,9 @@ slack:
 synth:
 	cd syn; dc_shell -tcl_mode -xg_mode -f encrypt_engine.syn.tcl | tee output.txt 
 
+run_apr:
+	cd apr; innovus -init encrypt_engine.apr.tcl | tee output.txt
+
 sim_synth:
 	cp goldenbrick/goldenbrick.txt verilog/goldenbrick.txt
 	cd verilog; $(VV) $(VVOPTS) $(STD_CELLS) $(SIM_SYNTH_FILES) $(TESTBENCH); ./$@
