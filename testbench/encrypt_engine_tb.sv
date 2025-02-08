@@ -51,22 +51,22 @@ module encrypt_engine_tb;
         $display("=== Stage Key Registers ===");
         for (int i = 0; i < 12; i++) begin
             #10
-            $display("Time: %0t, key_idx_cnt = %d, fsm_state = %d, key_gen = (%h) -> (%h)", $time, dut.key_gen_idx, dut.fsm_state, dut.key_expansion_in, dut.key_expansion_out);
-            for (int j = 0; j < 10; j++) begin
-                // $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
-                if (j == 8) begin
-                    $display("stage_out_regs[%0d] = %h [%b]", j, dut.last_stage_in, dut.last_in_valid);
-                end else if (j == 9) begin
-                    $display("stage_out_regs[%0d] = %h [%b]", j, dut.out, dut.out_valid);
-                end else begin
-                    $display("stage_out_regs[%0d] = %h [%b]", j, dut.stage_out_regs[j], dut.stage_valid[j]);
-                end
+            $display("Time: %0t, key_idx_cnt = %d, fsm_state = %d, key_gen = (%h) -> (%h), out = %h, out_valid = %b", $time, dut.key_gen_idx, dut.fsm_state, dut.key_expansion_in, dut.key_expansion_out, out, out_valid);
+            // for (int j = 0; j < 10; j++) begin
+            //     // $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
+            //     if (j == 8) begin
+            //         $display("stage_out_regs[%0d] = %h [%b]", j, dut.last_stage_in, dut.last_in_valid);
+            //     end else if (j == 9) begin
+            //         $display("stage_out_regs[%0d] = %h [%b]", j, dut.out, dut.out_valid);
+            //     end else begin
+            //         $display("stage_out_regs[%0d] = %h [%b]", j, dut.stage_out_regs[j], dut.stage_valid[j]);
+            //     end
 
-            end
+            // end
 
-            for (int j = 0; j < 10; j++) begin
-                $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
-            end
+            // for (int j = 0; j < 10; j++) begin
+            //     $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
+            // end
         end
         #10;
         // Additional test case: halt scenario
