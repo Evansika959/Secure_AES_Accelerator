@@ -219,6 +219,7 @@ def aes_encrypt(plaintext, key):
     # for row in state:
     #     print(' '.join(f"{b:02x}" for b in row))
     print(matrix_to_bytes(state).hex())
+    print(f"Round Key {10}: {matrix_to_bytes(round_keys[10]).hex()}")
     
     return matrix_to_bytes(state)
 
