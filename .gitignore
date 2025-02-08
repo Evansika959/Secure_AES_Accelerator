@@ -4,6 +4,8 @@ verilog/sim*
 verilog/nova*
 verilog/verdi*
 
+goldenbrick/__pycache__
+
 # verilog compilation
 *simv
 *.daidir
