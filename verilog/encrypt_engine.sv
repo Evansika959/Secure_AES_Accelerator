@@ -67,17 +67,17 @@ key_expansion_stage key_expansion_stage_initial_inst (
 assign key_gen_idx_next = (fsm_state == READY) ? 4'd1 : 
                           (fsm_state == KEY_GEN) ? key_gen_idx + 1 : 1;
 
-assign key_expansion_in_next = (fsm_state == READY) ? key_reg :
+assign key_expansion_in = (fsm_state == READY) ? key_reg :
                                (fsm_state == KEY_GEN) ? key_expansion_out : key_reg;
 
 always_ff @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
         key_gen_idx <= 4'd0;
-        key_expansion_in <= 128'h0;
+        // key_expansion_in <= 128'h0;
         stage_key_regs <= 0;
     end else begin
         key_gen_idx <= key_gen_idx_next;
-        key_expansion_in <= key_expansion_in_next;
+        // key_expansion_in <= key_expansion_in_next;
         
         if (fsm_state == KEY_GEN) begin
             stage_key_regs[key_gen_idx-1] <= key_expansion_out;
