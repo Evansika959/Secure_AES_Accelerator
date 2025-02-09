@@ -44,14 +44,15 @@ module encrypt_engine_tb;
 
         // Apply key
         set_key = 1;
+        #10;
+        set_key = 0;
         start = 1;
         // #10 set_key = 0;
         
         // #120;
         $display("=== Stage Key Registers ===");
-        for (int i = 0; i < 13; i++) begin
+        for (int i = 0; i < 12; i++) begin
             #10
-            set_key = 0;
             $display("Time: %0t, key_idx_cnt = %d, fsm_state = %d, key_gen = (%h) -> (%h), out = %h, out_valid = %b", $time, dut.key_gen_idx, dut.fsm_state, dut.key_expansion_in, dut.key_expansion_out, out, out_valid);
             for (int j = 0; j < 10; j++) begin
                 // $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
