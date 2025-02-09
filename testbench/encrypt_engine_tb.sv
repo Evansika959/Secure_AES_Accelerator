@@ -66,9 +66,9 @@ module encrypt_engine_tb;
 
             end
 
-            // for (int j = 0; j < 10; j++) begin
-            //     $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
-            // end
+            for (int j = 0; j < 10; j++) begin
+                $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
+            end
         end
         #10;
         // Additional test case: halt scenario
