@@ -77,7 +77,7 @@ always_ff @(posedge clk or negedge rst_n) begin
         key_expansion_out_reg <= 128'h0;
     end else begin
         key_gen_idx <= key_gen_idx_next;
-        key_expansion_out_reg <= key_expansion_out;
+        key_expansion_out_reg <= (fsm_state == KEY_GEN || (fsm_state == READY && start)) ? key_expansion_out key_expansion_in;
 
         if (fsm_state == KEY_GEN) begin
             stage_key_regs[key_gen_idx-1] <= key_expansion_out;
