@@ -82,6 +82,10 @@ always_ff @(posedge clk or negedge rst_n) begin
         if (fsm_state == KEY_GEN) begin
             stage_key_regs[key_gen_idx-1] <= key_expansion_out;
         end
+
+        if (fsm_state == READY && start == 1) begin
+            stage_key_regs[key_gen_idx-1] <= key_expansion_out;
+        end
     end
 end
 
@@ -104,6 +108,7 @@ encryptRound encryptRound_insts [8:0] (
     .rst_n(rst_n),
     .state({stage_out_regs,stage0_in}),
     .in_valid({stage_valid,stage_in_valid}),
+    // .in_valid({stage_valid,start}),
     .key(stage_key_regs[8:0]),
     .out({last_stage_in,stage_out_regs}),
     .out_valid({last_in_valid,stage_valid})
