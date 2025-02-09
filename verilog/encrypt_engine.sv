@@ -30,8 +30,8 @@ logic [127:0]   key_reg;
 
 logic [3:0]     key_gen_idx, key_gen_idx_next;
 
-logic [127:0]   key_expansion_in, key_expansion_in_next;
-logic [127:0]   key_expansion_out;
+logic [127:0]   key_expansion_in;
+logic [127:0]   key_expansion_out, key_expansion_out_reg;
 // logic           key_valid;
 
 logic [127:0]   after_addroundkey, stage0_in;
@@ -68,17 +68,17 @@ assign key_gen_idx_next = (fsm_state == READY) ? 4'd1 :
                           (fsm_state == KEY_GEN) ? key_gen_idx + 1 : 1;
 
 assign key_expansion_in = (fsm_state == READY) ? key_reg :
-                               (fsm_state == KEY_GEN) ? key_expansion_out : key_reg;
+                               (fsm_state == KEY_GEN) ? key_expansion_out_reg : key_reg;
 
 always_ff @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
         key_gen_idx <= 4'd0;
-        // key_expansion_in <= 128'h0;
         stage_key_regs <= 0;
+        key_expansion_out_reg <= 128'h0;
     end else begin
         key_gen_idx <= key_gen_idx_next;
-        // key_expansion_in <= key_expansion_in_next;
-        
+        key_expansion_out_reg <= key_expansion_out;
+
         if (fsm_state == KEY_GEN) begin
             stage_key_regs[key_gen_idx-1] <= key_expansion_out;
         end
