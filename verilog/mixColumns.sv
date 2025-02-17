@@ -1,3 +1,6 @@
+`ifndef MIX_COLUMNS
+`define MIX_COLUMNS
+
 module mixColumns(
     input [127:0] state,
     output [127:0] out
@@ -32,3 +35,5 @@ endgenerate
 assign out = state_out;
 
 endmodule
+
+`endif

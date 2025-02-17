@@ -1,3 +1,6 @@
+`ifndef AESLASTROUND
+`define AESLASTROUND
+
 `include "sysdef.svh"
 
 module aesLastRound(
@@ -64,3 +67,5 @@ always_ff @(posedge clk or negedge rst_n) begin
 end
     
 endmodule
+
+`endif

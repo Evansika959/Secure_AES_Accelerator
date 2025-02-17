@@ -1,3 +1,6 @@
+`ifndef SHIFTROWS
+`define SHIFTROWS
+
 module shiftRows (
     input [127:0] state,
     output logic [127:0] out
@@ -33,3 +36,5 @@ assign shifted[64+:8] = state[96+:8];
 assign shifted[96+:8] = state[0+:8];
 
 endmodule
+
+`endif

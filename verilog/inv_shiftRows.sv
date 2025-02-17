@@ -1,3 +1,6 @@
+`ifndef INV_SHIFTROWS
+`define INV_SHIFTROWS
+
 module inv_shiftRows (
     input  [127:0] state,
     output logic [127:0] out
@@ -34,3 +37,5 @@ assign inv_shifted[96+:8] = state[64+:8];    // state[64] -> original [96]
 assign inv_shifted[0+:8]  = state[96+:8];    // state[96] -> original [0]
 
 endmodule
+
+`endif

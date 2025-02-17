@@ -1,3 +1,6 @@
+`ifndef SBOX
+`define SBOX
+
 module sbox (
     input [7:0] a,
     output logic [7:0] c
@@ -265,3 +268,4 @@ always_comb begin
 end
 endmodule
 
+`endif

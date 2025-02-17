@@ -1,3 +1,6 @@
+`ifndef INV_MIXCOLUMNS  
+`define INV_MIXCOLUMNS
+
 module inv_mixColumns(
     input  [127:0] state,
     output [127:0] out
@@ -93,3 +96,5 @@ module inv_mixColumns(
   assign out = state_out;
 
 endmodule
+
+`endif

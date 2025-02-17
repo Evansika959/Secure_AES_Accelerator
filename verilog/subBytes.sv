@@ -1,3 +1,6 @@
+`ifndef SUBBYTES
+`define SUBBYTES
+
 module subBytes(
     input [127:0] state,
     output [127:0] out
@@ -18,3 +21,5 @@ endgenerate
 assign out = sbox_out;
 
 endmodule
+
+`endif
