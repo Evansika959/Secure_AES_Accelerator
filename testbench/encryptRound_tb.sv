@@ -54,6 +54,16 @@ module tb_encryptRound;
         $display("Key:          %h", key);
         $display("Encrypted:    %h", out);
 
+        #10;
+        state = 128'h6378e4daf062fd71a50f36ffdee684ac;
+        in_type = DECRYPT;
+
+        #10;
+        // Display results
+        $display("State:        %h", state);
+        $display("Key:          %h", key);
+        $display("Encrypted:    %h", out);
+
         // End simulation
         #100;
         $finish;
