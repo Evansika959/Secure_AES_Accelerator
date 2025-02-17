@@ -47,7 +47,7 @@ sim_shiftrows:
 sim_aesRound:
 	cd verilog; $(VV) $(VVOPTS) sysdef.svh aesRound.sv subBytes.sv shiftRows.sv mixColumns.sv \
 	addRoundKey.sv subBytes.sv shiftRows.sv mixColumns.sv\
-	 ../testbench/encryptRound_tb; ./$@
+	 ../testbench/encryptRound_tb.sv; ./$@
 
 sim_key_expansion_stage:
 	cd verilog; $(VV) $(VVOPTS) key_expansion_stage.sv subWords.sv sbox.sv  ../testbench/key_expansion_stage_tb.sv; ./$@
