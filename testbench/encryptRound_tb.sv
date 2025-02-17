@@ -9,6 +9,7 @@ module tb_encryptRound;
     logic [127:0] key;
     logic [127:0] out;
     logic in_valid;
+    logic out_valid;
     // Instantiate the DUT (Device Under Test)
     // encryptRound dut (
     //     .clk(clk),
@@ -33,7 +34,8 @@ module tb_encryptRound;
         .state(state),
         .in_valid(in_valid),
         .key(key),
-        .out(out)
+        .out(out),
+        .out_valid(out_valid)
     );
 
     // Clock generation
