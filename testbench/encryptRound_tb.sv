@@ -50,6 +50,7 @@ module tb_encryptRound;
         rst_n = 0;
         state = 128'h7ad5fda789ef4e272bca100b3d9ff59f;
         key = 128'h549932d1f08557681093ed9cbe2c974e;
+        in_valid = 1;
 
         // Apply reset
         #10;

@@ -13,8 +13,12 @@ module decryptRound (
 
 logic [127:0] after_roundkey, after_subbytes, after_shiftrows, out_temp;
 
+logic [127:0] state_in;
+
+assign state_in = (in_valid) ? state : 128'h0;
+
 inv_shiftRows inv_shiftRows_inst (
-    .state(state),
+    .state(state_in),
     .out(after_shiftrows)
 );
 
