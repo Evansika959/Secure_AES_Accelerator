@@ -1,3 +1,5 @@
+`include "sysdef.svh"
+
 module tb_encryptRound;
 
     // Testbench signals
@@ -6,12 +8,22 @@ module tb_encryptRound;
     logic [127:0] state;
     logic [127:0] key;
     logic [127:0] out;
+    job_t in_type;
 
     // Instantiate the DUT (Device Under Test)
-    encryptRound dut (
+    // encryptRound dut (
+    //     .clk(clk),
+    //     .rst_n(rst_n),
+    //     .state(state),
+    //     .key(key),
+    //     .out(out)
+    // );
+
+    aesRound dut (
         .clk(clk),
         .rst_n(rst_n),
         .state(state),
+        .in_type(in_type),
         .key(key),
         .out(out)
     );
@@ -28,6 +40,7 @@ module tb_encryptRound;
         rst_n = 0;
         state = 128'h00112233445566778899aabbccddeeff;
         key = 128'h000102030405060708090a0b0c0d0e0f;
+        in_type = ENCRYPT;
 
         // Apply reset
         #10;
