@@ -45,7 +45,7 @@ sim_shiftrows:
 	cd verilog; $(VV) $(VVOPTS) shiftRows.sv ../testbench/shiftrow_tb.sv; ./$@
 
 sim_aesRound:
-	cd verilog; $(VV) $(VVOPTS) aesRound.sv subBytes.sv shiftRows.sv mixColumns.sv\
+	cd verilog; $(VV) $(VVOPTS) sysdef.svh aesRound.sv subBytes.sv shiftRows.sv mixColumns.sv \
 	addRoundKey.sv subBytes.sv shiftRows.sv mixColumns.sv\
 	 ../testbench/encryptRound_tb; ./$@
 
