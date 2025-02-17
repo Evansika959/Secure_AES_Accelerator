@@ -66,10 +66,8 @@ always_ff @(posedge clk or negedge rst_n) begin
         out <= 128'h0;
         out_type <= INVALID;
     end else begin
-        if (in_valid) begin
-            out <= out_temp;
-            out_type <= in_type;
-        end
+        out <= out_temp;
+        out_type <= in_type;
     end
 end
 
