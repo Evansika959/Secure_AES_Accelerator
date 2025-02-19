@@ -108,7 +108,7 @@ always_ff @(posedge clk or negedge rst_n) begin
         stage_in_type <= INVALID;
     end else begin
         stage0_in <= after_addroundkey;
-        stage_in_type <= 1'b1;
+        stage_in_type <= in_type;
     end
 end
 

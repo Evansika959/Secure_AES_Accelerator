@@ -2833,7 +2833,18 @@ static inline U asm_bsf (U in)
 #ifdef __cplusplus
 extern "C" {
 #endif
-void  rmaPropagate0_sim_key_expansion_stage_daidir (UB  * pcode, vec32  * I1129, U  I1002);
+void  rmaPropagate0_sim_aesRound_daidir (UB  * pcode, vec32  * I1129, U  I1002);
+void  rmaPropagate1_p_sim_aesRound_daidir (UB  * pcode, vec32  * I1129, U  I1002);
+void  rmaPropagate1_sim_aesRound_daidir (UB  * pcode, vec32  * I1129, U  I1002);
+void  rmaPropagate1_t0_sim_aesRound_daidir (UB  * pcode, U  I1002);
+void  rmaPropagate2_p_sim_aesRound_daidir (UB  * pcode, vec32  * I1129, U  I1002);
+void  rmaPropagate2_sim_aesRound_daidir (UB  * pcode, vec32  * I1129, U  I1002);
+void  rmaPropagate2_t0_sim_aesRound_daidir (UB  * pcode, U  I1002);
+void  rmaPropagate3_sim_aesRound_daidir (UB  * pcode, scalar  val);
+void  rmaPropagate4_p_sim_aesRound_daidir (UB  * pcode, vec32  * I1129, U  I1002);
+void  rmaPropagate4_sim_aesRound_daidir (UB  * pcode, vec32  * I1129, U  I1002);
+void  rmaPropagate4_t0_sim_aesRound_daidir (UB  * pcode, U  I1002);
+void  rmaPropagate5_sim_aesRound_daidir (UB  * pcode, vec32  * I1129, U  I1002);
 void  schedNewEvent (struct dummyq_struct * I1460, EBLK  * I1455, U  I627);
 #ifdef __cplusplus
 }

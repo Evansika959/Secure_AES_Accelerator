@@ -1,9 +1,0 @@
-#!/bin/sh -h 
-PYTHONHOME=/usr/caen/vcs-2022.06/etc/search/pyh
-export PYTHONHOME
-PYTHONPATH=/usr/caen/vcs-2022.06/linux64/lib/pylib27
-export PYTHONPATH
-LD_LIBRARY_PATH=/usr/caen/vcs-2022.06/linux64/lib:/usr/caen/vcs-2022.06/linux64/lib/pylib27
-export LD_LIBRARY_PATH
-/usr/caen/vcs-2022.06/linux64/bin/vcsfind_create_index.exe  -z  "/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir/debug_dump/fsearch/./idents_LoLwDB.xml.gz" -o "/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir/debug_dump/fsearch/fsearch.db_tmp"
-\mv "/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir/debug_dump/fsearch/fsearch.db_tmp" "/home/xinting/eecs627/Secure_AES_Accelerator/verilog/verdi.daidir/debug_dump/fsearch/fsearch.db"

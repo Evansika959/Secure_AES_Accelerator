@@ -50,7 +50,6 @@ module aes_engine_tb;
         // Initialize signals
         clk = 0;
         rst_n = 0;
-        start = 0;
         set_key = 0;
         halt = 0;
         state = 128'h00112233445566778899aabbccddeeff; // Example plaintext state
@@ -72,7 +71,7 @@ module aes_engine_tb;
         $display("=== Stage Key Registers ===");
         for (int i = 0; i < 12; i++) begin
             #10
-            $display("Time: %0t, key_idx_cnt = %d, fsm_state = %d, key_gen = (%h) -> (%h), out = %h, out_valid = %b", $time, dut.key_gen_idx, dut.fsm_state, dut.key_expansion_in, dut.key_expansion_out, out, out_valid);
+            $display("Time: %0t, key_idx_cnt = %d, fsm_state = %d, key_gen = (%h) -> (%h), out = %h, out_type = %2b", $time, dut.key_gen_idx, dut.fsm_state, dut.key_expansion_in, dut.key_expansion_out, out, out_type);
             for (int j = 0; j < 10; j++) begin
                 // $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
                 if (j == 8) begin
@@ -100,9 +99,9 @@ module aes_engine_tb;
     end
 
     // Monitor outputs
-    initial begin
-        $monitor("Time: %0t | Start: %b | State: %h | Key: %h | Out: %h | Valid: %b", 
-                 $time, start, state, key, out, out_valid);
-    end
+    // initial begin
+    //     $monitor("Time: %0t | Start: %b | State: %h | Key: %h | Out: %h | Valid: %b", 
+    //              $time, start, state, key, out, out_valid);
+    // end
 
 endmodule
