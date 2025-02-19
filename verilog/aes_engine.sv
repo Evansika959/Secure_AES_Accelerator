@@ -114,21 +114,62 @@ end
 
 // ===========================================================
 // process rounds
+// genvar i;
+// generate
+//     for (i = 0; i < 9; i = i + 1) begin : gen_aesRound
+//         aesRound aesRound_inst (
+//             .clk(clk),
+//             .rst_n(rst_n),
+//             .state((i == 0) ? stage0_in : stage_out_regs[i]),
+//             .in_type((i == 0) ? stage_in_type : stage_type[i-1]),
+//             .key(stage_key_regs[i]),
+//             .inv_key(stage_key_regs[8-i]),
+//             .out((i == 8) ? last_stage_in : stage_out_regs[i]),
+//             .out_type((i == 8) ? last_stage_type : stage_type[i])
+//         );
+//     end
+// endgenerate
+
 genvar i;
 generate
-    for (i = 0; i < 9; i = i + 1) begin : gen_aesRound
-        aesRound aesRound_inst (
-            .clk(clk),
-            .rst_n(rst_n),
-            .state((i == 0) ? stage0_in : stage_out_regs[i]),
-            .in_type((i == 0) ? stage_in_type : stage_type[i-1]),
-            .key(stage_key_regs[i]),
-            .inv_key(stage_key_regs[i+1]),
-            .out((i == 8) ? last_stage_in : stage_out_regs[i]),
-            .out_type((i == 8) ? last_stage_type : stage_type[i])
-        );
+  for (i = 0; i < 9; i = i + 1) begin : gen_aesRound
+    if (i == 0) begin
+      aesRound aesRound_inst (
+        .clk      (clk),
+        .rst_n    (rst_n),
+        .state    (stage0_in),
+        .in_type  (stage_in_type),
+        .key      (stage_key_regs[0]),
+        .inv_key  (stage_key_regs[8]),
+        .out      (stage_out_regs[i]),
+        .out_type (stage_type[i])
+      );
+    end else if (i < 8) begin
+      aesRound aesRound_inst (
+        .clk      (clk),
+        .rst_n    (rst_n),
+        .state    (stage_out_regs[i-1]),
+        .in_type  (stage_type[i-1]),
+        .key      (stage_key_regs[i]),
+        .inv_key  (stage_key_regs[8-i]),
+        .out      (stage_out_regs[i]),
+        .out_type (stage_type[i])
+      );
+    end else begin  // i == 8, last stage
+      aesRound aesRound_inst (
+        .clk      (clk),
+        .rst_n    (rst_n),
+        .state    (stage_out_regs[i-1]),
+        .in_type  (stage_type[i-1]),
+        .key      (stage_key_regs[8]),
+        .inv_key  (stage_key_regs[0]),
+        .out      (last_stage_in),
+        .out_type (last_stage_type)
+      );
     end
+  end
 endgenerate
+
 
 aesLastRound aesLastRound_inst (
     .clk(clk),
