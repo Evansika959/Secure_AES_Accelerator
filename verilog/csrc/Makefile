@@ -8,7 +8,7 @@ VSRC=..
 TARGET_ARCH=
 
 # Choose name of executable 
-PRODUCTBASE=$(VSRC)/sim_aesRound
+PRODUCTBASE=$(VSRC)/sim
 
 PRODUCT=$(PRODUCTBASE)
 
@@ -39,7 +39,7 @@ STDLIB =
 STRIPFLAGS= 
 
 PRE_LDFLAGS= # Loader Flags
-LDFLAGS= -rdynamic  -Wl,-rpath='$$ORIGIN'/sim_aesRound.daidir -Wl,-rpath=./sim_aesRound.daidir -Wl,-rpath=/usr/caen/vcs-2023.12-SP2-1/linux64/lib -L/usr/caen/vcs-2023.12-SP2-1/linux64/lib 
+LDFLAGS= -rdynamic  -Wl,-rpath='$$ORIGIN'/sim.daidir -Wl,-rpath=./sim.daidir -Wl,-rpath=/usr/caen/vcs-2023.12-SP2-1/linux64/lib -L/usr/caen/vcs-2023.12-SP2-1/linux64/lib 
 # Picarchive Flags
 PICLDFLAGS= -Wl,-rpath-link=./ 
 PIC_LD=ld
