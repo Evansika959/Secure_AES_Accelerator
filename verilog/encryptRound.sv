@@ -1,3 +1,6 @@
+`ifndef ENCRYPTROUND
+`define ENCRYPTROUND
+
 module encryptRound (
     input clk,
     input rst_n,
@@ -52,3 +55,5 @@ always_ff @(posedge clk or negedge rst_n) begin
 end
 
 endmodule
+
+`endif

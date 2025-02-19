@@ -24,12 +24,12 @@ logic [1:0] fsm_state, next_fsm_state;
 
 logic [7:0] [127:0]   stage_out_regs ;
 logic [9:0] [127:0]   stage_key_regs ;
-logic [7:0]          stage_valid   ;
-logic           stage_in_valid;
+job_t [7:0]           stage_type;
+job_t                 stage_in_type;
 
 // for last round
 logic [127:0] last_stage_in;
-logic         last_in_valid;
+job_t         last_stage_type;
 
 logic [127:0]   key_reg;
 
@@ -105,35 +105,40 @@ end
 always_ff @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
         stage0_in <= 128'h0;
-        stage_in_valid <= 1'b0;
+        stage_in_type <= INVALID;
     end else begin
-        if (start) begin
-            stage0_in <= after_addroundkey;
-            stage_in_valid <= 1'b1;
-        end
+        stage0_in <= after_addroundkey;
+        stage_in_type <= 1'b1;
     end
 end
 
 // ===========================================================
 // process rounds
-encryptRound encryptRound_insts [8:0] (
-    .clk(clk),
-    .rst_n(rst_n),
-    .state({stage_out_regs,stage0_in}),
-    .in_valid({stage_valid,stage_in_valid}),
-    .key(stage_key_regs[8:0]),
-    .out({last_stage_in,stage_out_regs}),
-    .out_valid({last_in_valid,stage_valid})
-);
+genvar i;
+generate
+    for (i = 0; i < 9; i = i + 1) begin : gen_aesRound
+        aesRound aesRound_inst (
+            .clk(clk),
+            .rst_n(rst_n),
+            .state((i == 0) ? stage0_in : stage_out_regs[i]),
+            .in_type((i == 0) ? stage_in_type : stage_type[i-1]),
+            .key(stage_key_regs[i]),
+            .inv_key(stage_key_regs[i+1]),
+            .out((i == 8) ? last_stage_in : stage_out_regs[i]),
+            .out_type((i == 8) ? last_stage_type : stage_type[i])
+        );
+    end
+endgenerate
 
-encryptLastRound encryptLastRound_inst (
+aesLastRound aesLastRound_inst (
     .clk(clk),
     .rst_n(rst_n),
     .state(last_stage_in),
-    .in_valid(last_in_valid),
+    .in_type(last_stage_type),
     .key(stage_key_regs[9]),
+    .inv_key(key_reg),
     .out(out),
-    .out_valid(out_valid)
+    .out_type(out_type)
 );
 
 // ===========================================================

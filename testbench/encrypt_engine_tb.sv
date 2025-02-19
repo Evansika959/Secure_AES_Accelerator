@@ -20,7 +20,7 @@ module encrypt_engine_tb;
         .rst_n(rst_n),
         .start(start),
         .set_key(set_key),
-        .halt(halt),
+        .halt(halt),    
         .state(state),
         .key(key),
         .out(out),

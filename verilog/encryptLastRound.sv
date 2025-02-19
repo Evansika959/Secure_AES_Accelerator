@@ -1,3 +1,6 @@
+`ifndef ENCRYPTLASTROUND
+`define ENCRYPTLASTROUND
+
 module encryptLastRound (
     input clk,
     input rst_n,
@@ -46,3 +49,5 @@ end
 
 
 endmodule
+
+`endif
