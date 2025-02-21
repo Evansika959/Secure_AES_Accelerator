@@ -100,7 +100,7 @@ module aes_engine_tb;
         // #10;
         // in_type = INVALID;
 
-        #100;
+        #90;
         // Additional test case: halt scenario
         halt = 1;
         #10 halt = 0;
