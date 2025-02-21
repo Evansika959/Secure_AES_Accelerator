@@ -44,6 +44,7 @@ clean:
 	rm -f -r syn/dwsvf_*
 	rm -f -r run/*
 
+.PHONY: goldenbrick
 goldenbrick:
 	cd goldenbrick; python3 aes_gentb.py
 
