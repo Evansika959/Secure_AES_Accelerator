@@ -52,7 +52,7 @@ module aes_engine_tb;
     // Test sequence
     initial begin
         // open file
-        file = $fopen("../run/encrypt_goldenbrick_in", "r");
+        file = $fopen("../run/encrypt_goldenbrick_in.txt", "r");
         if (file == 0) begin
             $display("Error: Could not open file!");
             $finish;
