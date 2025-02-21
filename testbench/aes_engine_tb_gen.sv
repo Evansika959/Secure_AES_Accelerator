@@ -112,7 +112,7 @@ module aes_engine_tb;
     // Output file
     int file_output;
     initial begin
-      file_output = $fopen("../run/aes_out", "w");
+      file_output = $fopen("../run/encrypt_out.txt", "w");
       if (file_output == 0) begin
         $display("Error: Could not open output file!");
         $finish;
@@ -120,9 +120,10 @@ module aes_engine_tb;
     
       forever begin
         @(posedge clk);
-        if (out_type == ENCRYPT) begin
-          $fwrite(file_output, "%h\n", out);
-        end
+        // if (out_type == ENCRYPT) begin
+        //   $fwrite(file_output, "%h\n", out);
+        // end
+        $fwrite(file_output, "%h [%2b]\n", out, out_type);
       end
     end
 
