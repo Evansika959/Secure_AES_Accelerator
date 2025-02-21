@@ -48,8 +48,11 @@ clean:
 goldenbrick:
 	cd goldenbrick; python3 aes_gentb.py
 
+behavioral_check: goldenbrick sim
+	diff run/aes_out.txt run/encrypt_goldenbrick_out.txt | tee run/diff_functional.txt
+
 sim:
-	cd verilog; $(VV) $(VVOPTS) $(SIM_FILES) $(TESTBENCH); ./$@
+	cd verilog; $(VV) $(VVOPTS) $(SIM_FILES) $(TESTBENCH); ./$@; cd ..
 
 sim_shiftrows:
 	cd verilog; $(VV) $(VVOPTS) shiftRows.sv ../testbench/shiftrow_tb.sv; ./$@
