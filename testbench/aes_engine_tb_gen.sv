@@ -98,13 +98,13 @@ module aes_engine_tb;
 
         //
 
-        #10;
+        #100;
         // Additional test case: halt scenario
         halt = 1;
         #10 halt = 0;
 
         // Finish simulation
-        #50;
+        #20;
         $finish;
     end
 
@@ -120,10 +120,9 @@ module aes_engine_tb;
     
       forever begin
         @(posedge clk);
-        // if (out_type == ENCRYPT) begin
-        //   $fwrite(file_output, "%h\n", out);
-        // end
-        $fwrite(file_output, "%h [%2b]\n", out, out_type);
+        if (out_type == ENCRYPT) begin
+          $fwrite(file_output, "%h\n", out);
+        end
       end
     end
 
