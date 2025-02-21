@@ -47,6 +47,7 @@ module aes_engine_tb;
 
     int file;
     int status;
+    string line;
 
     // Test sequence
     initial begin
