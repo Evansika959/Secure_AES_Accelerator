@@ -6,6 +6,10 @@ verilog/verdi*
 
 goldenbrick/__pycache__
 
+*.txt
+
+run/*
+
 # verilog compilation
 *simv
 *.daidir
