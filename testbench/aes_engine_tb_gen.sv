@@ -45,6 +45,9 @@ module aes_engine_tb;
   endfunction
 
 
+    int file;
+    int status;
+
     // Test sequence
     initial begin
         // open file
