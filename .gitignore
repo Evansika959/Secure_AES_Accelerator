@@ -3,6 +3,7 @@ verilog/csrc/*
 verilog/sim*
 verilog/nova*
 verilog/verdi*
+verilog/.vcs*
 
 goldenbrick/__pycache__
 
