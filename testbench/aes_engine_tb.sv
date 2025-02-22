@@ -84,38 +84,44 @@ module aes_engine_tb;
 
             end
 
-            for (int j = 0; j < 10; j++) begin
-                $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
-            end
+            // for (int j = 0; j < 10; j++) begin
+            //     $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
+            // end
         end
 
+        // #10;
+        // // Decrypt test
+        // state = 128'h69c4e0d86a7b0430d8cdb78070b4c55a;
+        // in_type = DECRYPT;
+
+        // $display("=== Stage Key Registers ===");
+        // for (int i = 0; i < 12; i++) begin
+        //     #10
+        //     $display("Time: %0t, key_idx_cnt = %d, fsm_state = %d, key_gen = (%h) -> (%h), out = %h, out_type = %2b", $time, dut.key_gen_idx, dut.fsm_state, dut.key_expansion_in, dut.key_expansion_out, out, out_type);
+        //     for (int j = 0; j < 10; j++) begin
+        //         // $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
+        //         if (j == 8) begin
+        //             $display("stage_out_regs[%0d] = %h [%2b]", j, dut.last_stage_in, dut.last_stage_type);
+        //         end else if (j == 9) begin
+        //             $display("stage_out_regs[%0d] = %h [%2b]", j, dut.out, dut.out_type);
+        //         end else begin
+        //             $display("stage_out_regs[%0d] = %h [%2b]", j, dut.stage_out_regs[j], dut.stage_type[j]);
+        //         end
+
+        //     end
+
+        //     // for (int j = 0; j < 10; j++) begin
+        //     //     $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
+        //     // end
+        // end
+
+        #40;
+
         #10;
-        // Decrypt test
-        state = 128'h69c4e0d86a7b0430d8cdb78070b4c55a;
-        in_type = DECRYPT;
+        in_type = INVALID;
 
-        $display("=== Stage Key Registers ===");
-        for (int i = 0; i < 12; i++) begin
-            #10
-            $display("Time: %0t, key_idx_cnt = %d, fsm_state = %d, key_gen = (%h) -> (%h), out = %h, out_type = %2b", $time, dut.key_gen_idx, dut.fsm_state, dut.key_expansion_in, dut.key_expansion_out, out, out_type);
-            for (int j = 0; j < 10; j++) begin
-                // $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
-                if (j == 8) begin
-                    $display("stage_out_regs[%0d] = %h [%2b]", j, dut.last_stage_in, dut.last_stage_type);
-                end else if (j == 9) begin
-                    $display("stage_out_regs[%0d] = %h [%2b]", j, dut.out, dut.out_type);
-                end else begin
-                    $display("stage_out_regs[%0d] = %h [%2b]", j, dut.stage_out_regs[j], dut.stage_type[j]);
-                end
+        #50;
 
-            end
-
-            for (int j = 0; j < 10; j++) begin
-                $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
-            end
-        end
-
-        #10;
         // Additional test case: halt scenario
         halt = 1;
         #10 halt = 0;

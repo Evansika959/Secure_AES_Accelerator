@@ -97,10 +97,10 @@ module aes_engine_tb;
 
 
         //
-        // #10;
-        // in_type = INVALID;
+        #5;
+        in_type = INVALID;
 
-        #80;
+        #120;
         // Additional test case: halt scenario
         halt = 1;
         #10 halt = 0;
@@ -124,6 +124,22 @@ module aes_engine_tb;
         @(posedge clk);
         if (out_type == ENCRYPT) begin
           $fwrite(file_output, "%h\n", out);
+        end
+        if (dut.fsm_state == 2 || dut.fsm_state == 3) begin
+          $display("Time: %0t, key_idx_cnt = %d, fsm_state = %d, key_gen = (%h) -> (%h), out = %h, out_type = %2b", $time, dut.key_gen_idx, dut.fsm_state, dut.key_expansion_in, dut.key_expansion_out, out, out_type);
+          $display("input: %h, [%2b]", state, in_type);
+          $display("after 1st roundkey: %h, [%2b]", dut.stage0_in, dut.stage_in_type);
+          for (int j = 0; j < 10; j++) begin
+                // $display("stage_key_regs[%0d] = %h", j, dut.stage_key_regs[j]);
+                if (j == 8) begin
+                    $display("stage_out_regs[%0d] = %h [%2b]", j, dut.last_stage_in, dut.last_stage_type);
+                end else if (j == 9) begin
+                    $display("stage_out_regs[%0d] = %h [%2b]", j, dut.out, dut.out_type);
+                end else begin
+                    $display("stage_out_regs[%0d] = %h [%2b]", j, dut.stage_out_regs[j], dut.stage_type[j]);
+                end
+
+            end
         end
       end
     end
