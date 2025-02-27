@@ -219,6 +219,7 @@ def aes_encrypt(plaintext, key):
     # for row in state:
     #     print(' '.join(f"{b:02x}" for b in row))
     print(matrix_to_bytes(state).hex())
+    print(f"Round Key {10}: {matrix_to_bytes(round_keys[10]).hex()}")
     
     return matrix_to_bytes(state)
 
@@ -229,7 +230,8 @@ def main():
     # Example inputs (128-bit = 16 bytes)
     # They must be provided as hexadecimal strings.
     key_hex = "000102030405060708090a0b0c0d0e0f"
-    plaintext_hex = "00112233445566778899aabbccddeeff"
+    # plaintext_hex = "00112233445566778899aabbccddeeff"
+    plaintext_hex = "00000000000000000000000000000000"
     
     key = bytes.fromhex(key_hex)
     plaintext = bytes.fromhex(plaintext_hex)

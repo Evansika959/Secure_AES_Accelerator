@@ -1,13 +1,18 @@
-module encrypt_engine (
+`ifndef AES_ENGINE
+`define AES_ENGINE
+
+`include "sysdef.svh"
+
+module aes_engine (
     input clk,
     input rst_n,
-    input start,
+    input job_t in_type,
     input set_key,
     input halt,
     input [127:0] state,
     input [127:0] key,
     output logic [127:0] out,
-    output logic out_valid
+    output job_t out_type
 );
 
 localparam INIT = 0;
@@ -19,12 +24,12 @@ logic [1:0] fsm_state, next_fsm_state;
 
 logic [7:0] [127:0]   stage_out_regs ;
 logic [9:0] [127:0]   stage_key_regs ;
-logic [7:0]          stage_valid   ;
-logic           stage_in_valid;
+job_t [7:0]           stage_type;
+job_t                 stage_in_type;
 
 // for last round
 logic [127:0] last_stage_in;
-logic         last_in_valid;
+job_t         last_stage_type;
 
 logic [127:0]   key_reg;
 
@@ -35,6 +40,12 @@ logic [127:0]   key_expansion_out, key_expansion_out_reg;
 // logic           key_valid;
 
 logic [127:0]   after_addroundkey, stage0_in;
+
+logic [127:0]   key0_used, input_state;   // for the initial round key
+
+logic start;    // start signal for the first round
+
+assign start = ~(in_type == INVALID);
 
 // process key loading
 always_ff @(posedge clk or negedge rst_n) begin
@@ -49,9 +60,15 @@ end
 // ===========================================================
 
 // process initial round key
+always_comb begin
+    key0_used = (in_type == ENCRYPT) ? key_reg :
+                (in_type == DECRYPT) ? stage_key_regs[9] : 128'h0;
+    input_state = (in_type == INVALID) ? 128'h0 : state;
+end
+
 addRoundKey first_addRoundKey_inst (
-    .state(state),
-    .key(key_reg),
+    .state(input_state),
+    .key(key0_used),
     .out(after_addroundkey)
 );
 
@@ -88,35 +105,81 @@ end
 always_ff @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
         stage0_in <= 128'h0;
-        stage_in_valid <= 1'b0;
+        stage_in_type <= INVALID;
     end else begin
-        if (start) begin
-            stage0_in <= after_addroundkey;
-            stage_in_valid <= 1'b1;
-        end
+        stage0_in <= after_addroundkey;
+        stage_in_type <= in_type;
     end
 end
 
 // ===========================================================
 // process rounds
-encryptRound encryptRound_insts [8:0] (
-    .clk(clk),
-    .rst_n(rst_n),
-    .state({stage_out_regs,stage0_in}),
-    .in_valid({stage_valid,stage_in_valid}),
-    .key(stage_key_regs[8:0]),
-    .out({last_stage_in,stage_out_regs}),
-    .out_valid({last_in_valid,stage_valid})
-);
+// genvar i;
+// generate
+//     for (i = 0; i < 9; i = i + 1) begin : gen_aesRound
+//         aesRound aesRound_inst (
+//             .clk(clk),
+//             .rst_n(rst_n),
+//             .state((i == 0) ? stage0_in : stage_out_regs[i]),
+//             .in_type((i == 0) ? stage_in_type : stage_type[i-1]),
+//             .key(stage_key_regs[i]),
+//             .inv_key(stage_key_regs[8-i]),
+//             .out((i == 8) ? last_stage_in : stage_out_regs[i]),
+//             .out_type((i == 8) ? last_stage_type : stage_type[i])
+//         );
+//     end
+// endgenerate
 
-encryptLastRound encryptLastRound_inst (
+genvar i;
+generate
+  for (i = 0; i < 9; i = i + 1) begin : gen_aesRound
+    if (i == 0) begin
+      aesRound aesRound_inst (
+        .clk      (clk),
+        .rst_n    (rst_n),
+        .state    (stage0_in),
+        .in_type  (stage_in_type),
+        .key      (stage_key_regs[0]),
+        .inv_key  (stage_key_regs[8]),
+        .out      (stage_out_regs[i]),
+        .out_type (stage_type[i])
+      );
+    end else if (i < 8) begin
+      aesRound aesRound_inst (
+        .clk      (clk),
+        .rst_n    (rst_n),
+        .state    (stage_out_regs[i-1]),
+        .in_type  (stage_type[i-1]),
+        .key      (stage_key_regs[i]),
+        .inv_key  (stage_key_regs[8-i]),
+        .out      (stage_out_regs[i]),
+        .out_type (stage_type[i])
+      );
+    end else begin  // i == 8, last stage
+      aesRound aesRound_inst (
+        .clk      (clk),
+        .rst_n    (rst_n),
+        .state    (stage_out_regs[i-1]),
+        .in_type  (stage_type[i-1]),
+        .key      (stage_key_regs[8]),
+        .inv_key  (stage_key_regs[0]),
+        .out      (last_stage_in),
+        .out_type (last_stage_type)
+      );
+    end
+  end
+endgenerate
+
+
+aesLastRound aesLastRound_inst (
     .clk(clk),
     .rst_n(rst_n),
     .state(last_stage_in),
-    .in_valid(last_in_valid),
+    .in_type(last_stage_type),
     .key(stage_key_regs[9]),
+    .inv_key(key_reg),
     .out(out),
-    .out_valid(out_valid)
+    .out_type(out_type)
 );
 
 // ===========================================================
@@ -160,3 +223,5 @@ end
 // ====================================================================================================
 
 endmodule   
+
+`endif

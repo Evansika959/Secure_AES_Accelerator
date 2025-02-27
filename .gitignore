@@ -3,3 +3,38 @@ verilog/csrc/*
 verilog/sim*
 verilog/nova*
 verilog/verdi*
+verilog/.vcs*
+
+goldenbrick/__pycache__
+
+*.txt
+
+run/*
+
+# verilog compilation
+*simv
+*.daidir
+*.key
+*.vdb
+vc_hdrs.h
+debug_bin
+csrc/
+urgReport/
+
+# synthesis files
+*.vg
+*.rep
+*.ddc
+*.chk
+*.log
+*.syn
+*.db
+*.svf
+*.mr
+*.pvl
+*_svsim.sv
+
+# verdi
+verdi*
+novas*
+*fsdb*

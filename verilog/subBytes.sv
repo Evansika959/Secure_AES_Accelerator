@@ -1,3 +1,6 @@
+`ifndef SUBBYTES
+`define SUBBYTES
+
 module subBytes(
     input [127:0] state,
     output [127:0] out
@@ -15,14 +18,8 @@ generate
     end
 endgenerate
 
-// always_ff @(posedge clk or negedge rst_n) begin
-//     if (~rst_n) begin
-//         out <= 128'h0;
-//     end else begin
-//         out <= sbox_out;
-//     end
-// end
-
 assign out = sbox_out;
 
 endmodule
+
+`endif

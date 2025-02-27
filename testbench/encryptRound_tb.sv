@@ -1,3 +1,5 @@
+`include "sysdef.svh"
+
 module tb_encryptRound;
 
     // Testbench signals
@@ -6,14 +8,34 @@ module tb_encryptRound;
     logic [127:0] state;
     logic [127:0] key;
     logic [127:0] out;
-
+    logic in_valid;
+    logic out_valid;
     // Instantiate the DUT (Device Under Test)
-    encryptRound dut (
+    // encryptRound dut (
+    //     .clk(clk),
+    //     .rst_n(rst_n),
+    //     .state(state),
+    //     .key(key),
+    //     .out(out)
+    // );
+
+    // aesRound dut (
+    //     .clk(clk),
+    //     .rst_n(rst_n),
+    //     .state(state),
+    //     .in_type(in_type),
+    //     .key(key),
+    //     .out(out)
+    // );
+
+    decryptRound dut (
         .clk(clk),
         .rst_n(rst_n),
         .state(state),
+        .in_valid(in_valid),
         .key(key),
-        .out(out)
+        .out(out),
+        .out_valid(out_valid)
     );
 
     // Clock generation
@@ -26,8 +48,9 @@ module tb_encryptRound;
     initial begin
         // Initialize signals
         rst_n = 0;
-        state = 128'h00112233445566778899aabbccddeeff;
-        key = 128'h000102030405060708090a0b0c0d0e0f;
+        state = 128'h7ad5fda789ef4e272bca100b3d9ff59f;
+        key = 128'h549932d1f08557681093ed9cbe2c974e;
+        in_valid = 1;
 
         // Apply reset
         #10;
@@ -39,7 +62,7 @@ module tb_encryptRound;
         // Display results
         $display("State:        %h", state);
         $display("Key:          %h", key);
-        $display("Encrypted:    %h", out);
+        $display("Decrypted:    %h", out);
 
         // End simulation
         #100;

@@ -1,3 +1,6 @@
+`ifndef KEY_EXPANSION_STAGE
+`define KEY_EXPANSION_STAGE
+
 module key_expansion_stage (
     input  logic        clk,
     input  logic        rst_n,
@@ -60,3 +63,5 @@ end
 assign out_key = next_round_key;
 
 endmodule
+
+`endif

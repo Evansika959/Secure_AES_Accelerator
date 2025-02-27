@@ -1,7 +1,12 @@
 STD_CELLS = /afs/umich.edu/class/eecs627/ibm13/artisan/2005q3v1/aci/sc-x/verilog/ibm13_neg.v
-TESTBENCH = ../testbench/encrypt_engine_tb.sv
-SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv subBytes.sv subWords.sv key_expansion_stage.sv \
-			encrypt_engine.sv encryptLastRound.sv
+# TESTBENCH = ../testbench/aes_engine_tb.sv
+TESTBENCH = ../testbench/aes_engine_tb_gen.sv
+SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv \
+			subBytes.sv subWords.sv key_expansion_stage.sv \
+			inv_subBytes.sv inv_shiftRows.sv inv_mixColumns.sv inv_sbox.sv \
+			sysdef.svh decryptRound.sv decryptLastRound.sv \
+			aesRound.sv aesLastRound.sv \
+			aes_engine.sv encryptLastRound.sv
 # SIM_SYNTH_FILES = standard.vh ../syn/mult.syn.v
 
 VV         = vcs
@@ -37,12 +42,25 @@ clean:
 	rm -f goldenbrick/goldenbrick
 	rm -f goldenbrick/goldenbrick.txt
 	rm -f -r syn/dwsvf_*
+	rm -f -r run/*
+
+.PHONY: goldenbrick
+goldenbrick:
+	cd goldenbrick; python3 aes_gentb.py
+
+behavioral_check: goldenbrick sim
+	diff run/aes_out.txt run/encrypt_goldenbrick_out.txt | tee run/diff_functional.txt
 
 sim:
-	cd verilog; $(VV) $(VVOPTS) $(SIM_FILES) $(TESTBENCH); ./$@
+	cd verilog; $(VV) $(VVOPTS) $(SIM_FILES) $(TESTBENCH); ./$@; cd ..
 
 sim_shiftrows:
 	cd verilog; $(VV) $(VVOPTS) shiftRows.sv ../testbench/shiftrow_tb.sv; ./$@
+
+sim_aesRound:
+	cd verilog; $(VV) $(VVOPTS) sysdef.svh decryptRound.sv subBytes.sv shiftRows.sv mixColumns.sv sbox.sv \
+	addRoundKey.sv inv_subBytes.sv inv_shiftRows.sv inv_mixColumns.sv inv_sbox.sv\
+	 ../testbench/encryptRound_tb.sv; ./$@
 
 sim_key_expansion_stage:
 	cd verilog; $(VV) $(VVOPTS) key_expansion_stage.sv subWords.sv sbox.sv  ../testbench/key_expansion_stage_tb.sv; ./$@
@@ -56,10 +74,7 @@ slack:
 .PHONY: slack
 
 synth:
-	cd syn; dc_shell -tcl_mode -xg_mode -f encrypt_engine.syn.tcl | tee output.txt 
-
-run_apr:
-	cd apr; innovus -init encrypt_engine.apr.tcl | tee output.txt
+	cd syn; dc_shell -tcl_mode -xg_mode -f mult.syn.tcl | tee output.txt 
 
 sim_synth:
 	cp goldenbrick/goldenbrick.txt verilog/goldenbrick.txt

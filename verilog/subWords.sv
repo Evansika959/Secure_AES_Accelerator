@@ -1,3 +1,6 @@
+`ifndef SUBWORDS 
+`define SUBWORDS
+
 module subWords(
     input [31:0] state,
     output [31:0] out
@@ -18,3 +21,5 @@ endgenerate
 assign out = sbox_out;
 
 endmodule
+
+`endif
