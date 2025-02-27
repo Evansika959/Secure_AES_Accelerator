@@ -60,7 +60,7 @@ proc run_floorplan { } {
     
     get_multithread_lic
 
-    floorPlan -s 100 150 10 10 10 10
+    floorPlan -s 1000 1000 10 10 10 10
 
     loadIoFile ${top_level}.io
 

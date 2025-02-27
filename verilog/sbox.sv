@@ -259,7 +259,7 @@ always_comb begin
 	   8'hfb: c=8'h0f;
 	   8'hfc: c=8'hb0;
 	   8'hfd: c=8'h54;
-	   8'hfe: c=8'hbb;
+	   8'hfe: c=8'hbb;cc
 	   8'hff: c=8'h16;
 	endcase
 end

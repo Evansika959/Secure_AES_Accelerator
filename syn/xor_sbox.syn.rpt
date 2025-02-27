@@ -1,0 +1,1464 @@
+1
+ 
+****************************************
+Report : area
+Design : xor_sbox
+Version: T-2022.03-SP3
+Date   : Sun Feb  9 20:13:38 2025
+****************************************
+
+Library(s) Used:
+
+    typical (File: /afs/umich.edu/class/eecs627/ibm13/artisan/current/aci/sc-x/synopsys/typical.db)
+
+Number of ports:                           24
+Number of nets:                           392
+Number of cells:                          376
+Number of combinational cells:            376
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                         57
+Number of references:                      34
+
+Combinational area:               2698.560061
+Buf/Inv area:                      246.240010
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:           47506.904846
+
+Total cell area:                  2698.560061
+Total area:                      50205.464907
+1
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : xor_sbox
+Version: T-2022.03-SP3
+Date   : Sun Feb  9 20:13:38 2025
+****************************************
+
+
+Library(s) Used:
+
+    typical (File: /afs/umich.edu/class/eecs627/ibm13/artisan/current/aci/sc-x/synopsys/typical.db)
+
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+xor_sbox               ibm13_wl10        typical
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+xor_sbox                                  1.090    0.233 6.77e+04    1.323 100.0
+1
+ 
+****************************************
+Report : design
+Design : xor_sbox
+Version: T-2022.03-SP3
+Date   : Sun Feb  9 20:13:38 2025
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    typical (File: /afs/umich.edu/class/eecs627/ibm13/artisan/current/aci/sc-x/synopsys/typical.db)
+
+Local Link Library:
+
+    {typical.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : typical
+    Library : typical
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.20
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected manually by the user.
+
+Name           :   ibm13_wl10
+Location       :   typical
+Resistance     :   8.5e-08
+Capacitance    :   0.00015
+Area           :   0.7
+Slope          :   66.667
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1    66.67
+
+
+
+Wire Loading Model Mode: segmented.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : cell
+Design : xor_sbox
+Version: T-2022.03-SP3
+Date   : Sun Feb  9 20:13:38 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U752                      INVX1TR         typical         4.320000  
+U753                      INVX1TR         typical         4.320000  
+U754                      INVX1TR         typical         4.320000  
+U755                      INVX1TR         typical         4.320000  
+U756                      INVX1TR         typical         4.320000  
+U757                      INVX1TR         typical         4.320000  
+U758                      INVX1TR         typical         4.320000  
+U759                      INVX1TR         typical         4.320000  
+U760                      INVX1TR         typical         4.320000  
+U761                      NOR2X2TR        typical         7.200000  
+U762                      AOI211X1TR      typical         8.640000  
+U763                      AOI211X1TR      typical         8.640000  
+U764                      NOR2X2TR        typical         7.200000  
+U765                      XNOR2X2TR       typical         18.719999 
+U766                      AOI211X1TR      typical         8.640000  
+U767                      CLKXOR2X2TR     typical         12.960000 
+U768                      NOR2X2TR        typical         7.200000  
+U769                      CLKINVX2TR      typical         4.320000  
+U770                      CLKINVX2TR      typical         4.320000  
+U771                      NAND2X2TR       typical         7.200000  
+U772                      CLKINVX2TR      typical         4.320000  
+U773                      CLKINVX2TR      typical         4.320000  
+U774                      CLKINVX2TR      typical         4.320000  
+U775                      NOR2X2TR        typical         7.200000  
+U776                      CLKINVX2TR      typical         4.320000  
+U777                      NAND2X2TR       typical         7.200000  
+U778                      NOR2X2TR        typical         7.200000  
+U779                      NOR2X2TR        typical         7.200000  
+U780                      CLKINVX2TR      typical         4.320000  
+U781                      NOR2X2TR        typical         7.200000  
+U782                      NAND2X2TR       typical         7.200000  
+U783                      NOR2X2TR        typical         7.200000  
+U784                      NOR2X2TR        typical         7.200000  
+U785                      NAND2X2TR       typical         7.200000  
+U786                      NOR2X2TR        typical         7.200000  
+U787                      NOR2X2TR        typical         7.200000  
+U788                      NOR2X4TR        typical         11.520000 
+U789                      INVX1TR         typical         4.320000  
+U790                      INVX1TR         typical         4.320000  
+U791                      INVX1TR         typical         4.320000  
+U792                      INVX1TR         typical         4.320000  
+U793                      INVX1TR         typical         4.320000  
+U794                      INVX1TR         typical         4.320000  
+U795                      INVX1TR         typical         4.320000  
+U796                      INVX1TR         typical         4.320000  
+U797                      INVX1TR         typical         4.320000  
+U798                      INVX1TR         typical         4.320000  
+U799                      INVX1TR         typical         4.320000  
+U800                      INVX1TR         typical         4.320000  
+U801                      INVX1TR         typical         4.320000  
+U802                      INVX1TR         typical         4.320000  
+U803                      INVX1TR         typical         4.320000  
+U804                      XOR2X1TR        typical         11.520000 
+U805                      INVX1TR         typical         4.320000  
+U806                      XOR2X1TR        typical         11.520000 
+U807                      NAND2X1TR       typical         5.760000  
+U808                      NOR2X1TR        typical         5.760000  
+U809                      XOR2X1TR        typical         11.520000 
+U810                      XOR2X1TR        typical         11.520000 
+U811                      NOR2X1TR        typical         5.760000  
+U812                      NAND2X1TR       typical         5.760000  
+U813                      NAND2X1TR       typical         5.760000  
+U814                      INVX1TR         typical         4.320000  
+U815                      INVX1TR         typical         4.320000  
+U816                      NAND2X1TR       typical         5.760000  
+U817                      NAND2X1TR       typical         5.760000  
+U818                      NOR2X1TR        typical         5.760000  
+U819                      NOR2X1TR        typical         5.760000  
+U820                      INVX1TR         typical         4.320000  
+U821                      NAND2X1TR       typical         5.760000  
+U822                      NAND2X1TR       typical         5.760000  
+U823                      NOR2X1TR        typical         5.760000  
+U824                      NOR2X1TR        typical         5.760000  
+U825                      NAND2X1TR       typical         5.760000  
+U826                      NAND2X1TR       typical         5.760000  
+U827                      NAND2X1TR       typical         5.760000  
+U828                      NAND2X1TR       typical         5.760000  
+U829                      AND2X1TR        typical         7.200000  
+U830                      NAND2X1TR       typical         5.760000  
+U831                      NOR3BX1TR       typical         8.640000  
+U832                      NAND2X1TR       typical         5.760000  
+U833                      NAND2X1TR       typical         5.760000  
+U834                      NAND2X1TR       typical         5.760000  
+U835                      NAND2X1TR       typical         5.760000  
+U836                      INVX1TR         typical         4.320000  
+U837                      NAND2X1TR       typical         5.760000  
+U838                      NOR2X1TR        typical         5.760000  
+U839                      NAND2X1TR       typical         5.760000  
+U840                      NAND2X1TR       typical         5.760000  
+U841                      NAND2X1TR       typical         5.760000  
+U842                      NOR2X1TR        typical         5.760000  
+U843                      INVX1TR         typical         4.320000  
+U844                      NAND2X1TR       typical         5.760000  
+U845                      NAND2X1TR       typical         5.760000  
+U846                      NAND4X1TR       typical         8.640000  
+U847                      NAND2X1TR       typical         5.760000  
+U848                      NAND2X1TR       typical         5.760000  
+U849                      NAND2X1TR       typical         5.760000  
+U850                      NOR4BX1TR       typical         10.080000 
+U851                      NAND2X1TR       typical         5.760000  
+U852                      NOR2X1TR        typical         5.760000  
+U853                      INVX1TR         typical         4.320000  
+U854                      NAND4BX1TR      typical         10.080000 
+U855                      INVX1TR         typical         4.320000  
+U856                      NOR2X1TR        typical         5.760000  
+U857                      NAND2X1TR       typical         5.760000  
+U858                      NAND2X1TR       typical         5.760000  
+U859                      NAND3BX1TR      typical         8.640000  
+U860                      INVX1TR         typical         4.320000  
+U861                      NAND2X1TR       typical         5.760000  
+U862                      NAND2X1TR       typical         5.760000  
+U863                      INVX1TR         typical         4.320000  
+U864                      NOR2X1TR        typical         5.760000  
+U865                      NAND2X1TR       typical         5.760000  
+U866                      INVX1TR         typical         4.320000  
+U867                      NOR4BX1TR       typical         10.080000 
+U868                      NOR2X1TR        typical         5.760000  
+U869                      NAND2X1TR       typical         5.760000  
+U870                      NAND4X1TR       typical         8.640000  
+U871                      NOR4BX1TR       typical         10.080000 
+U872                      XOR2X1TR        typical         11.520000 
+U873                      XOR2X1TR        typical         11.520000 
+U874                      NAND2X1TR       typical         5.760000  
+U875                      INVX1TR         typical         4.320000  
+U876                      NOR2X1TR        typical         5.760000  
+U877                      NOR2X1TR        typical         5.760000  
+U878                      NOR2X1TR        typical         5.760000  
+U879                      NAND2X1TR       typical         5.760000  
+U880                      NAND2X1TR       typical         5.760000  
+U881                      NAND2X1TR       typical         5.760000  
+U882                      NAND4BX1TR      typical         10.080000 
+U883                      AOI211X1TR      typical         8.640000  
+U884                      NOR2X1TR        typical         5.760000  
+U885                      NAND2X1TR       typical         5.760000  
+U886                      NAND4X1TR       typical         8.640000  
+U887                      NAND2X1TR       typical         5.760000  
+U888                      NOR2X1TR        typical         5.760000  
+U889                      NAND2X1TR       typical         5.760000  
+U890                      INVX1TR         typical         4.320000  
+U891                      NOR2X1TR        typical         5.760000  
+U892                      NAND2X1TR       typical         5.760000  
+U893                      NOR3BX1TR       typical         8.640000  
+U894                      NOR2X1TR        typical         5.760000  
+U895                      AOI21X1TR       typical         7.200000  
+U896                      INVX1TR         typical         4.320000  
+U897                      NAND2X1TR       typical         5.760000  
+U898                      NAND3X1TR       typical         7.200000  
+U899                      NOR4BX1TR       typical         10.080000 
+U900                      NAND2X1TR       typical         5.760000  
+U901                      NAND2X1TR       typical         5.760000  
+U902                      NAND4X1TR       typical         8.640000  
+U903                      INVX1TR         typical         4.320000  
+U904                      NAND2X1TR       typical         5.760000  
+U905                      OAI211X1TR      typical         8.640000  
+U906                      NOR3X1TR        typical         7.200000  
+U907                      NAND3X1TR       typical         7.200000  
+U908                      NAND4X1TR       typical         8.640000  
+U909                      NAND2X1TR       typical         5.760000  
+U910                      AOI21X1TR       typical         7.200000  
+U911                      NAND2X1TR       typical         5.760000  
+U912                      NOR2X1TR        typical         5.760000  
+U913                      NOR3X1TR        typical         7.200000  
+U914                      NOR2X1TR        typical         5.760000  
+U915                      NOR4BX1TR       typical         10.080000 
+U916                      NAND4X1TR       typical         8.640000  
+U917                      NOR2X1TR        typical         5.760000  
+U918                      NAND2X1TR       typical         5.760000  
+U919                      INVX1TR         typical         4.320000  
+U920                      NOR2X1TR        typical         5.760000  
+U921                      AND2X1TR        typical         7.200000  
+U922                      INVX1TR         typical         4.320000  
+U923                      NAND2X1TR       typical         5.760000  
+U924                      NOR3X1TR        typical         7.200000  
+U925                      NAND2X1TR       typical         5.760000  
+U926                      OAI211X1TR      typical         8.640000  
+U927                      NOR4BX1TR       typical         10.080000 
+U928                      OAI21X1TR       typical         7.200000  
+U929                      NAND4X1TR       typical         8.640000  
+U930                      AOI22X1TR       typical         8.640000  
+U931                      NOR2X1TR        typical         5.760000  
+U932                      NAND2X1TR       typical         5.760000  
+U933                      NAND2X1TR       typical         5.760000  
+U934                      INVX1TR         typical         4.320000  
+U935                      NAND2X1TR       typical         5.760000  
+U936                      NAND4X1TR       typical         8.640000  
+U937                      OR4X1TR         typical         10.080000 
+U938                      NAND2X1TR       typical         5.760000  
+U939                      INVX1TR         typical         4.320000  
+U940                      NOR2X1TR        typical         5.760000  
+U941                      NOR3X1TR        typical         7.200000  
+U942                      NOR2X1TR        typical         5.760000  
+U943                      NOR2X1TR        typical         5.760000  
+U944                      AOI2BB1X1TR     typical         8.640000  
+U945                      NAND2X1TR       typical         5.760000  
+U946                      NAND3X1TR       typical         7.200000  
+U947                      NAND2X1TR       typical         5.760000  
+U948                      NAND2X1TR       typical         5.760000  
+U949                      NAND2X1TR       typical         5.760000  
+U950                      NOR4BX1TR       typical         10.080000 
+U951                      NAND4X1TR       typical         8.640000  
+U952                      NAND2X1TR       typical         5.760000  
+U953                      NAND2X1TR       typical         5.760000  
+U954                      INVX1TR         typical         4.320000  
+U955                      AOI211X1TR      typical         8.640000  
+U956                      NAND4BX1TR      typical         10.080000 
+U957                      OAI31X1TR       typical         8.640000  
+U958                      OAI211X1TR      typical         8.640000  
+U959                      NAND2X1TR       typical         5.760000  
+U960                      NAND2X1TR       typical         5.760000  
+U961                      NAND2X1TR       typical         5.760000  
+U962                      AOI31X1TR       typical         8.640000  
+U963                      INVX1TR         typical         4.320000  
+U964                      NOR2BX1TR       typical         7.200000  
+U965                      NAND2X1TR       typical         5.760000  
+U966                      OAI21X1TR       typical         7.200000  
+U967                      AOI211X1TR      typical         8.640000  
+U968                      NAND4X1TR       typical         8.640000  
+U969                      AOI211X1TR      typical         8.640000  
+U970                      AOI21X1TR       typical         7.200000  
+U971                      NAND4X1TR       typical         8.640000  
+U972                      NOR4BX1TR       typical         10.080000 
+U973                      NOR2X1TR        typical         5.760000  
+U974                      NAND4BX1TR      typical         10.080000 
+U975                      NOR4BX1TR       typical         10.080000 
+U976                      NAND4X1TR       typical         8.640000  
+U977                      NOR2X1TR        typical         5.760000  
+U978                      AOI211X1TR      typical         8.640000  
+U979                      NAND4X1TR       typical         8.640000  
+U980                      NOR2X1TR        typical         5.760000  
+U981                      INVX1TR         typical         4.320000  
+U982                      NAND2X1TR       typical         5.760000  
+U983                      NAND2X1TR       typical         5.760000  
+U984                      NAND4X1TR       typical         8.640000  
+U985                      NOR4X1TR        typical         10.080000 
+U986                      NAND4X1TR       typical         8.640000  
+U987                      AOI22X1TR       typical         8.640000  
+U988                      NOR3BX1TR       typical         8.640000  
+U989                      NOR3X1TR        typical         7.200000  
+U990                      NOR2X1TR        typical         5.760000  
+U991                      AND3X1TR        typical         8.640000  
+U992                      NAND3X1TR       typical         7.200000  
+U993                      INVX1TR         typical         4.320000  
+U994                      INVX1TR         typical         4.320000  
+U995                      NAND4X1TR       typical         8.640000  
+U996                      NOR2X1TR        typical         5.760000  
+U997                      OAI211X1TR      typical         8.640000  
+U998                      NAND3X1TR       typical         7.200000  
+U999                      NAND2X1TR       typical         5.760000  
+U1000                     NAND4X1TR       typical         8.640000  
+U1001                     OAI31X1TR       typical         8.640000  
+U1002                     OAI211X1TR      typical         8.640000  
+U1003                     OR2X1TR         typical         7.200000  
+U1004                     AOI21X1TR       typical         7.200000  
+U1005                     AND4X1TR        typical         10.080000 
+U1006                     NAND4X1TR       typical         8.640000  
+U1007                     NOR4X1TR        typical         10.080000 
+U1008                     AOI21X1TR       typical         7.200000  
+U1009                     INVX1TR         typical         4.320000  
+U1010                     NAND2X1TR       typical         5.760000  
+U1011                     NAND3X1TR       typical         7.200000  
+U1012                     NAND3X1TR       typical         7.200000  
+U1013                     NOR4BX1TR       typical         10.080000 
+U1014                     NAND4X1TR       typical         8.640000  
+U1015                     NOR2BX1TR       typical         7.200000  
+U1016                     NAND4X1TR       typical         8.640000  
+U1017                     NOR3X1TR        typical         7.200000  
+U1018                     NAND4X1TR       typical         8.640000  
+U1019                     OA21X1TR        typical         10.080000 
+U1020                     NAND3X1TR       typical         7.200000  
+U1021                     NAND4X1TR       typical         8.640000  
+U1022                     OR4X1TR         typical         10.080000 
+U1023                     NOR4BX1TR       typical         10.080000 
+U1024                     NAND4X1TR       typical         8.640000  
+U1025                     AOI22X1TR       typical         8.640000  
+U1026                     NAND3X1TR       typical         7.200000  
+U1027                     NOR3X1TR        typical         7.200000  
+U1028                     NAND2X1TR       typical         5.760000  
+U1029                     NAND4BX1TR      typical         10.080000 
+U1030                     OAI21X1TR       typical         7.200000  
+U1031                     NAND4BX1TR      typical         10.080000 
+U1032                     OAI31X1TR       typical         8.640000  
+U1033                     OAI211X1TR      typical         8.640000  
+U1034                     NOR2X1TR        typical         5.760000  
+U1035                     NAND4X1TR       typical         8.640000  
+U1036                     NOR4BX1TR       typical         10.080000 
+U1037                     NOR2X1TR        typical         5.760000  
+U1038                     AOI211X1TR      typical         8.640000  
+U1039                     INVX1TR         typical         4.320000  
+U1040                     NAND4BX1TR      typical         10.080000 
+U1041                     NOR3BX1TR       typical         8.640000  
+U1042                     AOI211X1TR      typical         8.640000  
+U1043                     NAND2X1TR       typical         5.760000  
+U1044                     NAND4BX1TR      typical         10.080000 
+U1045                     NOR2BX1TR       typical         7.200000  
+U1046                     NAND3X1TR       typical         7.200000  
+U1047                     NOR4BX1TR       typical         10.080000 
+U1048                     NAND4X1TR       typical         8.640000  
+U1049                     AOI22X1TR       typical         8.640000  
+U1050                     NAND3X1TR       typical         7.200000  
+U1051                     NAND2X1TR       typical         5.760000  
+U1052                     NAND4X1TR       typical         8.640000  
+U1053                     OR4X1TR         typical         10.080000 
+U1054                     OAI31X1TR       typical         8.640000  
+U1055                     OAI211X1TR      typical         8.640000  
+U1056                     OAI211X1TR      typical         8.640000  
+U1057                     NAND4X1TR       typical         8.640000  
+U1058                     NOR3X1TR        typical         7.200000  
+U1059                     NAND4BX1TR      typical         10.080000 
+U1060                     NAND4X1TR       typical         8.640000  
+U1061                     NOR3X1TR        typical         7.200000  
+U1062                     NAND2X1TR       typical         5.760000  
+U1063                     AOI211X1TR      typical         8.640000  
+U1064                     NAND4X1TR       typical         8.640000  
+U1065                     NOR3BX1TR       typical         8.640000  
+U1066                     NAND4X1TR       typical         8.640000  
+U1067                     AOI22X1TR       typical         8.640000  
+U1068                     OAI21X1TR       typical         7.200000  
+U1069                     OAI211X1TR      typical         8.640000  
+U1070                     NAND4X1TR       typical         8.640000  
+U1071                     OAI31X1TR       typical         8.640000  
+U1072                     NAND4X1TR       typical         8.640000  
+U1073                     NAND4X1TR       typical         8.640000  
+U1074                     NOR3X1TR        typical         7.200000  
+U1075                     NAND2BX1TR      typical         7.200000  
+U1076                     NAND4X1TR       typical         8.640000  
+U1077                     OAI31X1TR       typical         8.640000  
+U1078                     NAND3X1TR       typical         7.200000  
+U1079                     NOR4BX1TR       typical         10.080000 
+U1080                     NAND4X1TR       typical         8.640000  
+U1081                     OAI21X1TR       typical         7.200000  
+U1082                     NAND2X1TR       typical         5.760000  
+U1083                     NAND4BX1TR      typical         10.080000 
+U1084                     OAI211X1TR      typical         8.640000  
+U1085                     NAND4X1TR       typical         8.640000  
+U1086                     OAI31X1TR       typical         8.640000  
+U1087                     NAND4X1TR       typical         8.640000  
+U1088                     OAI211X1TR      typical         8.640000  
+U1089                     NOR4BX1TR       typical         10.080000 
+U1090                     NOR4BX1TR       typical         10.080000 
+U1091                     NAND4BX1TR      typical         10.080000 
+U1092                     OAI31X1TR       typical         8.640000  
+U1093                     NAND4X1TR       typical         8.640000  
+U1094                     NAND4X1TR       typical         8.640000  
+U1095                     AOI2BB1X1TR     typical         8.640000  
+U1096                     NAND4X1TR       typical         8.640000  
+U1097                     OAI31X1TR       typical         8.640000  
+U1098                     NAND4X1TR       typical         8.640000  
+U1099                     NOR2BX1TR       typical         7.200000  
+U1100                     NAND4X1TR       typical         8.640000  
+U1101                     OAI31X1TR       typical         8.640000  
+U1102                     OAI211X1TR      typical         8.640000  
+U1103                     NAND4X1TR       typical         8.640000  
+U1104                     OAI31X1TR       typical         8.640000  
+U1105                     NOR4BX1TR       typical         10.080000 
+U1106                     NAND4X1TR       typical         8.640000  
+U1107                     OAI31X1TR       typical         8.640000  
+U1108                     NAND4X1TR       typical         8.640000  
+U1109                     OAI31X1TR       typical         8.640000  
+U1110                     NAND4X1TR       typical         8.640000  
+U1111                     NAND4X1TR       typical         8.640000  
+U1112                     AOI211X1TR      typical         8.640000  
+U1113                     NAND4X1TR       typical         8.640000  
+U1114                     OAI21X1TR       typical         7.200000  
+U1115                     NOR3BX1TR       typical         8.640000  
+U1116                     NAND4X1TR       typical         8.640000  
+U1117                     OAI31X1TR       typical         8.640000  
+U1118                     NAND4X1TR       typical         8.640000  
+U1119                     NAND4X1TR       typical         8.640000  
+U1120                     NOR2X1TR        typical         5.760000  
+U1121                     AOI31X1TR       typical         8.640000  
+U1122                     NAND4X1TR       typical         8.640000  
+U1123                     OAI31X1TR       typical         8.640000  
+U1124                     NAND4BX1TR      typical         10.080000 
+U1125                     NAND4X1TR       typical         8.640000  
+U1126                     OAI21X1TR       typical         7.200000  
+U1127                     NAND4X1TR       typical         8.640000  
+--------------------------------------------------------------------------------
+Total 376 cells                                           2698.560061
+1
+ 
+****************************************
+Report : port
+        -verbose
+Design : xor_sbox
+Version: T-2022.03-SP3
+Date   : Sun Feb  9 20:13:38 2025
+****************************************
+
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+key[0]         in      0.0000   0.0000    1.02    0.17   --         
+key[1]         in      0.0000   0.0000    1.02    0.17   --         
+key[2]         in      0.0000   0.0000    1.02    0.17   --         
+key[3]         in      0.0000   0.0000    1.02    0.17   --         
+key[4]         in      0.0000   0.0000    1.02    0.17   --         
+key[5]         in      0.0000   0.0000    1.02    0.17   --         
+key[6]         in      0.0000   0.0000    1.02    0.17   --         
+key[7]         in      0.0000   0.0000    1.02    0.17   --         
+text[0]        in      0.0000   0.0000    1.02    0.17   --         
+text[1]        in      0.0000   0.0000    1.02    0.17   --         
+text[2]        in      0.0000   0.0000    1.02    0.17   --         
+text[3]        in      0.0000   0.0000    1.02    0.17   --         
+text[4]        in      0.0000   0.0000    1.02    0.17   --         
+text[5]        in      0.0000   0.0000    1.02    0.17   --         
+text[6]        in      0.0000   0.0000    1.02    0.17   --         
+text[7]        in      0.0000   0.0000    1.02    0.17   --         
+out0[0]        out     0.0100   0.0000   --      --      --         
+out0[1]        out     0.0100   0.0000   --      --      --         
+out0[2]        out     0.0100   0.0000   --      --      --         
+out0[3]        out     0.0100   0.0000   --      --      --         
+out0[4]        out     0.0100   0.0000   --      --      --         
+out0[5]        out     0.0100   0.0000   --      --      --         
+out0[6]        out     0.0100   0.0000   --      --      --         
+out0[7]        out     0.0100   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+key[0]             1      --              --              --        -- 
+key[1]             1      --              --              --        -- 
+key[2]             1      --              --              --        -- 
+key[3]             1      --              --              --        -- 
+key[4]             1      --              --              --        -- 
+key[5]             1      --              --              --        -- 
+key[6]             1      --              --              --        -- 
+key[7]             1      --              --              --        -- 
+text[0]            1      --              --              --        -- 
+text[1]            1      --              --              --        -- 
+text[2]            1      --              --              --        -- 
+text[3]            1      --              --              --        -- 
+text[4]            1      --              --              --        -- 
+text[5]            1      --              --              --        -- 
+text[6]            1      --              --              --        -- 
+text[7]            1      --              --              --        -- 
+out0[0]            1      --              --              --        -- 
+out0[1]            1      --              --              --        -- 
+out0[2]            1      --              --              --        -- 
+out0[3]            1      --              --              --        -- 
+out0[4]            1      --              --              --        -- 
+out0[5]            1      --              --              --        -- 
+out0[6]            1      --              --              --        -- 
+out0[7]            1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+key[0]        --      --      --      --      --      -- 
+key[1]        --      --      --      --      --      -- 
+key[2]        --      --      --      --      --      -- 
+key[3]        --      --      --      --      --      -- 
+key[4]        --      --      --      --      --      -- 
+key[5]        --      --      --      --      --      -- 
+key[6]        --      --      --      --      --      -- 
+key[7]        --      --      --      --      --      -- 
+text[0]       --      --      --      --      --      -- 
+text[1]       --      --      --      --      --      -- 
+text[2]       --      --      --      --      --      -- 
+text[3]       --      --      --      --      --      -- 
+text[4]       --      --      --      --      --      -- 
+text[5]       --      --      --      --      --      -- 
+text[6]       --      --      --      --      --      -- 
+text[7]       --      --      --      --      --      -- 
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+key[0]       INVX2TR            INVX2TR              -- /  --     
+key[1]       INVX2TR            INVX2TR              -- /  --     
+key[2]       INVX2TR            INVX2TR              -- /  --     
+key[3]       INVX2TR            INVX2TR              -- /  --     
+key[4]       INVX2TR            INVX2TR              -- /  --     
+key[5]       INVX2TR            INVX2TR              -- /  --     
+key[6]       INVX2TR            INVX2TR              -- /  --     
+key[7]       INVX2TR            INVX2TR              -- /  --     
+text[0]      INVX2TR            INVX2TR              -- /  --     
+text[1]      INVX2TR            INVX2TR              -- /  --     
+text[2]      INVX2TR            INVX2TR              -- /  --     
+text[3]      INVX2TR            INVX2TR              -- /  --     
+text[4]      INVX2TR            INVX2TR              -- /  --     
+text[5]      INVX2TR            INVX2TR              -- /  --     
+text[6]      INVX2TR            INVX2TR              -- /  --     
+text[7]      INVX2TR            INVX2TR              -- /  --     
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+key[0]        --      --     --      --     --      --     --     --        -- 
+key[1]        --      --     --      --     --      --     --     --        -- 
+key[2]        --      --     --      --     --      --     --     --        -- 
+key[3]        --      --     --      --     --      --     --     --        -- 
+key[4]        --      --     --      --     --      --     --     --        -- 
+key[5]        --      --     --      --     --      --     --     --        -- 
+key[6]        --      --     --      --     --      --     --     --        -- 
+key[7]        --      --     --      --     --      --     --     --        -- 
+text[0]       --      --     --      --     --      --     --     --        -- 
+text[1]       --      --     --      --     --      --     --     --        -- 
+text[2]       --      --     --      --     --      --     --     --        -- 
+text[3]       --      --     --      --     --      --     --     --        -- 
+text[4]       --      --     --      --     --      --     --     --        -- 
+text[5]       --      --     --      --     --      --     --     --        -- 
+text[6]       --      --     --      --     --      --     --     --        -- 
+text[7]       --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+key[0]        --      --      --      -- 
+key[1]        --      --      --      -- 
+key[2]        --      --      --      -- 
+key[3]        --      --      --      -- 
+key[4]        --      --      --      -- 
+key[5]        --      --      --      -- 
+key[6]        --      --      --      -- 
+key[7]        --      --      --      -- 
+text[0]       --      --      --      -- 
+text[1]       --      --      --      -- 
+text[2]       --      --      --      -- 
+text[3]       --      --      --      -- 
+text[4]       --      --      --      -- 
+text[5]       --      --      --      -- 
+text[6]       --      --      --      -- 
+text[7]       --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+out0[0]       --      --      --      --      --      0.00
+out0[1]       --      --      --      --      --      0.00
+out0[2]       --      --      --      --      --      0.00
+out0[3]       --      --      --      --      --      0.00
+out0[4]       --      --      --      --      --      0.00
+out0[5]       --      --      --      --      --      0.00
+out0[6]       --      --      --      --      --      0.00
+out0[7]       --      --      --      --      --      0.00
+
+1
+ 
+****************************************
+Report : compile_options
+Design : xor_sbox
+Version: T-2022.03-SP3
+Date   : Sun Feb  9 20:13:38 2025
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+xor_sbox                                 flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+--------------------------------------------------------------------------------
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : xor_sbox
+Version: T-2022.03-SP3
+Date   : Sun Feb  9 20:13:38 2025
+****************************************
+
+This design has no violated constraints.
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 100
+        -max_paths 20
+Design : xor_sbox
+Version: T-2022.03-SP3
+Date   : Sun Feb  9 20:13:38 2025
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: segmented
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  key[2] (in)                              0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.32       0.36 r
+  U805/Y (INVX1TR)                         0.37       0.72 f
+  U832/Y (NAND2X1TR)                       0.43       1.15 r
+  U772/Y (CLKINVX2TR)                      0.39       1.54 f
+  U889/Y (NAND2X1TR)                       0.44       1.98 r
+  U890/Y (INVX1TR)                         0.26       2.24 f
+  U891/Y (NOR2X1TR)                        0.31       2.54 r
+  U892/Y (NAND2X1TR)                       0.17       2.71 f
+  U893/Y (NOR3BX1TR)                       0.36       3.07 r
+  U898/Y (NAND3X1TR)                       0.13       3.20 f
+  U899/Y (NOR4BX1TR)                       0.42       3.63 r
+  U902/Y (NAND4X1TR)                       0.23       3.86 f
+  U1038/Y (AOI211X1TR)                     0.25       4.11 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.23 f
+  U1049/Y (AOI22X1TR)                      0.20       4.44 r
+  U1055/Y (OAI211X1TR)                     0.15       4.59 f
+  out0[2] (out)                            0.00       4.59 f
+  data arrival time                                   4.59
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  key[2] (in)                              0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.32       0.36 r
+  U805/Y (INVX1TR)                         0.37       0.72 f
+  U832/Y (NAND2X1TR)                       0.43       1.15 r
+  U772/Y (CLKINVX2TR)                      0.39       1.54 f
+  U889/Y (NAND2X1TR)                       0.44       1.98 r
+  U890/Y (INVX1TR)                         0.26       2.24 f
+  U891/Y (NOR2X1TR)                        0.31       2.54 r
+  U892/Y (NAND2X1TR)                       0.17       2.71 f
+  U893/Y (NOR3BX1TR)                       0.36       3.07 r
+  U898/Y (NAND3X1TR)                       0.13       3.20 f
+  U899/Y (NOR4BX1TR)                       0.42       3.63 r
+  U902/Y (NAND4X1TR)                       0.23       3.86 f
+  U906/Y (NOR3X1TR)                        0.24       4.10 r
+  U908/Y (NAND4X1TR)                       0.12       4.22 f
+  U930/Y (AOI22X1TR)                       0.21       4.43 r
+  U958/Y (OAI211X1TR)                      0.15       4.58 f
+  out0[6] (out)                            0.00       4.58 f
+  data arrival time                                   4.58
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: text[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  text[2] (in)                             0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.31       0.34 r
+  U805/Y (INVX1TR)                         0.37       0.71 f
+  U832/Y (NAND2X1TR)                       0.43       1.14 r
+  U772/Y (CLKINVX2TR)                      0.39       1.53 f
+  U889/Y (NAND2X1TR)                       0.44       1.96 r
+  U890/Y (INVX1TR)                         0.26       2.22 f
+  U891/Y (NOR2X1TR)                        0.31       2.53 r
+  U892/Y (NAND2X1TR)                       0.17       2.70 f
+  U893/Y (NOR3BX1TR)                       0.36       3.06 r
+  U898/Y (NAND3X1TR)                       0.13       3.19 f
+  U899/Y (NOR4BX1TR)                       0.42       3.61 r
+  U902/Y (NAND4X1TR)                       0.23       3.84 f
+  U1038/Y (AOI211X1TR)                     0.25       4.09 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.22 f
+  U1049/Y (AOI22X1TR)                      0.20       4.42 r
+  U1055/Y (OAI211X1TR)                     0.15       4.57 f
+  out0[2] (out)                            0.00       4.57 f
+  data arrival time                                   4.57
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: text[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  text[2] (in)                             0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.31       0.34 r
+  U805/Y (INVX1TR)                         0.37       0.71 f
+  U832/Y (NAND2X1TR)                       0.43       1.14 r
+  U772/Y (CLKINVX2TR)                      0.39       1.53 f
+  U889/Y (NAND2X1TR)                       0.44       1.96 r
+  U890/Y (INVX1TR)                         0.26       2.22 f
+  U891/Y (NOR2X1TR)                        0.31       2.53 r
+  U892/Y (NAND2X1TR)                       0.17       2.70 f
+  U893/Y (NOR3BX1TR)                       0.36       3.06 r
+  U898/Y (NAND3X1TR)                       0.13       3.19 f
+  U899/Y (NOR4BX1TR)                       0.42       3.61 r
+  U902/Y (NAND4X1TR)                       0.23       3.84 f
+  U906/Y (NOR3X1TR)                        0.24       4.08 r
+  U908/Y (NAND4X1TR)                       0.12       4.21 f
+  U930/Y (AOI22X1TR)                       0.21       4.41 r
+  U958/Y (OAI211X1TR)                      0.15       4.57 f
+  out0[6] (out)                            0.00       4.57 f
+  data arrival time                                   4.57
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  key[2] (in)                              0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.31       0.33 r
+  U805/Y (INVX1TR)                         0.37       0.69 f
+  U832/Y (NAND2X1TR)                       0.43       1.12 r
+  U772/Y (CLKINVX2TR)                      0.39       1.51 f
+  U889/Y (NAND2X1TR)                       0.44       1.95 r
+  U890/Y (INVX1TR)                         0.26       2.21 f
+  U891/Y (NOR2X1TR)                        0.31       2.51 r
+  U892/Y (NAND2X1TR)                       0.17       2.68 f
+  U893/Y (NOR3BX1TR)                       0.36       3.04 r
+  U898/Y (NAND3X1TR)                       0.13       3.17 f
+  U899/Y (NOR4BX1TR)                       0.42       3.60 r
+  U902/Y (NAND4X1TR)                       0.23       3.83 f
+  U1038/Y (AOI211X1TR)                     0.25       4.08 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.20 f
+  U1049/Y (AOI22X1TR)                      0.20       4.41 r
+  U1055/Y (OAI211X1TR)                     0.15       4.56 f
+  out0[2] (out)                            0.00       4.56 f
+  data arrival time                                   4.56
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  key[2] (in)                              0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.31       0.32 r
+  U805/Y (INVX1TR)                         0.37       0.69 f
+  U832/Y (NAND2X1TR)                       0.43       1.11 r
+  U772/Y (CLKINVX2TR)                      0.39       1.51 f
+  U889/Y (NAND2X1TR)                       0.44       1.94 r
+  U890/Y (INVX1TR)                         0.26       2.20 f
+  U891/Y (NOR2X1TR)                        0.31       2.51 r
+  U892/Y (NAND2X1TR)                       0.17       2.68 f
+  U893/Y (NOR3BX1TR)                       0.36       3.04 r
+  U898/Y (NAND3X1TR)                       0.13       3.17 f
+  U899/Y (NOR4BX1TR)                       0.42       3.59 r
+  U902/Y (NAND4X1TR)                       0.23       3.82 f
+  U1038/Y (AOI211X1TR)                     0.25       4.07 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.20 f
+  U1049/Y (AOI22X1TR)                      0.20       4.40 r
+  U1055/Y (OAI211X1TR)                     0.15       4.55 f
+  out0[2] (out)                            0.00       4.55 f
+  data arrival time                                   4.55
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  key[2] (in)                              0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.31       0.33 r
+  U805/Y (INVX1TR)                         0.37       0.69 f
+  U832/Y (NAND2X1TR)                       0.43       1.12 r
+  U772/Y (CLKINVX2TR)                      0.39       1.51 f
+  U889/Y (NAND2X1TR)                       0.44       1.95 r
+  U890/Y (INVX1TR)                         0.26       2.21 f
+  U891/Y (NOR2X1TR)                        0.31       2.51 r
+  U892/Y (NAND2X1TR)                       0.17       2.68 f
+  U893/Y (NOR3BX1TR)                       0.36       3.04 r
+  U898/Y (NAND3X1TR)                       0.13       3.17 f
+  U899/Y (NOR4BX1TR)                       0.42       3.60 r
+  U902/Y (NAND4X1TR)                       0.23       3.83 f
+  U906/Y (NOR3X1TR)                        0.24       4.07 r
+  U908/Y (NAND4X1TR)                       0.12       4.19 f
+  U930/Y (AOI22X1TR)                       0.21       4.40 r
+  U958/Y (OAI211X1TR)                      0.15       4.55 f
+  out0[6] (out)                            0.00       4.55 f
+  data arrival time                                   4.55
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  key[2] (in)                              0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.31       0.32 r
+  U805/Y (INVX1TR)                         0.37       0.69 f
+  U832/Y (NAND2X1TR)                       0.43       1.11 r
+  U772/Y (CLKINVX2TR)                      0.39       1.51 f
+  U889/Y (NAND2X1TR)                       0.44       1.94 r
+  U890/Y (INVX1TR)                         0.26       2.20 f
+  U891/Y (NOR2X1TR)                        0.31       2.51 r
+  U892/Y (NAND2X1TR)                       0.17       2.68 f
+  U893/Y (NOR3BX1TR)                       0.36       3.04 r
+  U898/Y (NAND3X1TR)                       0.13       3.17 f
+  U899/Y (NOR4BX1TR)                       0.42       3.59 r
+  U902/Y (NAND4X1TR)                       0.23       3.82 f
+  U906/Y (NOR3X1TR)                        0.24       4.06 r
+  U908/Y (NAND4X1TR)                       0.12       4.19 f
+  U930/Y (AOI22X1TR)                       0.21       4.39 r
+  U958/Y (OAI211X1TR)                      0.15       4.54 f
+  out0[6] (out)                            0.00       4.54 f
+  data arrival time                                   4.54
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  key[2] (in)                              0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.32       0.36 r
+  U805/Y (INVX1TR)                         0.37       0.72 f
+  U816/Y (NAND2X1TR)                       0.36       1.09 r
+  U794/Y (INVX1TR)                         0.24       1.32 f
+  U817/Y (NAND2X1TR)                       0.39       1.71 r
+  U769/Y (CLKINVX2TR)                      0.36       2.07 f
+  U858/Y (NAND2X1TR)                       0.43       2.49 r
+  U892/Y (NAND2X1TR)                       0.17       2.67 f
+  U893/Y (NOR3BX1TR)                       0.36       3.03 r
+  U898/Y (NAND3X1TR)                       0.13       3.16 f
+  U899/Y (NOR4BX1TR)                       0.42       3.58 r
+  U902/Y (NAND4X1TR)                       0.23       3.81 f
+  U1038/Y (AOI211X1TR)                     0.25       4.06 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.19 f
+  U1049/Y (AOI22X1TR)                      0.20       4.39 r
+  U1055/Y (OAI211X1TR)                     0.15       4.54 f
+  out0[2] (out)                            0.00       4.54 f
+  data arrival time                                   4.54
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: text[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  text[2] (in)                             0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.28       0.31 r
+  U805/Y (INVX1TR)                         0.37       0.68 f
+  U832/Y (NAND2X1TR)                       0.43       1.10 r
+  U772/Y (CLKINVX2TR)                      0.39       1.50 f
+  U889/Y (NAND2X1TR)                       0.44       1.93 r
+  U890/Y (INVX1TR)                         0.26       2.19 f
+  U891/Y (NOR2X1TR)                        0.31       2.50 r
+  U892/Y (NAND2X1TR)                       0.17       2.67 f
+  U893/Y (NOR3BX1TR)                       0.36       3.03 r
+  U898/Y (NAND3X1TR)                       0.13       3.16 f
+  U899/Y (NOR4BX1TR)                       0.42       3.58 r
+  U902/Y (NAND4X1TR)                       0.23       3.81 f
+  U1038/Y (AOI211X1TR)                     0.25       4.06 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.19 f
+  U1049/Y (AOI22X1TR)                      0.20       4.39 r
+  U1055/Y (OAI211X1TR)                     0.15       4.54 f
+  out0[2] (out)                            0.00       4.54 f
+  data arrival time                                   4.54
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: text[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  text[2] (in)                             0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.30       0.31 r
+  U805/Y (INVX1TR)                         0.37       0.68 f
+  U832/Y (NAND2X1TR)                       0.43       1.10 r
+  U772/Y (CLKINVX2TR)                      0.39       1.50 f
+  U889/Y (NAND2X1TR)                       0.44       1.93 r
+  U890/Y (INVX1TR)                         0.26       2.19 f
+  U891/Y (NOR2X1TR)                        0.31       2.50 r
+  U892/Y (NAND2X1TR)                       0.17       2.67 f
+  U893/Y (NOR3BX1TR)                       0.36       3.02 r
+  U898/Y (NAND3X1TR)                       0.13       3.16 f
+  U899/Y (NOR4BX1TR)                       0.42       3.58 r
+  U902/Y (NAND4X1TR)                       0.23       3.81 f
+  U1038/Y (AOI211X1TR)                     0.25       4.06 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.19 f
+  U1049/Y (AOI22X1TR)                      0.20       4.39 r
+  U1055/Y (OAI211X1TR)                     0.15       4.54 f
+  out0[2] (out)                            0.00       4.54 f
+  data arrival time                                   4.54
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  key[2] (in)                              0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.32       0.36 r
+  U805/Y (INVX1TR)                         0.37       0.72 f
+  U816/Y (NAND2X1TR)                       0.36       1.09 r
+  U794/Y (INVX1TR)                         0.24       1.32 f
+  U817/Y (NAND2X1TR)                       0.39       1.71 r
+  U769/Y (CLKINVX2TR)                      0.36       2.07 f
+  U858/Y (NAND2X1TR)                       0.43       2.49 r
+  U892/Y (NAND2X1TR)                       0.17       2.67 f
+  U893/Y (NOR3BX1TR)                       0.36       3.03 r
+  U898/Y (NAND3X1TR)                       0.13       3.16 f
+  U899/Y (NOR4BX1TR)                       0.42       3.58 r
+  U902/Y (NAND4X1TR)                       0.23       3.81 f
+  U906/Y (NOR3X1TR)                        0.24       4.05 r
+  U908/Y (NAND4X1TR)                       0.12       4.18 f
+  U930/Y (AOI22X1TR)                       0.21       4.38 r
+  U958/Y (OAI211X1TR)                      0.15       4.53 f
+  out0[6] (out)                            0.00       4.53 f
+  data arrival time                                   4.53
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: text[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  text[2] (in)                             0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.28       0.31 r
+  U805/Y (INVX1TR)                         0.37       0.68 f
+  U832/Y (NAND2X1TR)                       0.43       1.10 r
+  U772/Y (CLKINVX2TR)                      0.39       1.50 f
+  U889/Y (NAND2X1TR)                       0.44       1.93 r
+  U890/Y (INVX1TR)                         0.26       2.19 f
+  U891/Y (NOR2X1TR)                        0.31       2.50 r
+  U892/Y (NAND2X1TR)                       0.17       2.67 f
+  U893/Y (NOR3BX1TR)                       0.36       3.03 r
+  U898/Y (NAND3X1TR)                       0.13       3.16 f
+  U899/Y (NOR4BX1TR)                       0.42       3.58 r
+  U902/Y (NAND4X1TR)                       0.23       3.81 f
+  U906/Y (NOR3X1TR)                        0.24       4.05 r
+  U908/Y (NAND4X1TR)                       0.12       4.17 f
+  U930/Y (AOI22X1TR)                       0.21       4.38 r
+  U958/Y (OAI211X1TR)                      0.15       4.53 f
+  out0[6] (out)                            0.00       4.53 f
+  data arrival time                                   4.53
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: text[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  text[2] (in)                             0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.30       0.31 r
+  U805/Y (INVX1TR)                         0.37       0.68 f
+  U832/Y (NAND2X1TR)                       0.43       1.10 r
+  U772/Y (CLKINVX2TR)                      0.39       1.50 f
+  U889/Y (NAND2X1TR)                       0.44       1.93 r
+  U890/Y (INVX1TR)                         0.26       2.19 f
+  U891/Y (NOR2X1TR)                        0.31       2.50 r
+  U892/Y (NAND2X1TR)                       0.17       2.67 f
+  U893/Y (NOR3BX1TR)                       0.36       3.02 r
+  U898/Y (NAND3X1TR)                       0.13       3.16 f
+  U899/Y (NOR4BX1TR)                       0.42       3.58 r
+  U902/Y (NAND4X1TR)                       0.23       3.81 f
+  U906/Y (NOR3X1TR)                        0.24       4.05 r
+  U908/Y (NAND4X1TR)                       0.12       4.17 f
+  U930/Y (AOI22X1TR)                       0.21       4.38 r
+  U958/Y (OAI211X1TR)                      0.15       4.53 f
+  out0[6] (out)                            0.00       4.53 f
+  data arrival time                                   4.53
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: text[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  text[2] (in)                             0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.31       0.34 r
+  U805/Y (INVX1TR)                         0.37       0.71 f
+  U816/Y (NAND2X1TR)                       0.36       1.07 r
+  U794/Y (INVX1TR)                         0.24       1.31 f
+  U817/Y (NAND2X1TR)                       0.39       1.70 r
+  U769/Y (CLKINVX2TR)                      0.36       2.05 f
+  U858/Y (NAND2X1TR)                       0.43       2.48 r
+  U892/Y (NAND2X1TR)                       0.17       2.65 f
+  U893/Y (NOR3BX1TR)                       0.36       3.01 r
+  U898/Y (NAND3X1TR)                       0.13       3.14 f
+  U899/Y (NOR4BX1TR)                       0.42       3.57 r
+  U902/Y (NAND4X1TR)                       0.23       3.80 f
+  U1038/Y (AOI211X1TR)                     0.25       4.05 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.18 f
+  U1049/Y (AOI22X1TR)                      0.20       4.38 r
+  U1055/Y (OAI211X1TR)                     0.15       4.53 f
+  out0[2] (out)                            0.00       4.53 f
+  data arrival time                                   4.53
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: text[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  text[2] (in)                             0.03       0.03 r
+  U804/Y (XOR2X1TR)                        0.31       0.34 r
+  U805/Y (INVX1TR)                         0.37       0.71 f
+  U816/Y (NAND2X1TR)                       0.36       1.07 r
+  U794/Y (INVX1TR)                         0.24       1.31 f
+  U817/Y (NAND2X1TR)                       0.39       1.70 r
+  U769/Y (CLKINVX2TR)                      0.36       2.05 f
+  U858/Y (NAND2X1TR)                       0.43       2.48 r
+  U892/Y (NAND2X1TR)                       0.17       2.65 f
+  U893/Y (NOR3BX1TR)                       0.36       3.01 r
+  U898/Y (NAND3X1TR)                       0.13       3.14 f
+  U899/Y (NOR4BX1TR)                       0.42       3.57 r
+  U902/Y (NAND4X1TR)                       0.23       3.80 f
+  U906/Y (NOR3X1TR)                        0.24       4.04 r
+  U908/Y (NAND4X1TR)                       0.12       4.16 f
+  U930/Y (AOI22X1TR)                       0.21       4.37 r
+  U958/Y (OAI211X1TR)                      0.15       4.52 f
+  out0[6] (out)                            0.00       4.52 f
+  data arrival time                                   4.52
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  key[2] (in)                              0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.31       0.33 r
+  U805/Y (INVX1TR)                         0.37       0.69 f
+  U816/Y (NAND2X1TR)                       0.36       1.06 r
+  U794/Y (INVX1TR)                         0.24       1.29 f
+  U817/Y (NAND2X1TR)                       0.39       1.68 r
+  U769/Y (CLKINVX2TR)                      0.36       2.04 f
+  U858/Y (NAND2X1TR)                       0.43       2.46 r
+  U892/Y (NAND2X1TR)                       0.17       2.64 f
+  U893/Y (NOR3BX1TR)                       0.36       3.00 r
+  U898/Y (NAND3X1TR)                       0.13       3.13 f
+  U899/Y (NOR4BX1TR)                       0.42       3.55 r
+  U902/Y (NAND4X1TR)                       0.23       3.78 f
+  U1038/Y (AOI211X1TR)                     0.25       4.03 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.16 f
+  U1049/Y (AOI22X1TR)                      0.20       4.36 r
+  U1055/Y (OAI211X1TR)                     0.15       4.51 f
+  out0[2] (out)                            0.00       4.51 f
+  data arrival time                                   4.51
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[2] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  key[2] (in)                              0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.31       0.32 r
+  U805/Y (INVX1TR)                         0.37       0.69 f
+  U816/Y (NAND2X1TR)                       0.36       1.05 r
+  U794/Y (INVX1TR)                         0.24       1.29 f
+  U817/Y (NAND2X1TR)                       0.39       1.67 r
+  U769/Y (CLKINVX2TR)                      0.36       2.03 f
+  U858/Y (NAND2X1TR)                       0.43       2.46 r
+  U892/Y (NAND2X1TR)                       0.17       2.63 f
+  U893/Y (NOR3BX1TR)                       0.36       2.99 r
+  U898/Y (NAND3X1TR)                       0.13       3.12 f
+  U899/Y (NOR4BX1TR)                       0.42       3.54 r
+  U902/Y (NAND4X1TR)                       0.23       3.77 f
+  U1038/Y (AOI211X1TR)                     0.25       4.03 r
+  U1040/Y (NAND4BX1TR)                     0.13       4.15 f
+  U1049/Y (AOI22X1TR)                      0.20       4.35 r
+  U1055/Y (OAI211X1TR)                     0.15       4.51 f
+  out0[2] (out)                            0.00       4.51 f
+  data arrival time                                   4.51
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  key[2] (in)                              0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.31       0.33 r
+  U805/Y (INVX1TR)                         0.37       0.69 f
+  U816/Y (NAND2X1TR)                       0.36       1.06 r
+  U794/Y (INVX1TR)                         0.24       1.29 f
+  U817/Y (NAND2X1TR)                       0.39       1.68 r
+  U769/Y (CLKINVX2TR)                      0.36       2.04 f
+  U858/Y (NAND2X1TR)                       0.43       2.46 r
+  U892/Y (NAND2X1TR)                       0.17       2.64 f
+  U893/Y (NOR3BX1TR)                       0.36       3.00 r
+  U898/Y (NAND3X1TR)                       0.13       3.13 f
+  U899/Y (NOR4BX1TR)                       0.42       3.55 r
+  U902/Y (NAND4X1TR)                       0.23       3.78 f
+  U906/Y (NOR3X1TR)                        0.24       4.02 r
+  U908/Y (NAND4X1TR)                       0.12       4.15 f
+  U930/Y (AOI22X1TR)                       0.21       4.35 r
+  U958/Y (OAI211X1TR)                      0.15       4.50 f
+  out0[6] (out)                            0.00       4.50 f
+  data arrival time                                   4.50
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: key[2] (input port)
+  Endpoint: out0[6] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  xor_sbox           ibm13_wl10            typical
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  key[2] (in)                              0.01       0.01 f
+  U804/Y (XOR2X1TR)                        0.31       0.32 r
+  U805/Y (INVX1TR)                         0.37       0.69 f
+  U816/Y (NAND2X1TR)                       0.36       1.05 r
+  U794/Y (INVX1TR)                         0.24       1.29 f
+  U817/Y (NAND2X1TR)                       0.39       1.67 r
+  U769/Y (CLKINVX2TR)                      0.36       2.03 f
+  U858/Y (NAND2X1TR)                       0.43       2.46 r
+  U892/Y (NAND2X1TR)                       0.17       2.63 f
+  U893/Y (NOR3BX1TR)                       0.36       2.99 r
+  U898/Y (NAND3X1TR)                       0.13       3.12 f
+  U899/Y (NOR4BX1TR)                       0.42       3.54 r
+  U902/Y (NAND4X1TR)                       0.23       3.77 f
+  U906/Y (NOR3X1TR)                        0.24       4.02 r
+  U908/Y (NAND4X1TR)                       0.12       4.14 f
+  U930/Y (AOI22X1TR)                       0.21       4.35 r
+  U958/Y (OAI211X1TR)                      0.15       4.50 f
+  out0[6] (out)                            0.00       4.50 f
+  data arrival time                                   4.50
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

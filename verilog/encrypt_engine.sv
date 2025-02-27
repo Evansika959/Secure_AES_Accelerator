@@ -19,8 +19,8 @@ logic [1:0] fsm_state, next_fsm_state;
 
 logic [7:0] [127:0]   stage_out_regs ;
 logic [9:0] [127:0]   stage_key_regs ;
-logic [7:0]          stage_valid   ;
-logic           stage_in_valid;
+logic [7:0]           stage_valid   ;
+logic                 stage_in_valid;
 
 // for last round
 logic [127:0] last_stage_in;
@@ -158,9 +158,5 @@ always_ff @(posedge clk or negedge rst_n) begin
     end
 end
 // ====================================================================================================
-
-
-
-
 
 endmodule   
