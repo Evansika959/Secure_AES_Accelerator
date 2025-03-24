@@ -8,8 +8,9 @@ module aesLastRound (
     input rst_n,
     input [127:0] state,
     input job_t in_type,
-    input [127:0] key,
-    input [127:0] inv_key,
+    input [127:0] in_key,
+    input set_key,
+    input set_inv_key,
     output logic [127:0] out,
     output job_t out_type
 );
@@ -53,10 +54,14 @@ always_ff @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
         out_type <= INVALID;
         out <= 128'h0;
+        key <= 128'h0;
+        inv_key <= 128'h0;
     end else begin
         out_type <= in_type;
         out <= (in_type == DECRYPT) ? out_decrypt : 
              (in_type == ENCRYPT) ? out_encrypt : 128'hdeadbeef;
+        key <= (set_key) ? in_key : key;
+        inv_key <= (set_inv_key) ? in_key : inv_key;
     end
 end
 

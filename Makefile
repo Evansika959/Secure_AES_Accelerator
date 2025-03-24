@@ -65,6 +65,9 @@ sim_aesRound:
 sim_key_expansion_stage:
 	cd verilog; $(VV) $(VVOPTS) key_expansion_stage.sv subWords.sv sbox.sv  ../testbench/key_expansion_stage_tb.sv; ./$@
 
+sim_aes_controller:
+	cd verilog; $(VV) $(VVOPTS) key_expansion_stage.sv aes_controller.sv sysdef.svh ../testbench/aes_controller_tb.sv; ./$@
+
 verdi: 
 	cd verilog; $(VV) $(VVOPTS) -debug_access+r -kdb $(SIM_FILES) $(TESTBENCH); ./$@ -gui=verdi -verdi_opts "-ultra"
 
