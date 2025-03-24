@@ -12,14 +12,13 @@ module aes_controller (
     output logic [127:0] key_out,
     output logic [10:0] set_key
     // output logic [10:0] set_inv_key
-)
+);
 
 fsm_state_t fsm_state, next_fsm_state;
 
 logic key_gen_start;
 logic [3:0] key_gen_idx, key_gen_idx_next;
 
-logic 
 logic [127:0]   key_expansion_in;
 logic [127:0]   key_expansion_out, key_expansion_out_reg;
 
@@ -86,17 +85,17 @@ key_expansion_stage key_expansion_stage_initial_inst (
 
 always_comb begin
     case (key_gen_idx)
-        4'd0: set_inv_key = 10'b0000000001; 
-        4'd1: set_inv_key = 10'b0000000010;
-        4'd2: set_inv_key = 10'b0000000100;
-        4'd3: set_inv_key = 10'b0000001000;
-        4'd4: set_inv_key = 10'b0000010000;
-        4'd5: set_inv_key = 10'b0000100000;
-        4'd6: set_inv_key = 10'b0001000000;
-        4'd7: set_inv_key = 10'b0010000000;
-        4'd8: set_inv_key = 10'b0100000000;
-        4'd9: set_inv_key = 10'b1000000000;
-        default: set_inv_key = 10'b0000000000;
+        4'd0: set_key = 10'b0000000001; 
+        4'd1: set_key = 10'b0000000010;
+        4'd2: set_key = 10'b0000000100;
+        4'd3: set_key = 10'b0000001000;
+        4'd4: set_key = 10'b0000010000;
+        4'd5: set_key = 10'b0000100000;
+        4'd6: set_key = 10'b0001000000;
+        4'd7: set_key = 10'b0010000000;
+        4'd8: set_key = 10'b0100000000;
+        4'd9: set_key = 10'b1000000000;
+        default: set_key = 10'b0000000000;
     endcase
 end
 
