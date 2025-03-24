@@ -7,10 +7,10 @@ module aes_controller (
     input clk,
     input rst_n,
     input in_packet_t data_in,
-    output in_packet_t data_out,
+    output out_packet_t data_out,
     output logic load_data,  // controll the data loading from fifo
     output logic [127:0] key_out,
-    output logic [10:0] set_key
+    output logic [10:0] set_key_onehot
     // output logic [10:0] set_inv_key
 );
 
@@ -30,7 +30,7 @@ assign load_data = (fsm_state == PROCESS || fsm_state == IDLE);
 
 assign key_in = data_in.data;
 
-assign data_out = (fsm_state == KEY_GEN) ? 0 : data_in;
+assign data_out = (fsm_state == KEY_GEN) ? 0 : {data_in.valid, key_out, data_in.en_de};
 
 assign key_gen_idx_next = (fsm_state == IDLE) ? 4'd0: 
                           (fsm_state == KEY_GEN || key_gen_start) ? key_gen_idx + 1 : 0; 
@@ -72,12 +72,12 @@ always_ff @(posedge clk or negedge rst_n) begin
         fsm_state <= IDLE;
         key_gen_idx <= 4'd0;
         key_out <= 128'h0;
-        set_key <= 10'h0;
+        set_key_onehot <= 10'h0;
     end else begin
         fsm_state <= next_fsm_state;
         key_gen_idx <= key_gen_idx_next;
         key_out <= (key_gen_idx == 0 && key_gen_start) ? data_in.data : key_expansion_out;
-        set_key <= (fsm_state == KEY_GEN) ? next_set_key : 10'h0;
+        set_key_onehot <= (fsm_state == KEY_GEN) ? next_set_key : 10'h0;
     end
 end
 

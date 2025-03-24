@@ -2,7 +2,7 @@ STD_CELLS = /afs/umich.edu/class/eecs627/ibm13/artisan/2005q3v1/aci/sc-x/verilog
 # TESTBENCH = ../testbench/aes_engine_tb.sv
 TESTBENCH = ../testbench/aes_engine_tb_gen.sv
 SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv \
-			subBytes.sv subWords.sv key_expansion_stage.sv \
+			subBytes.sv subWords.sv key_expansion_stage.sv aes_firstround.sv\
 			inv_subBytes.sv inv_shiftRows.sv inv_mixColumns.sv inv_sbox.sv \
 			sysdef.svh decryptRound.sv decryptLastRound.sv \
 			aesRound.sv aesLastRound.sv \
