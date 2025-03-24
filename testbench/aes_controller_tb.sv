@@ -11,7 +11,7 @@ module aes_controller_tb;
     in_packet_t data_out;
     logic load_data;
     logic [127:0] key_out;
-    logic [10:0] set_key;
+    logic [10:0] set_key_onehot;
 
     // Clock generation (10ns period = 100MHz)
     always #5 clk = ~clk;
@@ -24,7 +24,7 @@ module aes_controller_tb;
         .data_out(data_out),
         .load_data(load_data),
         .key_out(key_out),
-        .set_key(set_key)
+        .set_key_onehot(set_key_onehot)
         // .set_inv_key() // Uncomment if needed
     );
 
