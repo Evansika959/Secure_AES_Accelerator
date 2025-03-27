@@ -10,7 +10,7 @@ module aesLastRound (
     input [127:0] in_key,
     input set_key,
     input set_inv_key,
-    output out_packet_t data_out,
+    output out_packet_t data_out
 );
 
 logic [127:0] state_in_decrypt, state_in_encrypt;
@@ -56,7 +56,7 @@ always_ff @(posedge clk or negedge rst_n) begin
         inv_key <= 128'h0;
     end else begin
         data_out <= (valid_decrypt) ? {1'b1, out_decrypt, 1'b1} : 
-               (valid_encrypt) ? {1'b1, out_encrypt, 1,b0} : 130'hdeadbeef;
+               (valid_encrypt) ? {1'b1, out_encrypt, 1'b0} : 130'hdeadbeef;
         key <= (set_key) ? in_key : key;
         inv_key <= (set_inv_key) ? in_key : inv_key;
     end

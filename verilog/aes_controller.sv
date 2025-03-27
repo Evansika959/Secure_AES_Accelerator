@@ -30,7 +30,7 @@ assign load_data = (fsm_state == PROCESS || fsm_state == IDLE);
 
 assign key_in = data_in.data;
 
-assign data_out = (fsm_state == KEY_GEN) ? 0 : {data_in.valid, key_out, data_in.en_de};
+assign data_out = (fsm_state == KEY_GEN || key_gen_start) ? 0 : data_in;
 
 assign key_gen_idx_next = (fsm_state == IDLE) ? 4'd0: 
                           (fsm_state == KEY_GEN || key_gen_start) ? key_gen_idx + 1 : 0; 

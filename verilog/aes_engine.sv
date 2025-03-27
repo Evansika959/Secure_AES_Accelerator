@@ -23,7 +23,7 @@ aes_controller  aes_controller_inst (
     .data_out(stage_in),
     .load_data(load_data),
     .key_out(key_out),
-    .set_key(set_key_onehot)
+    .set_key_onehot(set_key_onehot)
 );
 
 aesFirstRound aesFirstRound_inst (
@@ -55,7 +55,7 @@ aesLastRound  aesLastRound_inst (
     .clk(clk),
     .rst_n(rst_n),
     .data_in(stage_out_regs[9]),
-    .in_key(in_key),
+    .in_key(key_out),
     .set_key(set_key_onehot[10]),
     .set_inv_key(set_key_onehot[0]),
     .data_out(data_out)
