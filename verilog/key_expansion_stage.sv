@@ -2,8 +2,8 @@
 `define KEY_EXPANSION_STAGE
 
 module key_expansion_stage (
-    input  logic        clk,
-    input  logic        rst_n,
+    // input  logic        clk,
+    // input  logic        rst_n,
     input  logic [3:0]  round_idx,
     input  logic [127:0] in_key,
     output logic [127:0] out_key
@@ -30,16 +30,16 @@ always_comb begin
 
     // get round constant
     case (round_idx)
-    1: rcon = 32'h01000000;
-    2: rcon = 32'h02000000;
-    3: rcon = 32'h04000000;
-    4: rcon = 32'h08000000;
-    5: rcon = 32'h10000000;
-    6: rcon = 32'h20000000;
-    7: rcon = 32'h40000000;
-    8: rcon = 32'h80000000;
-    9: rcon = 32'h1B000000;
-    10: rcon = 32'h36000000;
+    0: rcon = 32'h01000000;
+    1: rcon = 32'h02000000;
+    2: rcon = 32'h04000000;
+    3: rcon = 32'h08000000;
+    4: rcon = 32'h10000000;
+    5: rcon = 32'h20000000;
+    6: rcon = 32'h40000000;
+    7: rcon = 32'h80000000;
+    8: rcon = 32'h1B000000;
+    9: rcon = 32'h36000000;
     default: rcon = 32'h00000000;
   endcase
 

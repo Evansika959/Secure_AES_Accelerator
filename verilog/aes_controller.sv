@@ -20,7 +20,7 @@ logic key_gen_start;
 logic [3:0] key_gen_idx, key_gen_idx_next;
 
 logic [127:0]   key_expansion_in;
-logic [127:0]   key_expansion_out, key_expansion_out_reg;
+logic [127:0]   key_expansion_out;
 
 logic [10:0] next_set_key;
 
@@ -77,30 +77,31 @@ always_ff @(posedge clk or negedge rst_n) begin
         fsm_state <= next_fsm_state;
         key_gen_idx <= key_gen_idx_next;
         key_out <= (key_gen_idx == 0 && key_gen_start) ? data_in.data : key_expansion_out;
-        set_key_onehot <= (fsm_state == KEY_GEN) ? next_set_key : 10'h0;
+        set_key_onehot <= (fsm_state == KEY_GEN || key_gen_start) ? next_set_key : 10'h0;
     end
 end
 
 key_expansion_stage key_expansion_stage_initial_inst (
-    .clk(clk),
-    .rst_n(rst_n),
+    // .clk(clk),
+    // .rst_n(rst_n),
     .round_idx(key_gen_idx),
     .in_key(key_expansion_in),
     .out_key(key_expansion_out)
 );
 
 always_comb begin
-    case (key_gen_idx)
-        4'd0: next_set_key = 10'b0000000001; 
-        4'd1: next_set_key = 10'b0000000010;
-        4'd2: next_set_key = 10'b0000000100;
-        4'd3: next_set_key = 10'b0000001000;
-        4'd4: next_set_key = 10'b0000010000;
-        4'd5: next_set_key = 10'b0000100000;
-        4'd6: next_set_key = 10'b0001000000;
-        4'd7: next_set_key = 10'b0010000000;
-        4'd8: next_set_key = 10'b0100000000;
-        4'd9: next_set_key = 10'b1000000000;
+    case (key_gen_idx_next)
+        4'd0: next_set_key = 11'b0000000001; 
+        4'd1: next_set_key = 11'b0000000010;
+        4'd2: next_set_key = 11'b0000000100;
+        4'd3: next_set_key = 11'b0000001000;
+        4'd4: next_set_key = 11'b0000010000;
+        4'd5: next_set_key = 11'b0000100000;
+        4'd6: next_set_key = 11'b0001000000;
+        4'd7: next_set_key = 11'b0010000000;
+        4'd8: next_set_key = 11'b0100000000;
+        4'd9: next_set_key = 11'b1000000000;
+        4'd10: next_set_key = 11'b10000000000;
         default: next_set_key = 10'b0000000000;
     endcase
 end

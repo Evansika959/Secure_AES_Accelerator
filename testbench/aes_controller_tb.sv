@@ -51,17 +51,24 @@ module aes_controller_tb;
     
         // Additional test stimulus example
         data_in.valid   = 1'b1;
-        data_in.data    = 128'h01234567_89ABCDEF_FEDCBA98_76543210;
+        data_in.data    = 128'h000102030405060708090a0b0c0d0e0f;
         data_in.en_de   = 1'b0;
         data_in.set_key = 1'b1;
     
         @(posedge clk);
+        @(negedge clk);
+        data_in.set_key = 1'b0;
     
         // Complete simulation
         #150;
         $finish;
     end
     
+    // Monitor key and set_key_onehot outputs
+    initial begin
+        $display("Time\t\tclk\treset\tload_data\t\tkey_out\t\t\tset_key_onehot");
+        $monitor("%0t\t%b\t%b\t%b\t%h\t%b", $time, clk, rst_n, load_data, key_out, set_key_onehot);
+    end
 
 
 endmodule

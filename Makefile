@@ -2,7 +2,7 @@ STD_CELLS = /afs/umich.edu/class/eecs627/ibm13/artisan/2005q3v1/aci/sc-x/verilog
 # TESTBENCH = ../testbench/aes_engine_tb.sv
 TESTBENCH = ../testbench/aes_engine_tb_gen.sv
 SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv \
-			subBytes.sv subWords.sv key_expansion_stage.sv aes_firstround.sv\
+			subBytes.sv subWords.sv key_expansion_stage.sv aesFirstRound.sv\
 			inv_subBytes.sv inv_shiftRows.sv inv_mixColumns.sv inv_sbox.sv \
 			sysdef.svh decryptRound.sv decryptLastRound.sv \
 			aesRound.sv aesLastRound.sv \
@@ -65,7 +65,12 @@ sim_aesRound:
 sim_key_expansion_stage:
 	cd verilog; $(VV) $(VVOPTS) key_expansion_stage.sv subWords.sv sbox.sv  ../testbench/key_expansion_stage_tb.sv; ./$@
 
+.PHONY: sim_aes_controller
 sim_aes_controller:
+	cd verilog; $(VV) $(VVOPTS) key_expansion_stage.sv aes_controller.sv subWords.sv sbox.sv sysdef.svh ../testbench/aes_controller_tb.sv; ./$@
+
+.PHONY: sim_aes_controller_verdi
+sim_aes_controller_verdi:
 	cd verilog; $(VV) $(VVOPTS) -debug_access+r -kdb key_expansion_stage.sv aes_controller.sv subWords.sv sbox.sv sysdef.svh ../testbench/aes_controller_tb.sv; ./$@ -gui=verdi -verdi_opts "-ultra"
 
 verdi: 
