@@ -45,10 +45,10 @@ clean:
 
 .PHONY: goldenbrick
 goldenbrick:
-	cd goldenbrick; python3 aes_gentb.py
+	cd goldenbrick; python3 golden_brick_gen.py
 
 behavioral_check: goldenbrick sim
-	diff run/aes_out.txt run/encrypt_goldenbrick_out.txt | tee run/diff_functional.txt
+	diff run/aes_out.txt run/tb_output.txt | tee run/diff_functional.txt
 
 sim:
 	cd verilog; $(VV) $(VVOPTS) $(SIM_FILES) $(TESTBENCH); ./$@; cd ..
