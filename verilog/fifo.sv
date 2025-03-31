@@ -33,6 +33,8 @@ module fifo #(parameter DEPTH = 16, WIDTH = 8)(
                 dout <= mem[rd_ptr];
                 rd_ptr <= rd_ptr + 1;
                 count <= count - 1;
+            end else begin
+                dout <= 0;
             end
         end
     end

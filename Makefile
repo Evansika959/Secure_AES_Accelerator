@@ -1,9 +1,9 @@
 STD_CELLS = /afs/umich.edu/class/eecs627/ibm13/artisan/2005q3v1/aci/sc-x/verilog/ibm13_neg.v
-TESTBENCH = ../testbench/aes_engine_tb.sv
+TESTBENCH = ../testbench/aes_engine_buffer_tb.sv
 SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv \
 			subBytes.sv subWords.sv key_expansion_stage.sv aesFirstRound.sv aes_controller.sv\
 			inv_subBytes.sv inv_shiftRows.sv inv_mixColumns.sv inv_sbox.sv \
-			sysdef.svh decryptRound.sv decryptLastRound.sv \
+			sysdef.svh decryptRound.sv decryptLastRound.sv fifo.sv\
 			aesRound.sv aesLastRound.sv \
 			aes_engine.sv encryptLastRound.sv
 # SIM_SYNTH_FILES = standard.vh ../syn/mult.syn.v

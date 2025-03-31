@@ -10,6 +10,7 @@ module aes_engine_tb;
     out_packet_t data_out, output_buffer_in;
     logic load_data;
     logic start;
+    logic wr_en_input;
 
     // DUT instantiation
     aes_engine DUT (
@@ -54,7 +55,6 @@ module aes_engine_tb;
 
         clk = 0;
         rst_n = 0;
-        data_in = '{valid: 0, data: 128'b0, en_de: 0, set_key: 0};
 
         // Reset assertion
         #20;

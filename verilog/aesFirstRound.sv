@@ -41,7 +41,9 @@ always_ff @(posedge clk or negedge rst_n) begin
         inv_key <= 128'h0;
         en_de <= 0;
     end else begin
-        data_out <= (data_in.valid) ? {1'b1, after_addroundkey, en_de} : 130'hdeadbeef;
+        // data_out <= (data_in.valid) ? {1'b1, after_addroundkey, en_de} : 130'hdeadbeef;
+        data_out <= (valid_decrypt) ? {1'b1, after_addroundkey, 1'b1} : 
+               (valid_encrypt) ? {1'b1, after_addroundkey, 1'b0} : 130'hdeadbeef;
         key <= (set_key) ? in_key : key;
         inv_key <= (set_inv_key) ? in_key : inv_key;
         en_de <= data_in.en_de;

@@ -26,7 +26,7 @@ logic [10:0] next_set_key;
 
 assign key_gen_start = (fsm_state != KEY_GEN) && data_in.valid && data_in.set_key;
 
-assign load_data = (fsm_state == PROCESS || fsm_state == IDLE);
+assign load_data = (fsm_state == PROCESS || fsm_state == IDLE) & ~key_gen_start;
 
 assign key_in = data_in.data;
 
