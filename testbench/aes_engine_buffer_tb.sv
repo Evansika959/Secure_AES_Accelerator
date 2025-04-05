@@ -5,7 +5,7 @@ module aes_engine_tb;
 
    // Signals
     logic clk;
-    logic rst_n;
+    logic rstn;
     in_packet_t data_in, input_buffer_in;
     out_packet_t data_out, output_buffer_in;
     logic load_data;
@@ -15,7 +15,7 @@ module aes_engine_tb;
     // DUT instantiation
     aes_engine DUT (
         .clk(clk),
-        .rst_n(rst_n),
+        .rstn(rstn),
         .data_in(data_in),
         .data_out(data_out),
         .load_data(load_data)
@@ -27,7 +27,7 @@ module aes_engine_tb;
     )
     input_buffer_inst (
         .clk(clk),
-        .rst_n(rst_n),
+        .rstn(rstn),
         .wr_en(wr_en_input),
         .rd_en(load_data & start),
         .din(input_buffer_in),
@@ -54,11 +54,11 @@ module aes_engine_tb;
         end
 
         clk = 0;
-        rst_n = 0;
+        rstn = 0;
 
         // Reset assertion
         #20;
-        rst_n = 1;
+        rstn = 1;
 
         #10;
         // fill the input buffer

@@ -5,7 +5,7 @@
 
 module aesRound (
     input clk,
-    input rst_n,
+    input rstn,
     input out_packet_t data_in,
     input [127:0] in_key,
     input set_key,
@@ -28,7 +28,7 @@ assign state_in_encrypt = (valid_encrypt) ? data_in.data : 128'h0;
 
 decryptRound decryptRound_inst (
     // .clk(clk),
-    // .rst_n(rst_n),
+    // .rstn(rstn),
     .state(state_in_decrypt),
     .in_valid(valid_decrypt),
     .key(inv_key),
@@ -38,7 +38,7 @@ decryptRound decryptRound_inst (
 
 encryptRound encryptRound_inst (
     // .clk(clk),
-    // .rst_n(rst_n),
+    // .rstn(rstn),
     .state(state_in_encrypt),
     .in_valid(valid_encrypt),
     .key(key),
@@ -49,8 +49,8 @@ encryptRound encryptRound_inst (
 // assign out = (in_type == DECRYPT) ? out_decrypt : 
 //              (in_type == ENCRYPT) ? out_encrypt : 128'hdeadbeef;
 
-always_ff @(posedge clk or negedge rst_n) begin
-    if (~rst_n) begin
+always_ff @(posedge clk or negedge rstn) begin
+    if (~rstn) begin
         data_out <= 0;
         key <= 128'h0;
         inv_key <= 128'h0;

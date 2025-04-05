@@ -4,7 +4,7 @@ SIM_FILES = encryptRound.sv addRoundKey.sv sbox.sv mixColumns.sv shiftRows.sv \
 			subBytes.sv subWords.sv key_expansion_stage.sv aesFirstRound.sv aes_controller.sv\
 			inv_subBytes.sv inv_shiftRows.sv inv_mixColumns.sv inv_sbox.sv \
 			sysdef.svh decryptRound.sv decryptLastRound.sv fifo.sv\
-			aesRound.sv aesLastRound.sv \
+			aesRound.sv aesLastRound.sv input_buffer.sv output_buffer.sv\
 			aes_engine.sv encryptLastRound.sv
 # SIM_SYNTH_FILES = standard.vh ../syn/mult.syn.v
 
@@ -71,6 +71,10 @@ sim_aes_controller:
 .PHONY: sim_aes_controller_verdi
 sim_aes_controller_verdi:
 	cd verilog; $(VV) $(VVOPTS) -debug_access+r -kdb key_expansion_stage.sv aes_controller.sv subWords.sv sbox.sv sysdef.svh ../testbench/aes_controller_tb.sv; ./$@ -gui=verdi -verdi_opts "-ultra"
+
+.PHONY: spi_test
+sim_spi:
+	cd verilog; $(VV) $(VVOPTS) -debug_access+r -kdb spi_interface.v spi_interface_testbench.v standard.vh; 
 
 verdi: 
 	cd verilog; $(VV) $(VVOPTS) -debug_access+r -kdb $(SIM_FILES) $(TESTBENCH); ./$@ -gui=verdi -verdi_opts "-ultra"

@@ -5,7 +5,7 @@ module aes_engine_tb;
 
   // Testbench signals
   logic         clk;
-  logic         rst_n;
+  logic         rstn;
   job_t         in_type;
   logic         set_key;
   logic         halt;
@@ -24,7 +24,7 @@ module aes_engine_tb;
   // Instantiate the DUT
   aes_engine dut (
     .clk      (clk),
-    .rst_n    (rst_n),
+    .rstn    (rstn),
     .in_type  (in_type),
     .set_key  (set_key),
     .halt     (halt),
@@ -59,7 +59,7 @@ module aes_engine_tb;
         end
         // Initialize signals
         clk = 0;
-        rst_n = 0;
+        rstn = 0;
         set_key = 0;
         halt = 0;
         state = 128'h00112233445566778899aabbccddeeff; // Example plaintext state
@@ -67,7 +67,7 @@ module aes_engine_tb;
         in_type = INVALID;
         
         // Reset phase
-        #10 rst_n = 1;
+        #10 rstn = 1;
         #10;
 
         // Apply key

@@ -3,7 +3,7 @@
 
 module decryptLastRound (
     // input clk,
-    // input rst_n,
+    // input rstn,
     input [127:0] state,
     input         in_valid,
     input [127:0] key,
@@ -33,8 +33,8 @@ addRoundKey addRoundKey_inst (
     .out(out)
 );
 
-// always_ff @(posedge clk or negedge rst_n) begin
-//     if (~rst_n) begin
+// always_ff @(posedge clk or negedge rstn) begin
+//     if (~rstn) begin
 //         out <= 128'h0;
 //         out_valid <= 1'b0;
 //     end else begin

@@ -145,6 +145,7 @@ module spi_testbench();
 
 		assert(AES_out_check	== AES_out);
 
+		$display("correct!");
 		$finish();
 	end
 

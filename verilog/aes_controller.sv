@@ -5,7 +5,7 @@
 
 module aes_controller (
     input clk,
-    input rst_n,
+    input rstn,
     input in_packet_t data_in,
     output out_packet_t data_out,
     output logic load_data,  // controll the data loading from fifo
@@ -67,8 +67,8 @@ always_comb begin
 end
 
 
-always_ff @(posedge clk or negedge rst_n) begin
-    if (~rst_n) begin
+always_ff @(posedge clk or negedge rstn) begin
+    if (~rstn) begin
         fsm_state <= IDLE;
         key_gen_idx <= 4'd0;
         key_out <= 128'h0;
@@ -83,7 +83,7 @@ end
 
 key_expansion_stage key_expansion_stage_initial_inst (
     // .clk(clk),
-    // .rst_n(rst_n),
+    // .rstn(rstn),
     .round_idx(key_gen_idx),
     .in_key(key_expansion_in),
     .out_key(key_expansion_out)

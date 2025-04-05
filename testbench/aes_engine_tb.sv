@@ -5,7 +5,7 @@ module aes_engine_tb;
 
    // Signals
     logic clk;
-    logic rst_n;
+    logic rstn;
     in_packet_t data_in;
     out_packet_t data_out;
     logic load_data;
@@ -13,7 +13,7 @@ module aes_engine_tb;
     // DUT instantiation
     aes_engine DUT (
         .clk(clk),
-        .rst_n(rst_n),
+        .rstn(rstn),
         .data_in(data_in),
         .data_out(data_out),
         .load_data(load_data)
@@ -35,12 +35,12 @@ module aes_engine_tb;
         end
 
         clk = 0;
-        rst_n = 0;
+        rstn = 0;
         data_in = '{valid: 0, data: 128'b0, en_de: 0, set_key: 0};
 
         // Reset assertion
         #20;
-        rst_n = 1;
+        rstn = 1;
 
         // Read the first line and set key
         status = $fgets(line, file);

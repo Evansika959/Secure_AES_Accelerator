@@ -6,7 +6,7 @@ module aes_controller_tb;
 
     // Testbench signals
     logic clk;
-    logic rst_n;
+    logic rstn;
     in_packet_t data_in;
     in_packet_t data_out;
     logic load_data;
@@ -19,7 +19,7 @@ module aes_controller_tb;
     // DUT instantiation
     aes_controller DUT (
         .clk(clk),
-        .rst_n(rst_n),
+        .rstn(rstn),
         .data_in(data_in),
         .data_out(data_out),
         .load_data(load_data),
@@ -30,13 +30,13 @@ module aes_controller_tb;
 
     initial begin
         clk = 0;
-        rst_n = 0;
+        rstn = 0;
     
         data_in = '{default:0};
     
         // Release reset after a few cycles
         #20;
-        rst_n = 1;
+        rstn = 1;
     
         // Apply stimulus after reset
         repeat (5) @(posedge clk);
@@ -67,7 +67,7 @@ module aes_controller_tb;
     // Monitor key and set_key_onehot outputs
     initial begin
         $display("Time\t\tclk\treset\tload_data\t\tkey_out\t\t\tset_key_onehot");
-        $monitor("%0t\t%b\t%b\t%b\t%h\t%b", $time, clk, rst_n, load_data, key_out, set_key_onehot);
+        $monitor("%0t\t%b\t%b\t%b\t%h\t%b", $time, clk, rstn, load_data, key_out, set_key_onehot);
     end
 
 

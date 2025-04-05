@@ -2,7 +2,7 @@ module encrypt_engine_tb;
 
     // Testbench signals
     logic clk;
-    logic rst_n;
+    logic rstn;
     logic start;
     logic set_key;
     logic halt;
@@ -17,7 +17,7 @@ module encrypt_engine_tb;
     // Instantiate the DUT (Device Under Test)
     encrypt_engine dut (
         .clk(clk),
-        .rst_n(rst_n),
+        .rstn(rstn),
         .start(start),
         .set_key(set_key),
         .halt(halt),    
@@ -31,7 +31,7 @@ module encrypt_engine_tb;
     initial begin
         // Initialize signals
         clk = 0;
-        rst_n = 0;
+        rstn = 0;
         start = 0;
         set_key = 0;
         halt = 0;
@@ -39,7 +39,7 @@ module encrypt_engine_tb;
         key = 128'h000102030405060708090a0b0c0d0e0f; // Example AES round key
         
         // Reset phase
-        #10 rst_n = 1;
+        #10 rstn = 1;
         #10;
 
         // Apply key

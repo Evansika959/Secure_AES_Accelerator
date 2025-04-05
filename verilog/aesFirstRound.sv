@@ -5,7 +5,7 @@
 
 module aesFirstRound (
     input clk,
-    input rst_n,
+    input rstn,
     input out_packet_t data_in,
     input [127:0] in_key,
     input set_key,
@@ -34,8 +34,8 @@ addRoundKey first_addRoundKey_inst(
     .out(after_addroundkey)
 );
 
-always_ff @(posedge clk or negedge rst_n) begin
-    if (~rst_n) begin
+always_ff @(posedge clk or negedge rstn) begin
+    if (~rstn) begin
         data_out <= 0;
         key <= 128'h0;
         inv_key <= 128'h0;
