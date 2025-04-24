@@ -5,8 +5,8 @@ module input_buffer (
     input logic rstn,
     input logic wr_en,           // Write enable
     input logic rd_en,           // Read enable
-    input logic [WIDTH-1:0] din, // Data input
-    output logic [WIDTH-1:0] dout // Data output
+    input logic [131-1:0] din, // Data input
+    output logic [131-1:0] dout // Data output
     // output logic full,           // FIFO full flag
     // output logic empty           // FIFO empty flag
 );

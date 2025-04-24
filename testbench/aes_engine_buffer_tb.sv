@@ -82,9 +82,12 @@ module aes_engine_tb;
         start = 1;
 
         #1000;
+
         
         // End simulation
         #20;
+
+        $display("@@@ Passed!");
         $finish;
     end
 
